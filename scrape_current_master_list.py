@@ -66,52 +66,29 @@ def extract_table(scope: Page | Frame) -> list[dict[str, str]]:
 
 
 def accept_cookies(page: Page) -> None:
-    selectors = [
+    for selector in [
         "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll",
-        "button:has-text('Allow all')",
-        "button:has-text('Accept all')",
-        "button:has-text('Accept All Cookies')",
-    ]
-    for selector in selectors:
+        "button:has-text('Allow all')", "button:has-text('Accept all')",
+    ]:
         try:
             button = page.locator(selector).first
             if button.count() and button.is_visible():
                 button.click()
-                page.wait_for_timeout(1800)
+                page.wait_for_timeout(1500)
                 return
         except Exception:
-            continue
-    try:
-        page.evaluate("""
-          () => {
-            if (window.Cookiebot && typeof window.Cookiebot.submitCustomConsent === 'function') {
-              window.Cookiebot.submitCustomConsent(true, true, true);
-            }
-          }
-        """)
-        page.wait_for_timeout(1200)
-    except Exception:
-        pass
+            pass
 
 
 def load_official_frame(page: Page, diagnostics: dict[str, object]) -> Frame | None:
     page.goto(PARENT_URL, wait_until="domcontentloaded", timeout=120000)
-    page.wait_for_timeout(4000)
+    page.wait_for_timeout(3500)
     accept_cookies(page)
-
     iframe = page.locator("iframe[src*='ipc-services.org']").first
     diagnostics["iframe_found"] = bool(iframe.count())
     if not iframe.count():
         return None
-
-    # Cookiebot may leave the statistics iframe inert. Reassigning src after
-    # consent makes Chromium perform the official embedded request with the
-    # correct parent-page context and Referer.
-    try:
-        iframe.evaluate("(el, src) => { el.classList.remove('cookieconsent-optin-statistics'); el.src = ''; el.src = src; }", IPC_URL)
-    except Exception:
-        pass
-
+    iframe.evaluate("(el, src) => { el.classList.remove('cookieconsent-optin-statistics'); el.src = src; }", IPC_URL)
     for _ in range(30):
         page.wait_for_timeout(1000)
         for frame in page.frames:
@@ -122,30 +99,11 @@ def load_official_frame(page: Page, diagnostics: dict[str, object]) -> Frame | N
     return None
 
 
-def option_data(scope: Page | Frame) -> list[list[dict[str, str]]]:
-    result: list[list[dict[str, str]]] = []
-    selects = scope.locator("select")
-    for index in range(selects.count()):
-        options: list[dict[str, str]] = []
-        for option in selects.nth(index).locator("option").all():
-            options.append({"value": option.get_attribute("value") or "", "text": clean(option.inner_text())})
-        result.append(options)
-    return result
-
-
-def submit(scope: Page | Frame) -> None:
-    for selector in [
-        "button[type=submit]", "input[type=submit]",
-        "button:has-text('Search')", "button:has-text('View')", "button:has-text('Submit')",
-    ]:
-        try:
-            control = scope.locator(selector).first
-            if control.count() and control.is_visible():
-                control.click()
-                scope.page.wait_for_timeout(1800) if isinstance(scope, Frame) else scope.wait_for_timeout(1800)
-                return
-        except Exception:
-            continue
+def options_of(select) -> list[dict[str, str]]:
+    return [
+        {"value": option.get_attribute("value") or "", "text": clean(option.inner_text())}
+        for option in select.locator("option").all()
+    ]
 
 
 def main() -> int:
@@ -161,67 +119,62 @@ def main() -> int:
         context = browser.new_context(
             viewport={"width": 1600, "height": 1200},
             locale="en-US",
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131 Safari/537.36",
         )
         page = context.new_page()
         responses: list[dict[str, object]] = []
         page.on("response", lambda response: responses.append({
-            "url": response.url,
-            "status": response.status,
+            "url": response.url, "status": response.status,
             "content_type": response.headers.get("content-type", ""),
         }))
 
         frame = load_official_frame(page, diagnostics)
         if frame is not None:
-            page.wait_for_timeout(3500)
+            page.wait_for_timeout(2500)
             selects = frame.locator("select")
-            options = option_data(frame)
             diagnostics["selects"] = selects.count()
-            diagnostics["select_options"] = options
+            diagnostics["select_options"] = [options_of(selects.nth(i)) for i in range(selects.count())]
 
-            if selects.count():
-                valid_seasons = [o for o in options[0] if o["value"] and "select" not in o["text"].lower()]
-                if valid_seasons:
-                    # Prefer the numerically newest displayed season.
-                    chosen = sorted(valid_seasons, key=lambda o: o["text"], reverse=True)[0]
-                    selects.nth(0).select_option(chosen["value"])
-                    page.wait_for_timeout(1200)
+            season_options = options_of(selects.nth(0)) if selects.count() else []
+            valid_seasons = [o for o in season_options if o["value"]]
+            season = sorted(valid_seasons, key=lambda o: o["text"], reverse=True)[0]["value"] if valid_seasons else "S26"
 
-            npc_values = [""]
-            if selects.count() > 1:
-                options = option_data(frame)
-                npc_values = [o["value"] for o in options[1] if o["value"] and "select" not in o["text"].lower()] or [""]
+            # The page has 3 selectors: season, region and NPC. The previous
+            # implementation mistakenly iterated the region selector. NPC is #3.
+            npc_options = options_of(selects.nth(2)) if selects.count() >= 3 else []
+            npcs = [o for o in npc_options if o["value"]]
+            diagnostics["season_selected"] = season
+            diagnostics["npc_count"] = len(npcs)
 
             seen: set[str] = set()
-            for npc in npc_values:
+            npc_errors: list[dict[str, str]] = []
+            for index, npc in enumerate(npcs, 1):
+                code = npc["value"].upper()
                 try:
-                    current_selects = frame.locator("select")
-                    if current_selects.count() > 1 and npc:
-                        current_selects.nth(1).select_option(npc)
-                    submit(frame)
-                    page.wait_for_timeout(1000)
-                    for row in extract_table(frame):
-                        if not row.get("npc") and npc:
-                            row["npc"] = npc
+                    route = f"{IPC_URL}/html/season/{season.lower()}/npc/{code.lower()}"
+                    frame.goto(route, wait_until="domcontentloaded", timeout=60000)
+                    page.wait_for_timeout(250)
+                    found = extract_table(frame)
+                    for row in found:
+                        row["npc"] = row.get("npc") or code
                         signature = json.dumps(row, sort_keys=True, ensure_ascii=False)
                         if signature not in seen:
                             seen.add(signature)
                             rows.append(row)
+                    print(f"[{index}/{len(npcs)}] {code}: {len(found)}")
                 except Exception as exc:
-                    diagnostics.setdefault("npc_errors", []).append({"npc": npc, "error": str(exc)[:300]})
-
+                    npc_errors.append({"npc": code, "error": str(exc)[:300]})
+            diagnostics["npc_errors"] = npc_errors
             diagnostics["frame_tables"] = frame.locator("table").count()
-            diagnostics["frame_html_excerpt"] = (frame.content()[:20000] if frame else "")
         else:
             diagnostics["frame_error"] = "Official IPC Services iframe did not load"
 
         diagnostics["rows_extracted"] = len(rows)
         diagnostics["network_candidates"] = [
             item for item in responses
-            if any(key in str(item["url"]).lower() for key in ("ipc-services", "cml", "class", "athlete", "json", "api"))
-        ][-200:]
+            if any(key in str(item["url"]).lower() for key in ("ipc-services", "cml", "class", "athlete"))
+        ][-300:]
         page.screenshot(path=str(OUT / "last_capture.png"), full_page=True)
-        (OUT / "last_page.html").write_text(page.content(), encoding="utf-8")
         browser.close()
 
     fields = sorted({key for row in rows for key in row}) or [
