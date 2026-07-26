@@ -1,16 +1,1043 @@
 {
-  "source": "https://www.ipc-services.org/sdms/web/cml/swm",
-  "captured_at": "2026-07-26T19:36:36.052185+00:00",
-  "selects": 0,
-  "select_options": [],
-  "title": "403 Forbidden",
-  "tables": 0,
-  "rows_extracted": 0,
+  "source": "https://www.paralympic.org/swimming/classified-athletes",
+  "embedded_source": "https://www.ipc-services.org/sdms/web/cml/swm",
+  "captured_at": "2026-07-26T19:40:57.202030+00:00",
+  "iframe_found": true,
+  "iframe_url": "https://www.ipc-services.org/sdms/web/cml/swm",
+  "iframe_title": "SDMS - Classification Master List Swimming",
+  "selects": 3,
+  "select_options": [
+    [
+      {
+        "value": "S26",
+        "text": "Summer Season 2026"
+      },
+      {
+        "value": "S25",
+        "text": "Summer Season 2025"
+      }
+    ],
+    [
+      {
+        "value": "",
+        "text": ""
+      },
+      {
+        "value": "",
+        "text": ""
+      },
+      {
+        "value": "AFR",
+        "text": "African Region"
+      },
+      {
+        "value": "AMR",
+        "text": "Americas Region"
+      },
+      {
+        "value": "ASR",
+        "text": "Asian Region"
+      },
+      {
+        "value": "EUR",
+        "text": "European Region"
+      },
+      {
+        "value": "OCR",
+        "text": "Oceanian Region"
+      }
+    ],
+    [
+      {
+        "value": "",
+        "text": ""
+      },
+      {
+        "value": "",
+        "text": ""
+      },
+      {
+        "value": "AFG",
+        "text": "Afghanistan"
+      },
+      {
+        "value": "ALG",
+        "text": "Algeria"
+      },
+      {
+        "value": "AND",
+        "text": "Andorra"
+      },
+      {
+        "value": "ANG",
+        "text": "Angola"
+      },
+      {
+        "value": "ANT",
+        "text": "Antigua and Barbuda"
+      },
+      {
+        "value": "ARG",
+        "text": "Argentina"
+      },
+      {
+        "value": "ARM",
+        "text": "Armenia"
+      },
+      {
+        "value": "ARU",
+        "text": "Aruba"
+      },
+      {
+        "value": "AUS",
+        "text": "Australia"
+      },
+      {
+        "value": "AUT",
+        "text": "Austria"
+      },
+      {
+        "value": "AZE",
+        "text": "Azerbaijan"
+      },
+      {
+        "value": "BRN",
+        "text": "Bahrain"
+      },
+      {
+        "value": "BAN",
+        "text": "Bangladesh"
+      },
+      {
+        "value": "BAR",
+        "text": "Barbados"
+      },
+      {
+        "value": "BLR",
+        "text": "Belarus"
+      },
+      {
+        "value": "BEL",
+        "text": "Belgium"
+      },
+      {
+        "value": "BEN",
+        "text": "Benin"
+      },
+      {
+        "value": "BER",
+        "text": "Bermuda"
+      },
+      {
+        "value": "BHU",
+        "text": "Bhutan"
+      },
+      {
+        "value": "BOL",
+        "text": "Bolivia"
+      },
+      {
+        "value": "BIH",
+        "text": "Bosnia and Herzegovina"
+      },
+      {
+        "value": "BOT",
+        "text": "Botswana"
+      },
+      {
+        "value": "BRA",
+        "text": "Brazil"
+      },
+      {
+        "value": "BRU",
+        "text": "Brunei Darussalam"
+      },
+      {
+        "value": "BUL",
+        "text": "Bulgaria"
+      },
+      {
+        "value": "BUR",
+        "text": "Burkina Faso"
+      },
+      {
+        "value": "BDI",
+        "text": "Burundi"
+      },
+      {
+        "value": "CAM",
+        "text": "Cambodia"
+      },
+      {
+        "value": "CMR",
+        "text": "Cameroon"
+      },
+      {
+        "value": "CAN",
+        "text": "Canada"
+      },
+      {
+        "value": "CPV",
+        "text": "Cape Verde"
+      },
+      {
+        "value": "CAF",
+        "text": "Central African Republic"
+      },
+      {
+        "value": "CHI",
+        "text": "Chile"
+      },
+      {
+        "value": "CHN",
+        "text": "People's Republic of China"
+      },
+      {
+        "value": "COL",
+        "text": "Colombia"
+      },
+      {
+        "value": "COM",
+        "text": "Comoros"
+      },
+      {
+        "value": "CGO",
+        "text": "Congo"
+      },
+      {
+        "value": "CRC",
+        "text": "Costa Rica"
+      },
+      {
+        "value": "CIV",
+        "text": "Côte d'Ivoire"
+      },
+      {
+        "value": "CRO",
+        "text": "Croatia"
+      },
+      {
+        "value": "CUB",
+        "text": "Cuba"
+      },
+      {
+        "value": "CYP",
+        "text": "Cyprus"
+      },
+      {
+        "value": "CZE",
+        "text": "Czechia"
+      },
+      {
+        "value": "PRK",
+        "text": "Democratic People's Republic of Korea"
+      },
+      {
+        "value": "COD",
+        "text": "Democratic Republic of the Congo"
+      },
+      {
+        "value": "DEN",
+        "text": "Denmark"
+      },
+      {
+        "value": "DOM",
+        "text": "Dominican Republic"
+      },
+      {
+        "value": "ECU",
+        "text": "Ecuador"
+      },
+      {
+        "value": "EGY",
+        "text": "Egypt"
+      },
+      {
+        "value": "ESA",
+        "text": "El Salvador"
+      },
+      {
+        "value": "ERI",
+        "text": "Eritrea"
+      },
+      {
+        "value": "EST",
+        "text": "Estonia"
+      },
+      {
+        "value": "SWZ",
+        "text": "Eswatini"
+      },
+      {
+        "value": "ETH",
+        "text": "Ethiopia"
+      },
+      {
+        "value": "FRO",
+        "text": "Faroe Islands"
+      },
+      {
+        "value": "FIJ",
+        "text": "Fiji"
+      },
+      {
+        "value": "FIN",
+        "text": "Finland"
+      },
+      {
+        "value": "FRA",
+        "text": "France"
+      },
+      {
+        "value": "GAB",
+        "text": "Gabon"
+      },
+      {
+        "value": "GAM",
+        "text": "Gambia"
+      },
+      {
+        "value": "GEO",
+        "text": "Georgia"
+      },
+      {
+        "value": "GER",
+        "text": "Germany"
+      },
+      {
+        "value": "GHA",
+        "text": "Ghana"
+      },
+      {
+        "value": "GBR",
+        "text": "Great Britain"
+      },
+      {
+        "value": "GRE",
+        "text": "Greece"
+      },
+      {
+        "value": "GRN",
+        "text": "Grenada"
+      },
+      {
+        "value": "GUA",
+        "text": "Guatemala"
+      },
+      {
+        "value": "GUI",
+        "text": "Guinea"
+      },
+      {
+        "value": "GBS",
+        "text": "Guinea-Bissau"
+      },
+      {
+        "value": "GUY",
+        "text": "Guyana"
+      },
+      {
+        "value": "HAI",
+        "text": "Haiti"
+      },
+      {
+        "value": "HON",
+        "text": "Honduras"
+      },
+      {
+        "value": "HKG",
+        "text": "Hong Kong, China"
+      },
+      {
+        "value": "HUN",
+        "text": "Hungary"
+      },
+      {
+        "value": "ISL",
+        "text": "Iceland"
+      },
+      {
+        "value": "IND",
+        "text": "India"
+      },
+      {
+        "value": "IPA",
+        "text": "Individual Paralympic Athletes"
+      },
+      {
+        "value": "INA",
+        "text": "Indonesia"
+      },
+      {
+        "value": "IRI",
+        "text": "Islamic Republic of Iran"
+      },
+      {
+        "value": "IRQ",
+        "text": "Iraq"
+      },
+      {
+        "value": "IRL",
+        "text": "Ireland"
+      },
+      {
+        "value": "ISR",
+        "text": "Israel"
+      },
+      {
+        "value": "ITA",
+        "text": "Italy"
+      },
+      {
+        "value": "JAM",
+        "text": "Jamaica"
+      },
+      {
+        "value": "JPN",
+        "text": "Japan"
+      },
+      {
+        "value": "JOR",
+        "text": "Jordan"
+      },
+      {
+        "value": "KAZ",
+        "text": "Kazakhstan"
+      },
+      {
+        "value": "KEN",
+        "text": "Kenya"
+      },
+      {
+        "value": "KIR",
+        "text": "Kiribati"
+      },
+      {
+        "value": "KOR",
+        "text": "Republic of Korea"
+      },
+      {
+        "value": "KOS",
+        "text": "Kosovo"
+      },
+      {
+        "value": "KUW",
+        "text": "Kuwait"
+      },
+      {
+        "value": "KGZ",
+        "text": "Kyrgyzstan"
+      },
+      {
+        "value": "LAO",
+        "text": "Lao People's Democratic Republic"
+      },
+      {
+        "value": "LAT",
+        "text": "Latvia"
+      },
+      {
+        "value": "LBN",
+        "text": "Lebanon"
+      },
+      {
+        "value": "LES",
+        "text": "Lesotho"
+      },
+      {
+        "value": "LBR",
+        "text": "Liberia"
+      },
+      {
+        "value": "LBA",
+        "text": "Libya"
+      },
+      {
+        "value": "LIE",
+        "text": "Liechtenstein"
+      },
+      {
+        "value": "LTU",
+        "text": "Lithuania"
+      },
+      {
+        "value": "LUX",
+        "text": "Luxembourg"
+      },
+      {
+        "value": "MAC",
+        "text": "Macao, China"
+      },
+      {
+        "value": "MAD",
+        "text": "Madagascar"
+      },
+      {
+        "value": "MAW",
+        "text": "Malawi"
+      },
+      {
+        "value": "MAS",
+        "text": "Malaysia"
+      },
+      {
+        "value": "MDV",
+        "text": "Maldives"
+      },
+      {
+        "value": "MLI",
+        "text": "Mali"
+      },
+      {
+        "value": "MLT",
+        "text": "Malta"
+      },
+      {
+        "value": "MRI",
+        "text": "Mauritius"
+      },
+      {
+        "value": "MEX",
+        "text": "Mexico"
+      },
+      {
+        "value": "MDA",
+        "text": "Republic of Moldova"
+      },
+      {
+        "value": "MGL",
+        "text": "Mongolia"
+      },
+      {
+        "value": "MNE",
+        "text": "Montenegro"
+      },
+      {
+        "value": "MAR",
+        "text": "Morocco"
+      },
+      {
+        "value": "MOZ",
+        "text": "Mozambique"
+      },
+      {
+        "value": "MYA",
+        "text": "Myanmar"
+      },
+      {
+        "value": "NAM",
+        "text": "Namibia"
+      },
+      {
+        "value": "NEP",
+        "text": "Nepal"
+      },
+      {
+        "value": "NED",
+        "text": "Netherlands"
+      },
+      {
+        "value": "NPA",
+        "text": "Neutral Para Athlete"
+      },
+      {
+        "value": "NZL",
+        "text": "New Zealand"
+      },
+      {
+        "value": "NCA",
+        "text": "Nicaragua"
+      },
+      {
+        "value": "NIG",
+        "text": "Niger"
+      },
+      {
+        "value": "NGR",
+        "text": "Nigeria"
+      },
+      {
+        "value": "MKD",
+        "text": "North Macedonia"
+      },
+      {
+        "value": "NOR",
+        "text": "Norway"
+      },
+      {
+        "value": "OMA",
+        "text": "Oman"
+      },
+      {
+        "value": "PAK",
+        "text": "Pakistan"
+      },
+      {
+        "value": "PLE",
+        "text": "Palestine"
+      },
+      {
+        "value": "PAN",
+        "text": "Panama"
+      },
+      {
+        "value": "PNG",
+        "text": "Papua New Guinea"
+      },
+      {
+        "value": "PAR",
+        "text": "Paraguay"
+      },
+      {
+        "value": "PER",
+        "text": "Peru"
+      },
+      {
+        "value": "PHI",
+        "text": "Philippines"
+      },
+      {
+        "value": "POL",
+        "text": "Poland"
+      },
+      {
+        "value": "POR",
+        "text": "Portugal"
+      },
+      {
+        "value": "PUR",
+        "text": "Puerto Rico"
+      },
+      {
+        "value": "QAT",
+        "text": "Qatar"
+      },
+      {
+        "value": "RPT",
+        "text": "Refugee Para(lympic) Team"
+      },
+      {
+        "value": "ROU",
+        "text": "Romania"
+      },
+      {
+        "value": "RUS",
+        "text": "Russian Federation"
+      },
+      {
+        "value": "RWA",
+        "text": "Rwanda"
+      },
+      {
+        "value": "VIN",
+        "text": "Saint Vincent and the Grenadines"
+      },
+      {
+        "value": "SMR",
+        "text": "San Marino"
+      },
+      {
+        "value": "STP",
+        "text": "Sao Tome and Principe"
+      },
+      {
+        "value": "KSA",
+        "text": "Saudi Arabia"
+      },
+      {
+        "value": "SEN",
+        "text": "Senegal"
+      },
+      {
+        "value": "SRB",
+        "text": "Serbia"
+      },
+      {
+        "value": "SEY",
+        "text": "Seychelles"
+      },
+      {
+        "value": "SLE",
+        "text": "Sierra Leone"
+      },
+      {
+        "value": "SGP",
+        "text": "Singapore"
+      },
+      {
+        "value": "SVK",
+        "text": "Slovakia"
+      },
+      {
+        "value": "SLO",
+        "text": "Slovenia"
+      },
+      {
+        "value": "SOL",
+        "text": "Solomon Islands"
+      },
+      {
+        "value": "SOM",
+        "text": "Somalia"
+      },
+      {
+        "value": "RSA",
+        "text": "South Africa"
+      },
+      {
+        "value": "ESP",
+        "text": "Spain"
+      },
+      {
+        "value": "SRI",
+        "text": "Sri Lanka"
+      },
+      {
+        "value": "SUR",
+        "text": "Suriname"
+      },
+      {
+        "value": "SWE",
+        "text": "Sweden"
+      },
+      {
+        "value": "SUI",
+        "text": "Switzerland"
+      },
+      {
+        "value": "SYR",
+        "text": "Syrian Arab Republic"
+      },
+      {
+        "value": "TPE",
+        "text": "Chinese Taipei"
+      },
+      {
+        "value": "TJK",
+        "text": "Tajikistan"
+      },
+      {
+        "value": "TAN",
+        "text": "Tanzania"
+      },
+      {
+        "value": "EUR",
+        "text": "Team Europe"
+      },
+      {
+        "value": "THA",
+        "text": "Thailand"
+      },
+      {
+        "value": "TLS",
+        "text": "Timor-Leste"
+      },
+      {
+        "value": "TOG",
+        "text": "Togo"
+      },
+      {
+        "value": "TGA",
+        "text": "Tonga"
+      },
+      {
+        "value": "TTO",
+        "text": "Trinidad and Tobago"
+      },
+      {
+        "value": "TUN",
+        "text": "Tunisia"
+      },
+      {
+        "value": "TUR",
+        "text": "Türkiye"
+      },
+      {
+        "value": "TKM",
+        "text": "Turkmenistan"
+      },
+      {
+        "value": "ISV",
+        "text": "U.S. Virgin Islands"
+      },
+      {
+        "value": "UGA",
+        "text": "Uganda"
+      },
+      {
+        "value": "UKR",
+        "text": "Ukraine"
+      },
+      {
+        "value": "UAE",
+        "text": "United Arab Emirates"
+      },
+      {
+        "value": "USA",
+        "text": "United States of America"
+      },
+      {
+        "value": "URU",
+        "text": "Uruguay"
+      },
+      {
+        "value": "UZB",
+        "text": "Uzbekistan"
+      },
+      {
+        "value": "VAN",
+        "text": "Vanuatu"
+      },
+      {
+        "value": "VEN",
+        "text": "Venezuela"
+      },
+      {
+        "value": "VIE",
+        "text": "Vietnam"
+      },
+      {
+        "value": "YEM",
+        "text": "Yemen"
+      },
+      {
+        "value": "ZAM",
+        "text": "Zambia"
+      },
+      {
+        "value": "ZIM",
+        "text": "Zimbabwe"
+      }
+    ]
+  ],
+  "frame_tables": 9,
+  "frame_html_excerpt": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\"><html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-GB\" lang=\"en-GB\" dir=\"ltr\"><head><title>SDMS - Classification Master List</title><meta name=\"csrf-param\" content=\"_csrf\">\n<meta name=\"csrf-token\" content=\"8N9smq6KzseIAP2aF1Ey2KHl9c_tL_xU7BG7zZ8M5FWo8g3q282Mpvhnm9RVIga1zZSxi6R2tGKZVtK5-UDUIg==\">\n\n<meta charset=\"UTF-8\">\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n<meta http-equiv=\"Expires\" content=\"86400\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n<meta name=\"author\" content=\"International Paralympic Committee (IPC)\">\n<link type=\"image/x-icon\" href=\"/sdms/favicon.ico\" rel=\"icon\">\n<link href=\"/sdms/css/layout.css?v=202630\" rel=\"stylesheet\">\n<link href=\"https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css\" rel=\"stylesheet\"></head><body><main id=\"w16-content\" role=\"main\"><div class=\"container-fluid\"><div class=\"position-relative\" aria-live=\"polite\" aria-atomic=\"true\"><div id=\"w17\" class=\"toast-container top-0 start-50 translate-middle-x\"></div></div><content id=\"content\" role=\"content\"><div id=\"w1\" class=\"text-center lib-form-header row align-items-center mb-2\"><div><h4 class=\"mb-0 py-2\">Classification Master List</h4></div></div><h5 class=\"text-center\">Swimming</h5><h5 class=\"text-center\">Summer Season 2026</h5><hr><div class=\"row\"><div class=\"col\"><dl class=\"row mb-0 text-muted\"><dt class=\"col-2\">Applied Filters</dt><dd class=\"col-10\">Region = African Region</dd><dt class=\"col-2\">Status</dt><dd class=\"col-10\">C (Confirmed), R (Review), R-y (Review + year), or N (New)</dd><dt class=\"col-2\">*</dt><dd class=\"col-10\">old Exception Codes (until 2017)</dd></dl></div><div class=\"col-auto\"><a type=\"button\" id=\"w2\" class=\"btn btn-primary lib-btn\" href=\"/sdms/web/cml/swm\">back</a></div></div><hr><h5><div id=\"w3\" class=\"d-flex align-items-center\"><div class=\"me-2 d-flex align-items-center justify-content-center\"><img class=\"border\" src=\"data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 version=%221.0%22 width=%22900%22 height=%22600%22 viewBox=%220 0 9 6%22%3E %3Ctitle%3EFlag of Cameroon%3C/title%3E %3Cpath d=%22M 0%2C0 H 9 V 6 H 0 Z%22 fill=%22%23ce1126%22/%3E %3Cpath d=%22M 0%2C0 H 3 V 6 H 0 Z%22 fill=%22%23007a5e%22/%3E %3Cpath d=%22M 6%2C0 H 9 V 6 H 6 Z%22 fill=%22%23fcd116%22/%3E %3Cpath d=%22M 4.0519978%2C8.9713793 5.2773166%2C8.0811325 H 3.7627392 L 4.9880581%2C8.9713793 4.5200279%2C7.5309302 Z%22 fill=%22%23fcd116%22 transform=%22translate%28-0.02077718%2C-5.3264359%29 matrix%281.0009411%2C0%2C0%2C1.0009411%2C-0.00350457%2C-0.00858636%29%22/%3E%3C/svg%3E\" alt=\"CMR Flag\" style=\"height: 19px;\"></div><span>Cameroon</span></div></h5><div class=\"table-md-responsive\"><table class=\"table table-hover table-sm table-striped small\"><colgroup><col style=\"width: 8%;\"><col style=\"width: 14%;\"><col style=\"width: 14%;\"><col style=\"width: 8%;\"><col style=\"width: 7%;\"><col style=\"width: 7%;\"><col style=\"width: 7%;\"><col style=\"width: 7%;\"><col style=\"width: 7%;\"><col style=\"width: 7%;\"><col style=\"width: 14%;\"></colgroup><thead class=\"table-primary\"><tr><th>SDMS ID</th><th>Family Name</th><th>Given Name</th><th>Gender</th><th>S</th><th>Status</th><th>SB</th><th>Status</th><th>SM</th><th>Status</th><th>Exceptions</th></tr></thead><tbody><tr><td>68906</td><td>Bouck Laka</td><td>Prince Djidda</td><td>M</td><td>S3</td><td>N</td><td></td><td></td><td></td><td></td><td>-</td></tr></tbody></table></div><h5><div id=\"w4\" class=\"d-flex align-items-center\"><div class=\"me-2 d-flex align-items-center justify-content-center\"><img class=\"border\" src=\"data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 xmlns:xlink=%22http://www.w3.org/1999/xlink%22 width=%22900%22 height=%22600%22%3E%3Cdefs%3E%3CclipPath clipPathUnits=%22userSpaceOnUse%22 id=%22c%22%3E%3Cpath d=%22m -109.44854%2C181.5283 c -0.0743%2C0.005 -0.14904%2C0.007 -0.22429%2C0.007 -1.64187%2C0 -5.45544%2C-0.84238 -6.92547%2C-2.10534 -1.53974%2C1.16668 -5.41628%2C2.10534 -7.03156%2C2.10534 -0.0758%2C0 -0.15062%2C-0.009 -0.22481%2C-0.0229 -0.004%2C0.36798 0.0154%2C0.74941 0.0382%2C1.09633 0.0855%2C1.29667 0.3129%2C2.59794 0.65818%2C3.85022 1.08693%2C3.94096 3.31152%2C7.29006 6.50134%2C9.83059 3.19246%2C-2.54265 5.41973%2C-5.89492 6.50902%2C-9.8388 0.34583%2C-1.25198 0.57398%2C-2.55315 0.66026%2C-3.84968 0.0202%2C-0.36299 0.0404%2C-0.80747 0.0391%2C-1.07276 z%22 fill=%22%23fff%22 stroke=%22%23c09300%22 stroke-width=%22.242%22/%3E%3C/clipPath%3E%3C/defs%3E%3Cpath d=%22M0 0H900V600H0z%22/%3E%3Cpath fill=%22%23fff%22 d=%22M0 0H900V400H0z%22/%3E%3Cpath fill=%22%23ce1126%22 d=%22M0 0H900V200H0z%22/%3E%3Cg transform=%22translate%28-0.00509995%2C0.00275164%29 matrix%280.23309335%2C0%2C0%2C0.23309335%2C344.14597%2C97.431038%29%22 fill=%22%23fff%22 stroke=%22%23c09300%22%3E%3Cpath d=%22m 457.60208%2C879.34399 293.822%2C272.76201 -20.918%2C-495.38002 c -3.073%2C-75.078 -68.316%2C-57.853 -115.709%2C-30.77 -48.01%2C30.77 -102.783%2C30.77 -160.648%2C10.454 -57.852%2C20.315 -112.629%2C20.315 -160.64%2C-10.455 -47.388%2C-27.08 -112.624%2C-44.308 -115.704%2C30.77 l -20.931%2C495.38102 z%22 stroke-width=%225.45%22 stroke-linejoin=%22round%22/%3E%3Cpath transform=%22translate%28-225.92792%2C881.60599%29 matrix%284.29012%2C0%2C0%2C4.29012%2C-1250.5%2C-1299.595%29%22 d=%22m 393.47%2C246.49 -4.734%2C112.32 -8.035%2C7.168 4.879%2C-115.47 c 2.294%2C-1.578 6.313%2C-4.017 7.89%2C-4.017 z m 9.62%2C8.04 -4.017%2C93.955 -8.032%2C8.22 4.877%2C-108.49 c 1.579%2C1.577 6.314%2C5.45 7.172%2C6.31 z m 8.75%2C7.17 -3.155%2C78.362 -6.455%2C6.31 4.018%2C-89.406 c 1.574%2C1.578 4.73%2C3.874 5.592%2C4.734 z m 9.47%2C4.02 -3.156%2C66.787 -6.313%2C5.12 3.156%2C-74.345 c 1.579%2C0.717 4.735%2C2.438 6.313%2C2.438 z m 8.75%2C0 -2.297%2C55.657 -6.455%2C6.313 2.44%2C-61.252 c 1.575%2C0 5.593%2C0 6.312%2C-0.718 z%22 id=%22a%22 fill=%22%23c09300%22 stroke=%22none%22/%3E%3Cuse height=%22100%25%22 width=%22100%25%22 transform=%22matrix%28-1%2C0%2C0%2C1%2C908.25417%2C5.1265624e-7%29%22 xlink:href=%22%23a%22/%3E%3Cpath d=%22m 467.68408%2C933.65699 41.24%2C187.71501 -13.547%2C13.536 -14.154%2C-10.463 -23.39%2C-167.39201 9.849%2C167.39201 -13.544%2C17.228 -13.54%2C-17.228 9.85%2C-167.39201 -23.383%2C167.39201 -14.168%2C10.463 -13.533%2C-13.536 41.233%2C-187.71601 h 27.087 z%22 fill=%22%23c09300%22 stroke-width=%224.607%22/%3E%3Cg id=%22b%22 fill=%22none%22 stroke=%22%23c09300%22 stroke-width=%221.27%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m 587.732%2C-30.405 -81.856%2C290.463 112.637%2C17.236 47.998%2C-218.47 -78.78%2C-89.23 z%22 fill=%22%23fff%22 stroke-width=%225.101%22 transform=%22translate%28-225.92792%2C881.60599%29%22/%3E%3Cpath d=%22m 560.661%2C68.697 9.848%2C23.994 53.219%2C-50.83%22 stroke-width=%225.448%22 transform=%22translate%28-225.92792%2C881.60599%29%22/%3E%3Cpath d=%22M 597.513%2C8.55 608.649%2C112.997 642.5%2C68.688 m -13.54%2C17.212 18.49%2C63.816 m 7.25%2C-23.446 -37.4%2C56.806 m 11.665%2C56.698 -11.97%2C-56.62 -10.45%2C-57.587 -25.056%2C33.93 -10.989%2C-39.121 -35.07%2C35.971 17.836%2C65.429 24.615%2C-40.477 13.538%2C41.238 25.27%2C-39.307%22 stroke-width=%225.448%22 transform=%22translate%28-225.92792%2C881.60599%29%22/%3E%3Cpath d=%22m 529.858%2C253.301 22.736%2C-31.934 14.813%2C49.152 20.31%2C-34.46 13.547%2C41.244%22 stroke-width=%225.448%22 transform=%22translate%28-225.92792%2C881.60599%29%22/%3E%3C/g%3E%3Cuse height=%22100%25%22 width=%22100%25%22 transform=%22matrix%28-1%2C0%2C0%2C1%2C908.25417%2C5.1265624e-7%29%22 xlink:href=%22%23b%22/%3E%3Cg stroke-width=%221.27%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m 680.055%2C389.899 c 85.558%2C0 167.418%2C-6.769 215.42%2C-20.31 20.316%2C-3.684 20.316%2C-14.147 20.316%2C-27.694 20.315%2C-6.768 9.845%2C-30.762 24%2C-30.762 -14.155%2C3.7 -17.228%2C-24 -34.462%2C-20.299 0%2C-24.01 -24.006%2C-27.083 -44.317%2C-20.325 -40.626%2C13.546 -112.637%2C16.625 -180.958%2C16.625 -68.316%2C-3.079 -139.716%2C-3.079 -180.953%2C-16.625 -20.31%2C-6.758 -44.304%2C-3.685 -44.304%2C20.325 -17.239%2C-3.7 -20.315%2C24 -34.467%2C20.3 14.152%2C0 3.687%2C23.993 24%2C30.761 0%2C13.547 0%2C24.01 20.926%2C27.694 47.385%2C13.541 129.253%2C20.31 214.798%2C20.31 z%22 stroke-width=%2210.202%22 transform=%22translate%28-225.92792%2C881.60599%29%22/%3E%3Cpath d=%22m 563.75%2C260.036 c 27.69%2C3.695 58.466%2C6.769 82.478%2C3.695 13.528%2C0 23.378%2C23.383 -3.701%2C27.083 -23.995%2C3.068 -61.542%2C0 -81.856%2C-3.7 -17.233%2C-3.078 -54.776%2C-9.844 -78.783%2C-16.625 -24.003%2C-10.452 -6.762%2C-30.751 6.766%2C-27.68 20.931%2C6.765 48.015%2C13.54 75.099%2C17.228 z m 232.653%2C0 c -27.7%2C3.695 -58.466%2C6.769 -81.86%2C3.695 -14.16%2C0 -24.008%2C23.383 3.077%2C27.083 24.005%2C3.068 61.55%2C0 81.847%2C-3.7 17.242%2C-3.078 54.78%2C-9.844 78.784%2C-16.625 24.01%2C-10.452 6.78%2C-30.751 -6.767%2C-27.68 -20.926%2C6.765 -48.006%2C13.54 -75.081%2C17.228 z%22 stroke-width=%225.448%22 transform=%22translate%28-225.92792%2C881.60599%29%22/%3E%3Cpath d=%22m 478.805%2C246.523 c -20.923%2C-3.695 -30.77%2C20.299 -23.993%2C33.835 3.073%2C-6.768 17.23%2C-6.768 20.312%2C-13.536 3.681%2C-10.455 -3.082%2C-10.455 3.681%2C-20.3 z m 81.856%2C62.936 c 0%2C-13.526 13.533%2C-11.863 13.533%2C-25.404 0%2C-6.766 -3.685%2C-17.234 -10.454%2C-17.234 -6.772%2C0 -13.546%2C6.768 -13.546%2C13.536 -3.08%2C13.544 10.467%2C15.578 10.467%2C29.102 z m 97.429%2C-38.955 c 20.294%2C0 18.283%2C27.089 8.432%2C40.627 0%2C-9.846 -17.23%2C-13.538 -17.23%2C-20.299 0%2C-10.476 15.556%2C-10.476 8.798%2C-20.328 z m 223.215%2C-23.981 c 20.926%2C-3.695 30.778%2C20.299 24.004%2C33.835 -3.08%2C-6.768 -17.233%2C-6.768 -20.31%2C-13.536 -3.694%2C-10.455 3.08%2C-10.455 -3.694%2C-20.3 z m -81.855%2C62.936 c 0%2C-13.526 -13.528%2C-11.863 -13.528%2C-25.404 0%2C-6.766 3.687%2C-17.234 10.459%2C-17.234 6.766%2C0 13.54%2C6.768 13.54%2C13.536 3.08%2C13.544 -10.471%2C15.578 -10.471%2C29.102 z m -97.43%2C-38.955 c -20.302%2C0 -18.288%2C27.089 -8.44%2C40.627 0%2C-9.846 17.228%2C-13.538 17.228%2C-20.299 0.003%2C-10.476 -15.556%2C-10.476 -8.787%2C-20.328 z%22 stroke-width=%225.448%22 transform=%22translate%28-225.92792%2C881.60599%29%22/%3E%3Cpath d=%22m 485.584%2C253.301 c 6.778%2C0 17.236%2C3.079 20.315%2C6.766 l -20.335%2C-6.779 z m 33.806%2C10.468 c 3.697%2C0 17.239%2C3.073 24.007%2C6.758 l -24.025%2C-6.779 z m 123.127%2C13.514 c -6.769%2C0 -20.31%2C0 -23.994%2C3.068 l 23.982%2C-3.089 z m -37.539%2C0 c -3.684%2C-3.7 -17.231%2C-3.7 -23.997%2C0 h 23.982 z M 874.57%2C253.301 c -6.769%2C0 -16.623%2C3.079 -20.316%2C6.766 z m -33.85%2C10.468 c -3.69%2C0 -17.234%2C3.073 -24.004%2C6.758 l 24.024%2C-6.779 z m -123.126%2C13.514 c 6.776%2C0 20.314%2C0 24.004%2C3.068 l -24.024%2C-3.089 z m 37.538%2C0 c 3.69%2C-3.7 17.24%2C-3.7 24.005%2C0 h -24.025 z%22 stroke-width=%223.822%22 transform=%22translate%28-225.92792%2C881.60599%29%22/%3E%3Cg fill=%22%23c09300%22 stroke=%22none%22%3E%3Cpath d=%22m 479.878%2C307.4 c -2.291%2C-0.438 -3.494%2C-2.251 -2.918%2C-4.396 0.703%2C-2.613 2.796%2C-4.108 4.773%2C-3.408 1.258%2C0.444 3.56%2C2.765 3.57%2C3.598 0.012%2C0.956 -1.205%2C3.229 -1.728%2C3.234 -0.226%2C0.002 -0.576%2C0.2 -0.778%2C0.437 -0.429%2C0.507 -1.773%2C0.753 -2.919%2C0.534 z m 235.656%2C16.817 c -0.852%2C-0.316 -2.21%2C-2.225 -2.208%2C-3.105 0.008%2C-1.661 2.463%2C-4.367 3.984%2C-4.382 0.752%2C-0.005 2.81%2C1.064 3.579%2C1.864 1.394%2C1.45 1.09%2C3.83 -0.662%2C5.182 -0.862%2C0.666 -3.433%2C0.907 -4.692%2C0.44 z m 1.545%2C10.639 c -1.803%2C-0.61 -2.462%2C-1.492 -2.609%2C-3.49 -0.152%2C-2.083 0.05%2C-2.407 2.25%2C-3.607 l 1.569%2C-0.855 1.486%2C0.663 c 2.06%2C0.918 2.975%2C1.908 3.048%2C3.292 0.078%2C1.492 -1.029%2C3.018 -2.747%2C3.788 -1.508%2C0.676 -1.598%2C0.682 -2.997%2C0.21 z%22 transform=%22translate%28-225.92792%2C881.60599%29%22/%3E%3Cpath d=%22m 498.797%2C288.137 c -1.485%2C-0.047 -3.523%2C1.318 -4.692%2C2.01 -2.785%2C0.654 -6.026%2C2.365 -8.714%2C0.537 -2.648%2C-0.818 -6.17%2C-0.173 -6.57%2C3.084 0.68%2C2.796 4.598%2C4.394 6.972%2C2.547 1.762%2C-2.306 6.57%2C-3.659 7.105%2C0.268 -1.96%2C2.97 -1.737%2C6.902 -3.351%2C10.055 -0.263%2C1.964 -1.08%2C3.829 -2.145%2C5.497 -1.983%2C0.199 -4.092%2C-0.035 -5.765%2C1.206 -2.686%2C0.147 -5.426%2C1.482 -6.972%2C3.754 -1.73%2C2.48 -3.383%2C5 -3.888%2C8.044 0.46%2C3.11 4.022%2C4.002 6.704%2C4.156 2.86%2C0.788 5.724%2C1.82 8.58%2C2.682 4.656%2C1.042 9.018%2C2.725 13.675%2C3.753 6.797%2C2.05 13.934%2C2.992 20.78%2C4.827 0.718%2C0.238 1.39%2C0.445 2.145%2C0.536 2.842%2C0.59 4.324%2C-2.5 4.558%2C-4.826 1.41%2C-4.975 2.486%2C-10.035 3.888%2C-15.016 0.965%2C-1.997 2.13%2C-6.509 -1.742%2C-5.496 -2.21%2C1.324 -4.084%2C3.318 -6.838%2C3.485 -3.75%2C0.219 -1.61%2C4.055 -0.134%2C5.631 0.326%2C2.52 -0.471%2C5.53 -2.145%2C7.508 -2.23%2C1.414 -5.026%2C-0.24 -7.374%2C-0.804 -2.465%2C0.042 -7.393%2C-1.216 -5.094%2C-4.559 0.816%2C-2.475 0.888%2C-5.183 1.877%2C-7.641 1.259%2C-2.637 1.439%2C-5.514 2.01%2C-8.312 -1.55%2C-3.335 -4.198%2C1.097 -6.3%2C1.474 -1.45%2C1.007 -6.888%2C1.434 -4.023%2C4.022 2.468%2C1.875 0.576%2C5.134 0.134%2C7.508 -0.158%2C3.304 -3.594%2C4.093 -6.301%2C3.352 -2.693%2C-0.13 -6.441%2C-2.135 -4.156%2C-5.095 0.52%2C-2.467 1.381%2C-4.891 1.877%2C-7.374 1.018%2C-2.993 1.876%2C-5.846 2.95%2C-8.848 0.465%2C-2.66 1.42%2C-5.182 2.68%2C-7.508 0.075%2C-2.94 2.05%2C-5.47 2.011%2C-8.446 -0.2%2C-1.454 -0.851%2C-1.983 -1.742%2C-2.011 z M 483.38%2C319.24 c 0.35%2C-0.06 0.6%2C-0.008 0.938%2C0.134 1.071%2C0.456 1.103%2C1.327 0%2C2.28 -0.482%2C0.415 -1.03%2C0.816 -1.207%2C0.804 -2.006%2C-0.173 -2.598%2C-0.471 -2.68%2C-1.207 -0.075%2C-0.649 0.13%2C-0.835 1.474%2C-1.475 0.667%2C-0.318 1.124%2C-0.475 1.475%2C-0.536 z m -4.446%2C21.537 c -2.128%2C-2 -1.785%2C-3.46 1.361%2C-5.806 1.347%2C-1.003 2.163%2C-0.89 3.703%2C0.515 2.37%2C2.162 2.465%2C3.53 0.373%2C5.383 -1.034%2C0.916 -1.486%2C1.104 -2.69%2C1.116 -1.259%2C0.013 -1.616%2C-0.144 -2.747%2C-1.208 z m 13.085%2C3.947 a 3.688%2C3.688 0 0 1 -2.67%2C-4.666 c 0.55%2C-1.865 0.87%2C-2.048 3.604%2C-2.076 3.067%2C-0.03 3.662%2C0.483 3.691%2C3.183 0.017%2C1.52 -0.1%2C1.872 -0.857%2C2.576 -0.888%2C0.826 -2.596%2C1.271 -3.768%2C0.982 z m 382.293%2C0.343 c -0.974%2C-0.81 -1.17%2C-1.177 -1.181%2C-2.209 -0.013%2C-1.761 1.002%2C-3.053 3.2%2C-4.049 2.926%2C-1.325 4.118%2C-1.143 5.22%2C0.797 1.465%2C2.58 1.395%2C3.633 -0.36%2C5.371 -0.969%2C0.96 -1.15%2C1.016 -3.368%2C1.038 -2.177%2C0.013 -2.426%2C-0.045 -3.511%2C-0.948 z M 509.394%2C350 c -1.561%2C-0.416 -2.37%2C-1.588 -2.39%2C-3.46 -0.018%2C-1.433 0.086%2C-1.661 1.087%2C-2.445 0.65%2C-0.508 1.674%2C-0.943 2.482%2C-1.053 1.145%2C-0.157 1.564%2C-0.057 2.485%2C0.59 2.362%2C1.66 2.864%2C3.303 1.496%2C4.897 -1.457%2C1.697 -2.837%2C2.091 -5.16%2C1.471 z m 94.04%2C4.205 c -0.347%2C-0.432 -1.112%2C-0.687 -1.191%2C-1.232 0.137%2C-2.38 0.251%2C-4.79 1.01%2C-7.07 0.412%2C-2.244 0.05%2C-4.588 0.833%2C-6.773 0.802%2C-3.977 0.801%2C-8.077 1.725%2C-12.028 0.043%2C-2.035 0.236%2C-4.071 0.826%2C-6.03 0.676%2C-3.096 0.058%2C-6.333 0.97%2C-9.392 -0.098%2C-1.15 1.225%2C-4.218 2.387%2C-2.4 1.687%2C2.473 3.91%2C4.483 6.096%2C6.5 1.878%2C1.084 0.154%2C2.68 -1.144%2C3.217 -1.781%2C0.702 -2.214%2C2.664 -2.088%2C4.385 -0.25%2C1.779 -0.963%2C3.462 -1.036%2C5.277 -0.377%2C2.67 -0.303%2C5.383 -0.65%2C8.05 -0.781%2C2.613 -0.482%2C5.405 -0.743%2C8.098 0.034%2C1.71 -0.778%2C3.263 -0.666%2C4.979 -0.208%2C1.74 -0.286%2C3.836 -1.747%2C5.03 -1.41%2C0.712 -3.45%2C0.589 -4.583%2C-0.611 z M 730.85%2C312.161 c -2.069%2C1.565 -3.919%2C3.412 -5.765%2C5.23 -2.542%2C1.925 2.088%2C3.045 2.681%2C4.692 0.675%2C2.515 0.635%2C5.193 0.805%2C7.776 0.769%2C2.365 1.108%2C4.884 0.938%2C7.374 -0.222%2C2.67 -3.704%2C2.107 -5.228%2C3.62 -2.11%2C0.888 -2.952%2C2.962 -4.559%2C4.423 -1.056%2C2.071 -1.339%2C4.618 -1.474%2C6.972 0.151%2C1.921 -1.298%2C4.072 0%2C5.765 0.167%2C0.239 0.365%2C0.566 0.536%2C0.804 0.434%2C0.623 1.47%2C0.126 2.145%2C0.268 2.16%2C-0.12 4.412%2C0.203 6.435%2C-0.67 5.191%2C-0.898 10.43%2C-0.97 15.686%2C-1.207 3.214%2C0.103 6.307%2C-1.016 9.519%2C-0.938 2.517%2C0.557 3.65%2C-2.172 3.62%2C-4.156 -1.426%2C-2.804 -0.194%2C-6.129 -1.341%2C-8.983 -1.008%2C-2.885 -0.611%2C-6.126 -1.073%2C-9.116 -0.063%2C-2.353 -3.049%2C-3.225 -4.558%2C-1.475 -1.465%2C1.48 -3.83%2C1.776 -4.96%2C3.62 -1.273%2C2.584 2.691%2C2.587 3.351%2C4.558 0.755%2C1.992 0.508%2C4.207 0.67%2C6.301 0.49%2C2.542 -2.27%2C2.687 -4.021%2C2.95 -2.303%2C0.863 -5.535%2C1.44 -6.838%2C-1.34 -0.819%2C-2.058 -0.707%2C-4.26 -0.938%2C-6.436 -0.057%2C-3.826 -0.977%2C-7.587 -1.207%2C-11.395 -0.22%2C-4.706 -1.033%2C-9.381 -1.34%2C-14.077 -0.044%2C-1.954 -0.304%2C-5.14 -3.084%2C-4.558 z m -2.681%2C35.394 1.34%2C0.134 0.134%2C1.609 0.134%2C1.608 -1.743%2C0.537 c -0.923%2C0.273 -1.73%2C0.404 -1.742%2C0.402 a 10.938%2C10.938 0 0 1 -0.805%2C-0.537 c -0.942%2C-0.68 -0.701%2C-1.651 0.536%2C-2.949 0.698%2C-0.73 1.025%2C-0.872 2.145%2C-0.804 z M 599.615%2C307.743 c -1.63%2C0.579 -3.7%2C2.973 -5.362%2C2.95 -3.776%2C0.266 -3.249%2C3.943 -0.537%2C5.228 0.358%2C1.115 0.022%2C2.522 0.134%2C3.754 0.527%2C3.387 -1.61%2C6.113 -1.206%2C9.519 -0.19%2C3.733 -1.317%2C7.369 -1.475%2C11.127 -1.06%2C3.876 -1.072%2C7.86 -1.743%2C11.798 -0.447%2C3.532 -3.001%2C2.286 -5.229%2C1.341 -0.017%2C-1.531 -0.116%2C-3.027 -0.134%2C-4.558 0.929%2C-3.506 -1.892%2C-4.529 -4.692%2C-4.96 -2.944%2C0.278 -4.388%2C-2.245 -3.754%2C-4.827 1.265%2C-1.506 4.445%2C-1.087 6.435%2C-1.34 4.21%2C0.872 4.04%2C-4.77 1.877%2C-6.704 -1.479%2C-2.727 -5.14%2C-3.9 -6.167%2C-6.703 0.41%2C-3.717 -2.058%2C-7.432 -5.094%2C-9.25 -4.67%2C-0.328 -8.196%2C3.702 -9.921%2C7.641 -1.942%2C0.561 -3.878%2C1.144 -5.765%2C1.877 -3.042%2C0.761 -7.378%2C6.036 -3.218%2C8.044 2.335%2C0.643 9.44%2C2.264 6.301%2C5.496 -1.768%2C3.034 -5.152%2C3.086 -8.178%2C2.28 -3.104%2C0.002 -6.56%2C-1.51 -6.435%2C-5.095 -0.633%2C-3.217 -0.529%2C-6.684 -2.01%2C-9.653 -0.638%2C-3.6 -4.723%2C-2.758 -4.961%2C0.536 -3.146%2C2.292 -2.727%2C5.997 -0.536%2C8.715 1.367%2C3.127 0.013%2C6.768 -1.34%2C9.652 -0.82%2C3.754 -4.96%2C3.882 -7.911%2C5.095 -1.448%2C0.562 -6.986%2C-0.334 -4.96%2C2.815 3.23%2C1.14 7.09%2C2.166 10.457%2C1.34 3.53%2C-0.437 6.596%2C-2.851 8.312%2C-5.898 2.371%2C-2.403 6.444%2C-1.145 9.519%2C-1.207 3.315%2C-0.008 6.704%2C2.328 9.92%2C0.805 0.933%2C-2.421 5.243%2C-6.417 6.57%2C-2.28 -0.226%2C3.702 3.043%2C5.688 6.435%2C5.23 3.706%2C-0.212 2.336%2C2.62 2.28%2C4.826 0.244%2C4.009 2.83%2C6.112 6.166%2C7.776 1.137%2C0.306 2.338%2C0.203 3.486%2C0 3.209%2C-1.009 6.665%2C-2.44 7.642%2C-6.033 1.302%2C-2.92 1.333%2C-6.224 2.279%2C-9.25 0.76%2C-4.848 1.741%2C-9.696 1.877%2C-14.613 1.184%2C-4.455 0.844%2C-9.164 1.742%2C-13.675 0.568%2C-3.354 0.99%2C-6.707 1.341%2C-10.055 -0.393%2C-1.79 -1.166%2C-2.09 -2.145%2C-1.743 z m -29.092%2C17.83 c 0.65%2C0.08 1.01%2C0.876 1.073%2C2.28 0.068%2C1.561 0.885%2C2.834 1.877%2C3.083 0.782%2C0.196 0.715%2C1.025 -0.134%2C1.609 -0.494%2C0.34 -1.377%2C0.545 -2.95%2C0.536 -2.48%2C-0.013 -4.017%2C-0.655 -5.362%2C-2.011 l -0.805%2C-0.804 1.207%2C-0.805 a 27.579%2C27.579 0 0 0 2.413%2C-2.145 c 1.222%2C-1.247 2.032%2C-1.822 2.681%2C-1.743 z m 283.282%2C-33.79 c -2.433%2C0.112 -4.879%2C0.506 -7.105%2C1.073 -4.463%2C-0.278 -6.703%2C4.406 -2.413%2C6.703 2.58%2C6.583 6.608%2C-1.359 10.725%2C-0.804 6.167%2C1.2 6.688%2C7.86 7.642%2C12.87 0.347%2C4.963 1.777%2C9.789 3.217%2C14.48 4.128%2C4.588 -3.092%2C7.465 -6.167%2C3.887 -2.622%2C-2.85 -8.239%2C-6.347 -11.395%2C-2.413 -3.877%2C1.642 -4.036%2C6.823 -7.24%2C8.312 -5.187%2C1.58 -5.84%2C-4.8 -8.58%2C-7.507 -2.52%2C-3.537 -7.338%2C-3.846 -11.262%2C-5.095 -1.84%2C-3.727 -0.881%2C-10.063 -4.692%2C-12.602 -3.2%2C1.305 -9.066%2C7.302 -4.156%2C10.055 4.795%2C4.121 -2.093%2C6.01 -4.29%2C8.848 -3.139%2C3.495 -3.64%2C8.306 -4.157%2C12.737 -5.402%2C2.984 -6.454%2C-3.38 -7.105%2C-7.374 -0.42%2C-4.768 -4.444%2C-3.369 -7.24%2C-1.609 -4.086%2C1.656 -6.126%2C5.536 -8.982%2C8.58 -0.343%2C2.779 0.16%2C5.82 0.134%2C8.715 0.928%2C3.48 5.158%2C1.846 7.776%2C1.608 4.199%2C-1.756 5.918%2C2.692 2.547%2C5.23 -2",
+  "rows_extracted": 45,
   "network_candidates": [
     {
+      "url": "https://www.paralympic.org/swimming/classified-athletes",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://consentcdn.cookiebot.com/consentconfig/0dd98a29-c6b7-479b-9254-9102a5cbd85f/settings.json",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
       "url": "https://www.ipc-services.org/sdms/web/cml/swm",
-      "status": 403,
-      "content_type": "text/html"
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/css/layout.css?v=202630",
+      "status": 200,
+      "content_type": "text/css"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/assets/c0b5974b/yii.js",
+      "status": 200,
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/assets/c0b5974b/yii.activeForm.js",
+      "status": 200,
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/assets/cbf5028b/js/bootstrap.bundle.js",
+      "status": 200,
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://www.paralympic.org/metrics/g/collect?v=2&tid=G-EFXW45ME1V&gtm=45je67m0v9239231353z89229636711za20gzb9229636711zd9229636711&_p=1785094858670&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&gdid=dMWZhNz&ecid=568588052&_eu=AAAAAGA&_fplc=0&are=1&cid=503138493.1785094860&frm=0&pscdl=noapi&rcb=0&sr=1600x1200&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&ur=US-IL&sst.rnd=1507309915.1785094860&sst.adr=1&sst.us_privacy=1---&sst.tft=1785094858670&sst.lpc=167079999&sst.navt=n&sst.ude=0&sst.sw_exp=1&gaf=2&_s=1&tag_exp=115938466~115938469~118897920~118897930~119896802&dl=https%3A%2F%2Fwww.paralympic.org%2Fswimming%2Fclassified-athletes&sid=1785094859&sct=1&seg=0&dt=Swimming%20Classification%20Master%20List%20%7C%20World%20Para%20Swimming&_tu=DA&en=page_view&_fv=2&_nsi=1&_ss=1&_c=1&gap.sstd=1&evnid=1785095417740_17850951673696&tfd=1859&richsstsse",
+      "status": 200,
+      "content_type": "text/plain"
+    },
+    {
+      "url": "https://www.google.com/measurement/conversion/?random=237456209&fmt=8&cv=12&fst=1785094860290&tid=G-EFXW45ME1V&gtm=45j91e67m1v9239231353z89229636711z99229636247za20gzb9229636711zd9229636711&tag_exp=115938466~115938469~117401771~118032361~118897920~118897930~119896802&gap.sstd=1&rcb=0&gcs=G111&dma=0&npa=0&s3p=1&gacid=TynVGUjVc7CRNRuLhFNb%2FvL0NDCihQplo%2F4GdlVHxFI%3D.1785094860&gdid=dMWZhNz&us_privacy=1---&pscdl=noapi&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&en=page_view",
+      "status": 200,
+      "content_type": ""
+    },
+    {
+      "url": "https://www.google.com/measurement/conversion/?random=460684463&fmt=8&cv=12&fst=1785094860300&tid=G-EFXW45ME1V&gtm=45j91e67m1v9239231353z89229636711z99229636247za20gzb9229636711zd9229636711&tag_exp=115938466~115938469~117401771~118032361~118897920~118897930~119896802&gap.sstd=1&rcb=0&gcs=G111&dma=0&npa=0&s3p=1&gacid=TynVGUjVc7CRNRuLhFNb%2FvL0NDCihQplo%2F4GdlVHxFI%3D.1785094860&gdid=dMWZhNz&us_privacy=1---&pscdl=noapi&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uamb=0&uam=&uap=Windows&uapv=10.0&uaw=0&en=first_visit",
+      "status": 200,
+      "content_type": ""
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/assets/58297ff8/jquery.js",
+      "status": 200,
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://api.userway.org/api/v1/tunings/auFeha0CUz",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://cdn.userway.org/widgetapp/2026-07-07-10-43-48/locales/en-US.json",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://cdn.userway.org/remediations/consolidated/1173374/OcFv8gppgpKYQFdN.json",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://cdn.userway.org/remediations/consolidated/1173374/OcFv8gppgpKYQFdN.json",
+      "status": 200,
+      "content_type": "application/json"
+    },
+    {
+      "url": "https://www.facebook.com/tr/?id=1143245079059661&ev=PageView&dl=https%3A%2F%2Fwww.paralympic.org%2Fswimming%2Fclassified-athletes&rl=&if=false&ts=1785094863503&iw=false&sw=1600&sh=1200&v=2.9.363&r=stable&a=tmSimo-GTM-WebTemplate&ec=0&o=12318&aems=0%3B0&fbp=fb.1.1785094863490.177983398530769507&ler=empty&pmd[title]=Swimming%20Classification%20Master%20List%20%7C%20World%20Para%20Swimming&pmd[locale]=en&pmd[description]=Please%20select%20the%20season%20and%20specify%20the%20NPC%20to%20view%20the%20list%20of%20licensed%20athletes%20for%20World%20Para%20Swimming%20recognised%20competitions.&plt=1214&iss=1&imft=1&tz=0&it=1785094863400&coo=false&tm=1&expv2[0]=pl1&expv2[1]=el3&expv2[2]=bc1&expv2[3]=ra2&expv2[4]=rp2&expv2[5]=ct2&expv2[6]=hf0&rqm=GET",
+      "status": 200,
+      "content_type": "text/plain"
+    },
+    {
+      "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-XXXXXXXXXX&gtm=45je67m1h2za200&_p=1785094858670&gcs=G111&gcd=13v3v3v3v7l1&npa=1&dma=0&gdid=dMWZhNz&are=1&cid=503138493.1785094860&frm=0&pscdl=noapi&rcb=18&sr=1600x1200&uaa=x86&uab=64&uafvl=HeadlessChrome%3B149.0.7827.55%7CChromium%3B149.0.7827.55%7CNot)A%253BBrand%3B24.0.0.0&uam=&uamb=0&uap=Windows&uapv=10.0&uaw=0&ul=en-us&_s=1&tag_exp=115938466~115938469~118897920~118897930~119527019~119793973~119896802&sid=1785094863&sct=1&seg=0&dl=https%3A%2F%2Fwww.paralympic.org%2Fswimming%2Fclassified-athletes&dt=Swimming%20Classification%20Master%20List%20%7C%20World%20Para%20Swimming&_tu=CA&en=page_view&_fv=1&_ss=1&_ee=1&ep.anonymize_ip=true&tfd=5709",
+      "status": 204,
+      "content_type": "text/plain"
+    },
+    {
+      "url": "https://analytics.twitter.com/i/adsct?bci=3&dv=UTC%26en-US%26Google%20Inc.%26Linux%20x86_64%26255%261600%261200%264%2624%261600%261200%260%26na&eci=2&event_id=0a6de253-5afb-4e19-b145-4b2db0717ac9&events=%5B%5B%22pageview%22%2C%7B%7D%5D%5D&integration=advertiser&p_id=Twitter&p_user_id=0&pl_id=1ff01ea1-afb5-478f-8536-e4cad901b874&pt=Swimming%20Classification%20Master%20List%20%7C%20World%20Para%20Swimming&tw_document_href=https%3A%2F%2Fwww.paralympic.org%2Fswimming%2Fclassified-athletes&tw_iframe_status=0&tw_order_quantity=0&tw_pid_src=1&tw_sale_amount=0&twpid=tw.1785094863609.726274366956087724&txn_id=o4sr5&type=javascript&version=2.3.54",
+      "status": 200,
+      "content_type": "image/gif;charset=utf-8"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/web/cml/swm",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/css/layout.css?v=202630",
+      "status": 200,
+      "content_type": "text/css"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/assets/58297ff8/jquery.js",
+      "status": 200,
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/assets/c0b5974b/yii.js",
+      "status": 200,
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/assets/cbf5028b/js/bootstrap.bundle.js",
+      "status": 200,
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/assets/c0b5974b/yii.activeForm.js",
+      "status": 200,
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://t.co/i/adsct?bci=3&dv=UTC%26en-US%26Google%20Inc.%26Linux%20x86_64%26255%261600%261200%264%2624%261600%261200%260%26na&eci=2&event_id=0a6de253-5afb-4e19-b145-4b2db0717ac9&events=%5B%5B%22pageview%22%2C%7B%7D%5D%5D&integration=advertiser&p_id=Twitter&p_user_id=0&pl_id=1ff01ea1-afb5-478f-8536-e4cad901b874&pt=Swimming%20Classification%20Master%20List%20%7C%20World%20Para%20Swimming&tw_document_href=https%3A%2F%2Fwww.paralympic.org%2Fswimming%2Fclassified-athletes&tw_iframe_status=0&tw_order_quantity=0&tw_pid_src=1&tw_sale_amount=0&twpid=tw.1785094863609.726274366956087724&txn_id=o4sr5&type=javascript&version=2.3.54",
+      "status": 200,
+      "content_type": "image/gif;charset=utf-8"
+    },
+    {
+      "url": "https://analytics.tiktok.com/api/v2/pixel",
+      "status": 200,
+      "content_type": ""
+    },
+    {
+      "url": "https://analytics.tiktok.com/api/v2/pixel",
+      "status": 200,
+      "content_type": ""
+    },
+    {
+      "url": "https://analytics.tiktok.com/api/v2/pixel/act",
+      "status": 200,
+      "content_type": ""
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/web/cml/swm",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/css/layout.css?v=202630",
+      "status": 200,
+      "content_type": "text/css"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/assets/58297ff8/jquery.js",
+      "status": 200,
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/assets/c0b5974b/yii.js",
+      "status": 200,
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/assets/cbf5028b/js/bootstrap.bundle.js",
+      "status": 200,
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/assets/c0b5974b/yii.activeForm.js",
+      "status": 200,
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://api.userway.org/api/a11y-data/v0/page/https%3A%2F%2Fwww.paralympic.org%2Fswimming%2Fclassified-athletes/DESKTOP/WIDGET_ON/status",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://cdn77.api.userway.org/api/img-dscr/v2/auFeha0CUz/1173374/iSnoJiOTUTvxyQHN/alts.json?dto=%7B%22sorted%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Fwww.paralympic.org%2Fsites%2Fdefault%2Ffiles%2F2021-06%2F2019_02%2520Website%2520headers_SWI.png%22%2C%22alt%22%3A%22World-Para-Swimming-header-logo%22%2C%22dir%22%3A%22RO%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fwww.paralympic.org%2Fsites%2Fdefault%2Ffiles%2Fpublic%253A%2F%2Fmenu_image%2F2021-06%2FFB_White.png%22%2C%22alt%22%3A%22Facebook%20icon%22%2C%22dir%22%3A%22RO%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fwww.paralympic.org%2Fsites%2Fdefault%2Ffiles%2Fpublic%253A%2F%2Fmenu_image%2F2021-06%2FInsta_White.png%22%2C%22alt%22%3A%22Instagram%20icon%22%2C%22dir%22%3A%22RO%22%7D%5D%2C%22tier%22%3A%22PAID_QUOTA_TIER%22%2C%22pageUrl%22%3A%22https%3A%2F%2Fwww.paralympic.org%2Fswimming%2Fclassified-athletes%22%7D",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://cdn77.api.userway.org/api/img-dscr/v2/auFeha0CUz/1173374/iSnoJiOTUTvxyQHN/alts.json?dto=%7B%22sorted%22%3A%5B%7B%22src%22%3A%22https%3A%2F%2Fwww.paralympic.org%2Fsites%2Fdefault%2Ffiles%2F2019-08%2FSWANS%2520LOGO.jpg%22%2C%22alt%22%3A%22Official%20Swans%20logo%22%2C%22dir%22%3A%22RO%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fwww.paralympic.org%2Fsites%2Fdefault%2Ffiles%2F2021-06%2FWorld-Para-Swimming%2520%25281%2529.png%22%2C%22alt%22%3A%22World%20Para%20Swimming%20logo%22%2C%22dir%22%3A%22RO%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fwww.paralympic.org%2Fsites%2Fdefault%2Ffiles%2Fpublic%253A%2F%2Fmenu_image%2F2021-06%2FYoutube_White.png%22%2C%22alt%22%3A%22Youtube%20icon%22%2C%22dir%22%3A%22RO%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fwww.paralympic.org%2Fsites%2Fdefault%2Ffiles%2Fpublic%253A%2F%2Fmenu_image%2F2023-11%2FTwitter-Logo-1_4.png%22%2C%22alt%22%3A%22Twitter%20icon%22%2C%22dir%22%3A%22RO%22%7D%2C%7B%22src%22%3A%22https%3A%2F%2Fwww.paralympic.org%2Fsites%2Fdefault%2Ffiles%2Fpublic%253A%2F%2Fmenu_image%2F2025-03%2Ftiktok-white-logo.png%22%2C%22alt%22%3A%22Tiktok%20icon%22%2C%22dir%22%3A%22RO%22%7D%5D%2C%22tier%22%3A%22PAID_QUOTA_TIER%22%2C%22pageUrl%22%3A%22https%3A%2F%2Fwww.paralympic.org%2Fswimming%2Fclassified-athletes%22%7D",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/web/list-organisations?id=AFR&prompt=&_=1785094865259",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/web/cml/swm",
+      "status": 302,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/web/cml/swm/html/season/s26/region/afr",
+      "status": 200,
+      "content_type": "text/html; charset=UTF-8"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/css/layout.css?v=202630",
+      "status": 200,
+      "content_type": "text/css"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/assets/cbf5028b/js/bootstrap.bundle.js",
+      "status": 200,
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/assets/58297ff8/jquery.js",
+      "status": 200,
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://www.ipc-services.org/sdms/assets/c0b5974b/yii.js",
+      "status": 200,
+      "content_type": "application/javascript"
+    },
+    {
+      "url": "https://analytics.tiktok.com/api/v2/pixel",
+      "status": 200,
+      "content_type": ""
     }
   ]
 }

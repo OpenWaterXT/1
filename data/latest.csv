@@ -1,1 +1,46 @@
-athlete_id,name,npc,gender,sport_class,status,review_date
+athlete_id,exceptions,family_name,gender,given_name,name,npc,s,sb,sdms_id,sm,status
+23cc4f0084709c4d,T,Ferreira,F,Alani,Alani Ferreira,AFR,S13,SB13,27000,SM13,R-2027
+8f902b42d538de50,T,Hendricks,M,Nathan,Nathan Hendricks,AFR,S13,SB13,57004,SM13,R-2029
+ad904f37133e2811,-,Janse Van Rensburg,F,Minke,Minke Janse Van Rensburg,AFR,S14,SB14,52683,SM14,R-2028
+a8d09eaeec700437,-,Lawrence,M,Elih Thomas,Elih Thomas Lawrence,AFR,S14,SB14,66392,SM14,R-2028
+ffb206ec1e4ce0cd,-,Nel,M,Jean-Pierre,Jean-Pierre Nel,AFR,S14,SB14,66551,SM14,R
+6db68ef360ac504e,"A, 3, 5",Sadie,M,Christian,Christian Sadie,AFR,S7,SB7,30469,SM7,C
+a2f6bbc69a52fbd5,"A, Y, E, 3, 4, 12",Swanepoel,F,Kat,Kat Swanepoel,AFR,S5,SB4,44602,SM5,R-2025
+c083ae5ff8a4ba35,T,Vyncke,F,Danika,Danika Vyncke,AFR,S13,SB13,57005,SM13,R-2029
+3c40f3abe522f940,T,Vyncke,F,Ivana,Ivana Vyncke,AFR,S13,SB13,59311,SM13,R-2030
+23cc4f0084709c4d,T,Ferreira,F,Alani,Alani Ferreira,AMR,S13,SB13,27000,SM13,R-2027
+8f902b42d538de50,T,Hendricks,M,Nathan,Nathan Hendricks,AMR,S13,SB13,57004,SM13,R-2029
+ad904f37133e2811,-,Janse Van Rensburg,F,Minke,Minke Janse Van Rensburg,AMR,S14,SB14,52683,SM14,R-2028
+a8d09eaeec700437,-,Lawrence,M,Elih Thomas,Elih Thomas Lawrence,AMR,S14,SB14,66392,SM14,R-2028
+ffb206ec1e4ce0cd,-,Nel,M,Jean-Pierre,Jean-Pierre Nel,AMR,S14,SB14,66551,SM14,R
+6db68ef360ac504e,"A, 3, 5",Sadie,M,Christian,Christian Sadie,AMR,S7,SB7,30469,SM7,C
+a2f6bbc69a52fbd5,"A, Y, E, 3, 4, 12",Swanepoel,F,Kat,Kat Swanepoel,AMR,S5,SB4,44602,SM5,R-2025
+c083ae5ff8a4ba35,T,Vyncke,F,Danika,Danika Vyncke,AMR,S13,SB13,57005,SM13,R-2029
+3c40f3abe522f940,T,Vyncke,F,Ivana,Ivana Vyncke,AMR,S13,SB13,59311,SM13,R-2030
+23cc4f0084709c4d,T,Ferreira,F,Alani,Alani Ferreira,ASR,S13,SB13,27000,SM13,R-2027
+8f902b42d538de50,T,Hendricks,M,Nathan,Nathan Hendricks,ASR,S13,SB13,57004,SM13,R-2029
+ad904f37133e2811,-,Janse Van Rensburg,F,Minke,Minke Janse Van Rensburg,ASR,S14,SB14,52683,SM14,R-2028
+a8d09eaeec700437,-,Lawrence,M,Elih Thomas,Elih Thomas Lawrence,ASR,S14,SB14,66392,SM14,R-2028
+ffb206ec1e4ce0cd,-,Nel,M,Jean-Pierre,Jean-Pierre Nel,ASR,S14,SB14,66551,SM14,R
+6db68ef360ac504e,"A, 3, 5",Sadie,M,Christian,Christian Sadie,ASR,S7,SB7,30469,SM7,C
+a2f6bbc69a52fbd5,"A, Y, E, 3, 4, 12",Swanepoel,F,Kat,Kat Swanepoel,ASR,S5,SB4,44602,SM5,R-2025
+c083ae5ff8a4ba35,T,Vyncke,F,Danika,Danika Vyncke,ASR,S13,SB13,57005,SM13,R-2029
+3c40f3abe522f940,T,Vyncke,F,Ivana,Ivana Vyncke,ASR,S13,SB13,59311,SM13,R-2030
+23cc4f0084709c4d,T,Ferreira,F,Alani,Alani Ferreira,EUR,S13,SB13,27000,SM13,R-2027
+8f902b42d538de50,T,Hendricks,M,Nathan,Nathan Hendricks,EUR,S13,SB13,57004,SM13,R-2029
+ad904f37133e2811,-,Janse Van Rensburg,F,Minke,Minke Janse Van Rensburg,EUR,S14,SB14,52683,SM14,R-2028
+a8d09eaeec700437,-,Lawrence,M,Elih Thomas,Elih Thomas Lawrence,EUR,S14,SB14,66392,SM14,R-2028
+ffb206ec1e4ce0cd,-,Nel,M,Jean-Pierre,Jean-Pierre Nel,EUR,S14,SB14,66551,SM14,R
+6db68ef360ac504e,"A, 3, 5",Sadie,M,Christian,Christian Sadie,EUR,S7,SB7,30469,SM7,C
+a2f6bbc69a52fbd5,"A, Y, E, 3, 4, 12",Swanepoel,F,Kat,Kat Swanepoel,EUR,S5,SB4,44602,SM5,R-2025
+c083ae5ff8a4ba35,T,Vyncke,F,Danika,Danika Vyncke,EUR,S13,SB13,57005,SM13,R-2029
+3c40f3abe522f940,T,Vyncke,F,Ivana,Ivana Vyncke,EUR,S13,SB13,59311,SM13,R-2030
+23cc4f0084709c4d,T,Ferreira,F,Alani,Alani Ferreira,OCR,S13,SB13,27000,SM13,R-2027
+8f902b42d538de50,T,Hendricks,M,Nathan,Nathan Hendricks,OCR,S13,SB13,57004,SM13,R-2029
+ad904f37133e2811,-,Janse Van Rensburg,F,Minke,Minke Janse Van Rensburg,OCR,S14,SB14,52683,SM14,R-2028
+a8d09eaeec700437,-,Lawrence,M,Elih Thomas,Elih Thomas Lawrence,OCR,S14,SB14,66392,SM14,R-2028
+ffb206ec1e4ce0cd,-,Nel,M,Jean-Pierre,Jean-Pierre Nel,OCR,S14,SB14,66551,SM14,R
+6db68ef360ac504e,"A, 3, 5",Sadie,M,Christian,Christian Sadie,OCR,S7,SB7,30469,SM7,C
+a2f6bbc69a52fbd5,"A, Y, E, 3, 4, 12",Swanepoel,F,Kat,Kat Swanepoel,OCR,S5,SB4,44602,SM5,R-2025
+c083ae5ff8a4ba35,T,Vyncke,F,Danika,Danika Vyncke,OCR,S13,SB13,57005,SM13,R-2029
+3c40f3abe522f940,T,Vyncke,F,Ivana,Ivana Vyncke,OCR,S13,SB13,59311,SM13,R-2030
