@@ -1,0 +1,16 @@
+{
+  "captured_at": "2026-07-26T19:33:49.137549+00:00",
+  "source": "https://www.paralympic.org/swimming/classified-athletes",
+  "records": 0,
+  "fields": [
+    "athlete_id",
+    "name",
+    "npc",
+    "gender",
+    "sport_class",
+    "status",
+    "review_date"
+  ],
+  "snapshot": "data/snapshots/2026-07-26.csv",
+  "athletes": []
+}
