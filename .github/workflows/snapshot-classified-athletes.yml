@@ -16,7 +16,7 @@ permissions:
 jobs:
   snapshot:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -25,7 +25,7 @@ jobs:
       - name: Install scraper
         run: |
           python -m pip install --upgrade pip
-          pip install playwright
+          pip install playwright beautifulsoup4
           playwright install --with-deps chromium
       - name: Capture official WPS master list
         run: python scrape_current_master_list.py
