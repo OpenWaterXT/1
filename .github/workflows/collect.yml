@@ -15,6 +15,8 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/collect.yml'
+      - 'scrape_master_lists.py'
+      - 'requirements.txt'
   schedule:
     - cron: '17 5 1 * *'
 
@@ -24,6 +26,7 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
