@@ -85,18 +85,45 @@ def accept_cookies(page) -> None:
             pass
 
 
+def wait_for_frame(page):
+    for _ in range(40):
+        page.wait_for_timeout(500)
+        frame = next((f for f in page.frames if "ipc-services.org/sdms/web/cml/swm" in f.url), None)
+        if frame:
+            return frame
+    return None
+
+
+def submit_current_form(frame, page) -> None:
+    form = frame.locator("form").first
+    if not form.count():
+        raise RuntimeError("IPC form not found")
+    old_url = frame.url
+    form.evaluate("form => form.submit()")
+    for _ in range(40):
+        page.wait_for_timeout(250)
+        if frame.url != old_url or frame.locator("table").count():
+            break
+    page.wait_for_timeout(300)
+
+
 def main() -> int:
     OUT.mkdir(exist_ok=True)
     SNAPSHOTS.mkdir(parents=True, exist_ok=True)
     now = datetime.now(timezone.utc)
     day = now.strftime("%Y-%m-%d")
-    diagnostics: dict[str, object] = {"source": PARENT_URL, "embedded_source": IPC_URL, "captured_at": now.isoformat()}
+    diagnostics: dict[str, object] = {
+        "source": PARENT_URL,
+        "embedded_source": IPC_URL,
+        "captured_at": now.isoformat(),
+    }
     rows: list[dict[str, str]] = []
 
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True)
         context = browser.new_context(
-            viewport={"width": 1600, "height": 1200}, locale="en-US",
+            viewport={"width": 1600, "height": 1200},
+            locale="en-US",
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131 Safari/537.36",
         )
         page = context.new_page()
@@ -109,12 +136,7 @@ def main() -> int:
             raise RuntimeError("Official IPC Services iframe not found")
         iframe.evaluate("(el, src) => { el.classList.remove('cookieconsent-optin-statistics'); el.src = src; }", IPC_URL)
 
-        frame = None
-        for _ in range(30):
-            page.wait_for_timeout(1000)
-            frame = next((f for f in page.frames if "ipc-services.org/sdms/web/cml/swm" in f.url), None)
-            if frame:
-                break
+        frame = wait_for_frame(page)
         if frame is None:
             raise RuntimeError("Official IPC Services iframe did not load")
 
@@ -133,20 +155,34 @@ def main() -> int:
             {"value": o.get_attribute("value") or "", "text": clean(o.inner_text())}
             for o in selects.nth(2).locator("option").all()
         ]
-        npcs = [o for o in npc_options if o["value"].upper() not in REGIONS and re.fullmatch(r"[A-Za-z]{3}", o["value"] or "")]
+        npcs = [
+            o for o in npc_options
+            if o["value"].upper() not in REGIONS and re.fullmatch(r"[A-Za-z]{3}", o["value"] or "")
+        ]
         diagnostics.update({"season_selected": season, "npc_count": len(npcs), "npcs": npcs})
 
         seen: set[str] = set()
         errors: list[dict[str, str]] = []
+        counts: dict[str, int] = {}
+
         for index, npc in enumerate(npcs, 1):
             code = npc["value"].upper()
-            route = f"{IPC_URL}/html/season/{season.lower()}/npc/{code.lower()}"
             try:
-                response = context.request.get(route, headers={"Referer": PARENT_URL}, timeout=30000)
-                if not response.ok:
-                    errors.append({"npc": code, "status": str(response.status)})
-                    continue
-                found = parse_table(response.text())
+                # Return to the official form before each request so the selectors
+                # and CSRF/session state are always fresh.
+                if frame.url.rstrip("/") != IPC_URL.rstrip("/"):
+                    frame.goto(IPC_URL, wait_until="domcontentloaded", timeout=60000)
+                    page.wait_for_timeout(350)
+
+                current_selects = frame.locator("select")
+                if current_selects.count() < 3:
+                    raise RuntimeError(f"Expected 3 selectors, found {current_selects.count()}")
+                current_selects.nth(0).select_option(season)
+                current_selects.nth(2).select_option(npc["value"])
+                submit_current_form(frame, page)
+
+                found = parse_table(frame.content())
+                counts[code] = len(found)
                 for row in found:
                     row["npc"] = code
                     row["athlete_id"] = athlete_key(row)
@@ -158,13 +194,21 @@ def main() -> int:
             except Exception as exc:
                 errors.append({"npc": code, "error": str(exc)[:300]})
 
+        diagnostics["npc_counts"] = counts
         diagnostics["npc_errors"] = errors
         diagnostics["rows_extracted"] = len(rows)
+        diagnostics["final_frame_url"] = frame.url
         browser.close()
 
-    fields = sorted({key for row in rows for key in row}) or [
-        "athlete_id", "name", "npc", "gender", "s", "sb", "sm", "status", "review_date"
-    ]
+    # Never overwrite a valid dataset with an empty capture.
+    if not rows:
+        diagnostics["preserved_previous_dataset"] = True
+        (OUT / "capture_diagnostics.json").write_text(
+            json.dumps(diagnostics, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        raise RuntimeError("Capture returned zero athletes; previous dataset preserved")
+
+    fields = sorted({key for row in rows for key in row})
     snapshot = SNAPSHOTS / f"{day}.csv"
     for target in (snapshot, OUT / "latest.csv"):
         with target.open("w", newline="", encoding="utf-8") as handle:
