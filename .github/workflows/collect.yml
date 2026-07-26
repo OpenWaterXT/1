@@ -1,0 +1,40 @@
+name: Collect WPS Master Lists
+
+on:
+  workflow_dispatch:
+    inputs:
+      start_year:
+        description: First year
+        required: true
+        default: '2012'
+      end_year:
+        description: Last year
+        required: true
+        default: '2026'
+  schedule:
+    - cron: '17 5 1 * *'
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements.txt
+      - name: Collect archived lists
+        run: |
+          python scrape_master_lists.py \
+            --start-year "${{ inputs.start_year || '2012' }}" \
+            --end-year "${{ inputs.end_year || '2026' }}"
+      - name: Commit collected documents
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet || git commit -m "Update WPS master lists archive"
+          git push
