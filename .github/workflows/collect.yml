@@ -11,6 +11,10 @@ on:
         description: Last year
         required: true
         default: '2026'
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/collect.yml'
   schedule:
     - cron: '17 5 1 * *'
 
