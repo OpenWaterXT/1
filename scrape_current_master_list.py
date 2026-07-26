@@ -8,12 +8,14 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-from playwright.sync_api import Frame, Page, sync_playwright
+from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright
 
 PARENT_URL = "https://www.paralympic.org/swimming/classified-athletes"
 IPC_URL = "https://www.ipc-services.org/sdms/web/cml/swm"
 OUT = Path("data")
 SNAPSHOTS = OUT / "snapshots"
+REGIONS = {"AFR", "AMR", "ASR", "EUR", "OCR"}
 
 
 def clean(value: str) -> str:
@@ -21,7 +23,7 @@ def clean(value: str) -> str:
 
 
 def athlete_key(row: dict[str, str]) -> str:
-    raw = "|".join(clean(row.get(k, "")).lower() for k in ("name", "npc", "gender"))
+    raw = "|".join(clean(row.get(k, "")).lower() for k in ("sdms_id", "name", "npc", "gender"))
     return hashlib.sha1(raw.encode("utf-8")).hexdigest()[:16]
 
 
@@ -34,6 +36,8 @@ def normalise(headers: list[str], cells: list[str]) -> dict[str, str]:
         "sport class": "sport_class", "class": "sport_class",
         "status": "status", "sport class status": "status",
         "review date": "review_date", "fixed review date": "review_date", "frd": "review_date",
+        "sdms id": "sdms_id", "id": "sdms_id",
+        "s": "s", "sb": "sb", "sm": "sm", "exceptions": "exceptions",
     }
     row: dict[str, str] = {}
     for index, cell in enumerate(cells):
@@ -46,18 +50,19 @@ def normalise(headers: list[str], cells: list[str]) -> dict[str, str]:
     return row
 
 
-def extract_table(scope: Page | Frame) -> list[dict[str, str]]:
+def parse_table(html: str) -> list[dict[str, str]]:
+    soup = BeautifulSoup(html, "html.parser")
     best: list[dict[str, str]] = []
-    tables = scope.locator("table")
-    for table_index in range(tables.count()):
-        table = tables.nth(table_index)
-        headers = [clean(x) for x in table.locator("thead th").all_inner_texts()]
-        if not headers:
-            headers = [clean(x) for x in table.locator("tr").first.locator("th,td").all_inner_texts()]
+    for table in soup.find_all("table"):
+        header_nodes = table.select("thead th")
+        if not header_nodes:
+            first = table.find("tr")
+            header_nodes = first.find_all(["th", "td"]) if first else []
+        headers = [clean(node.get_text(" ", strip=True)) for node in header_nodes]
         rows: list[dict[str, str]] = []
-        table_rows = table.locator("tbody tr")
-        for row_index in range(table_rows.count()):
-            cells = [clean(x) for x in table_rows.nth(row_index).locator("td").all_inner_texts()]
+        body_rows = table.select("tbody tr") or table.find_all("tr")[1:]
+        for tr in body_rows:
+            cells = [clean(td.get_text(" ", strip=True)) for td in tr.find_all("td")]
             if len(cells) >= 2:
                 rows.append(normalise(headers, cells))
         if len(rows) > len(best):
@@ -65,7 +70,7 @@ def extract_table(scope: Page | Frame) -> list[dict[str, str]]:
     return best
 
 
-def accept_cookies(page: Page) -> None:
+def accept_cookies(page) -> None:
     for selector in [
         "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll",
         "button:has-text('Allow all')", "button:has-text('Accept all')",
@@ -74,36 +79,10 @@ def accept_cookies(page: Page) -> None:
             button = page.locator(selector).first
             if button.count() and button.is_visible():
                 button.click()
-                page.wait_for_timeout(1500)
+                page.wait_for_timeout(1200)
                 return
         except Exception:
             pass
-
-
-def load_official_frame(page: Page, diagnostics: dict[str, object]) -> Frame | None:
-    page.goto(PARENT_URL, wait_until="domcontentloaded", timeout=120000)
-    page.wait_for_timeout(3500)
-    accept_cookies(page)
-    iframe = page.locator("iframe[src*='ipc-services.org']").first
-    diagnostics["iframe_found"] = bool(iframe.count())
-    if not iframe.count():
-        return None
-    iframe.evaluate("(el, src) => { el.classList.remove('cookieconsent-optin-statistics'); el.src = src; }", IPC_URL)
-    for _ in range(30):
-        page.wait_for_timeout(1000)
-        for frame in page.frames:
-            if "ipc-services.org/sdms/web/cml/swm" in frame.url:
-                diagnostics["iframe_url"] = frame.url
-                diagnostics["iframe_title"] = frame.title()
-                return frame
-    return None
-
-
-def options_of(select) -> list[dict[str, str]]:
-    return [
-        {"value": option.get_attribute("value") or "", "text": clean(option.inner_text())}
-        for option in select.locator("option").all()
-    ]
 
 
 def main() -> int:
@@ -117,68 +96,74 @@ def main() -> int:
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True)
         context = browser.new_context(
-            viewport={"width": 1600, "height": 1200},
-            locale="en-US",
+            viewport={"width": 1600, "height": 1200}, locale="en-US",
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131 Safari/537.36",
         )
         page = context.new_page()
-        responses: list[dict[str, object]] = []
-        page.on("response", lambda response: responses.append({
-            "url": response.url, "status": response.status,
-            "content_type": response.headers.get("content-type", ""),
-        }))
+        page.goto(PARENT_URL, wait_until="domcontentloaded", timeout=120000)
+        page.wait_for_timeout(3000)
+        accept_cookies(page)
 
-        frame = load_official_frame(page, diagnostics)
-        if frame is not None:
-            page.wait_for_timeout(2500)
-            selects = frame.locator("select")
-            diagnostics["selects"] = selects.count()
-            diagnostics["select_options"] = [options_of(selects.nth(i)) for i in range(selects.count())]
+        iframe = page.locator("iframe[src*='ipc-services.org']").first
+        if not iframe.count():
+            raise RuntimeError("Official IPC Services iframe not found")
+        iframe.evaluate("(el, src) => { el.classList.remove('cookieconsent-optin-statistics'); el.src = src; }", IPC_URL)
 
-            season_options = options_of(selects.nth(0)) if selects.count() else []
-            valid_seasons = [o for o in season_options if o["value"]]
-            season = sorted(valid_seasons, key=lambda o: o["text"], reverse=True)[0]["value"] if valid_seasons else "S26"
+        frame = None
+        for _ in range(30):
+            page.wait_for_timeout(1000)
+            frame = next((f for f in page.frames if "ipc-services.org/sdms/web/cml/swm" in f.url), None)
+            if frame:
+                break
+        if frame is None:
+            raise RuntimeError("Official IPC Services iframe did not load")
 
-            # The page has 3 selectors: season, region and NPC. The previous
-            # implementation mistakenly iterated the region selector. NPC is #3.
-            npc_options = options_of(selects.nth(2)) if selects.count() >= 3 else []
-            npcs = [o for o in npc_options if o["value"]]
-            diagnostics["season_selected"] = season
-            diagnostics["npc_count"] = len(npcs)
+        selects = frame.locator("select")
+        if selects.count() < 3:
+            raise RuntimeError(f"Expected 3 selectors, found {selects.count()}")
 
-            seen: set[str] = set()
-            npc_errors: list[dict[str, str]] = []
-            for index, npc in enumerate(npcs, 1):
-                code = npc["value"].upper()
-                try:
-                    route = f"{IPC_URL}/html/season/{season.lower()}/npc/{code.lower()}"
-                    frame.goto(route, wait_until="domcontentloaded", timeout=60000)
-                    page.wait_for_timeout(250)
-                    found = extract_table(frame)
-                    for row in found:
-                        row["npc"] = row.get("npc") or code
-                        signature = json.dumps(row, sort_keys=True, ensure_ascii=False)
-                        if signature not in seen:
-                            seen.add(signature)
-                            rows.append(row)
-                    print(f"[{index}/{len(npcs)}] {code}: {len(found)}")
-                except Exception as exc:
-                    npc_errors.append({"npc": code, "error": str(exc)[:300]})
-            diagnostics["npc_errors"] = npc_errors
-            diagnostics["frame_tables"] = frame.locator("table").count()
-        else:
-            diagnostics["frame_error"] = "Official IPC Services iframe did not load"
+        season_options = [
+            {"value": o.get_attribute("value") or "", "text": clean(o.inner_text())}
+            for o in selects.nth(0).locator("option").all()
+        ]
+        valid_seasons = [o for o in season_options if o["value"]]
+        season = sorted(valid_seasons, key=lambda o: o["text"], reverse=True)[0]["value"] if valid_seasons else "S26"
 
+        npc_options = [
+            {"value": o.get_attribute("value") or "", "text": clean(o.inner_text())}
+            for o in selects.nth(2).locator("option").all()
+        ]
+        npcs = [o for o in npc_options if o["value"].upper() not in REGIONS and re.fullmatch(r"[A-Za-z]{3}", o["value"] or "")]
+        diagnostics.update({"season_selected": season, "npc_count": len(npcs), "npcs": npcs})
+
+        seen: set[str] = set()
+        errors: list[dict[str, str]] = []
+        for index, npc in enumerate(npcs, 1):
+            code = npc["value"].upper()
+            route = f"{IPC_URL}/html/season/{season.lower()}/npc/{code.lower()}"
+            try:
+                response = context.request.get(route, headers={"Referer": PARENT_URL}, timeout=30000)
+                if not response.ok:
+                    errors.append({"npc": code, "status": str(response.status)})
+                    continue
+                found = parse_table(response.text())
+                for row in found:
+                    row["npc"] = code
+                    row["athlete_id"] = athlete_key(row)
+                    signature = row.get("sdms_id") or json.dumps(row, sort_keys=True, ensure_ascii=False)
+                    if signature not in seen:
+                        seen.add(signature)
+                        rows.append(row)
+                print(f"[{index}/{len(npcs)}] {code}: {len(found)}")
+            except Exception as exc:
+                errors.append({"npc": code, "error": str(exc)[:300]})
+
+        diagnostics["npc_errors"] = errors
         diagnostics["rows_extracted"] = len(rows)
-        diagnostics["network_candidates"] = [
-            item for item in responses
-            if any(key in str(item["url"]).lower() for key in ("ipc-services", "cml", "class", "athlete"))
-        ][-300:]
-        page.screenshot(path=str(OUT / "last_capture.png"), full_page=True)
         browser.close()
 
     fields = sorted({key for row in rows for key in row}) or [
-        "athlete_id", "name", "npc", "gender", "sport_class", "status", "review_date"
+        "athlete_id", "name", "npc", "gender", "s", "sb", "sm", "status", "review_date"
     ]
     snapshot = SNAPSHOTS / f"{day}.csv"
     for target in (snapshot, OUT / "latest.csv"):
