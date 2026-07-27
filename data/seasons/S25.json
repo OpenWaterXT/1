@@ -1,7 +1,7 @@
 {
   "season": "S25",
   "label": "Summer Season 2025",
-  "captured_at": "2026-07-27T07:15:17.382602+00:00",
+  "captured_at": "2026-07-27T10:30:54.580648+00:00",
   "records": 2507,
   "athletes": [
     {
@@ -9877,7 +9877,7 @@
       "athlete_id": "2fa05215c90f9367"
     },
     {
-      "sdms_id": "67143",
+      "sdms_id": "55967",
       "family_name": "Pozo Videaux",
       "given_name": "Mabel Vanessa",
       "gender": "F",
@@ -9890,7 +9890,7 @@
       "npc": "CUB",
       "season": "S25",
       "season_label": "Summer Season 2025",
-      "athlete_id": "5ae03679c5b1db54"
+      "athlete_id": "3c2682a9719dd8dd"
     },
     {
       "sdms_id": "55964",
@@ -10667,7 +10667,7 @@
       "gender": "M",
       "s": "S11 S12",
       "status": "R-2019 R-2027",
-      "sb": "SB12 SB11",
+      "sb": "SB11 SB12",
       "sm": "SM12 SM11",
       "exceptions": "T, B",
       "name": "Jeferson Gerardo Penafiel Ayala",
