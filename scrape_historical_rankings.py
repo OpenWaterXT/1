@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
 
 PARENT = "https://www.paralympic.org/swimming/rankings"
-IPC = "https://www.ipc-services.org/sdms/web/ranking/sw/"
+IPC = "https://www.ipc-services.org/sdms/web/rankings/swm"
 YEAR = int(os.environ.get("YEAR", datetime.now().year))
 ROOT = Path("rankings")
 OUT = ROOT / str(YEAR)
@@ -74,7 +74,7 @@ def submit_form(frame, page) -> None:
     old_html = frame.content()
     try:
         with page.expect_response(
-            lambda response: "/sdms/web/ranking/sw" in response.url and response.request.method == "POST",
+            lambda response: "/sdms/web/rankings/swm" in response.url and response.request.method == "POST",
             timeout=45000,
         ):
             form.evaluate("form => form.requestSubmit ? form.requestSubmit() : form.submit()")
@@ -106,7 +106,7 @@ def main() -> None:
         frame = None
         for _ in range(60):
             page.wait_for_timeout(500)
-            frame = next((candidate for candidate in page.frames if "/sdms/web/ranking/sw" in candidate.url), None)
+            frame = next((candidate for candidate in page.frames if "/sdms/web/rankings/swm" in candidate.url), None)
             if frame:
                 break
         if not frame:
