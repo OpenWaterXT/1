@@ -67,6 +67,27 @@ def select_option(frame, words: list[str], matcher) -> bool:
     return False
 
 
+def submit_form(frame, page) -> None:
+    form = frame.locator("form").first
+    if not form.count():
+        raise RuntimeError("ranking form not found")
+    old_html = frame.content()
+    try:
+        with page.expect_response(
+            lambda response: "/sdms/web/ranking/sw" in response.url and response.request.method == "POST",
+            timeout=45000,
+        ):
+            form.evaluate("form => form.requestSubmit ? form.requestSubmit() : form.submit()")
+    except Exception:
+        form.evaluate("form => form.requestSubmit ? form.requestSubmit() : form.submit()")
+    for _ in range(120):
+        page.wait_for_timeout(250)
+        current = frame.content()
+        if current != old_html and (frame.locator("table").count() or "No results" in current):
+            break
+    page.wait_for_timeout(1000)
+
+
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     items: list[dict[str, object]] = []
@@ -94,6 +115,7 @@ def main() -> None:
         diagnostics["controls"] = frame.locator("form input,form select,form button").evaluate_all(
             "els=>els.map(e=>({tag:e.tagName,name:e.name,id:e.id,type:e.type,value:e.value,text:(e.innerText||'').trim()}))"
         )
+        diagnostics["form_html"] = frame.locator("form").first.evaluate("el => el.outerHTML")[:50000] if frame.locator("form").count() else ""
 
         for course, course_label in [("LC", "P50"), ("SC", "P25")]:
             for gender, gender_label in [("M", "Masculino"), ("F", "Femenino")]:
@@ -108,13 +130,7 @@ def main() -> None:
                     set_date(frame, ["to", "end", "until"], [f"{YEAR}-12-31", f"31/12/{YEAR}"])
                     select_option(frame, ["course", "pool"], lambda text: ("50" in text or "long" in text) if course == "LC" else ("25" in text or "short" in text))
                     select_option(frame, ["gender", "sex"], lambda text: ("male" in text or "men" in text) if gender == "M" else ("female" in text or "women" in text))
-                    button = frame.locator("button[name='format'][value='html'],button:has-text('Show'),button:has-text('Search')").first
-                    if not button.count():
-                        button = frame.locator("button[type='submit']").first
-                    if not button.count():
-                        raise RuntimeError("ranking submit button not found")
-                    button.click()
-                    page.wait_for_timeout(2500)
+                    submit_form(frame, page)
                     rows = parse_table(frame.content())
                     if rows:
                         filename = f"{YEAR}_{course}_{gender}.csv"
@@ -125,7 +141,7 @@ def main() -> None:
                             writer.writerows(rows)
                         entry.update({"records": len(rows), "file": f"rankings/{YEAR}/{filename}", "status": "ok"})
                     else:
-                        entry["status"] = "sin resultados o filtro no reconocido"
+                        entry["status"] = "sin resultados o filtros no reconocidos"
                 except Exception as exc:
                     entry["status"] = str(exc)[:220]
                 items.append(entry)
