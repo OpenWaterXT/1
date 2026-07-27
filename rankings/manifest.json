@@ -1,0 +1,733 @@
+{
+  "generated_at": "2026-07-27T11:49:28.299193+00:00",
+  "source": "https://www.paralympic.org/swimming/rankings",
+  "years": [
+    2009,
+    2026
+  ],
+  "items": [
+    {
+      "year": 2026,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2026,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2026,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2026,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2025,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2025,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2025,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2025,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2024,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2024,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2024,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2024,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2023,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2023,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2023,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2023,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2022,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2022,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2022,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2022,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2021,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2021,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2021,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2021,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2020,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2020,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2020,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2020,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2019,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2019,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2019,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2019,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2018,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2018,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2018,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2018,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2017,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2017,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2017,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2017,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2016,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2016,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2016,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2016,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2015,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2015,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2015,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2015,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2014,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2014,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2014,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2014,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2013,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2013,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2013,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2013,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2012,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2012,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2012,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2012,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2011,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2011,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2011,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2011,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2010,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2010,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2010,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2010,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2009,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2009,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2009,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    },
+    {
+      "year": 2009,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 0,
+      "file": "",
+      "status": "ranking submit button not found"
+    }
+  ],
+  "blocks": 72,
+  "blocks_with_data": 0,
+  "records": 0
+}
