@@ -1,0 +1,38 @@
+name: Download WPS rankings 2009-present
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7,22,37,52 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: historical-wps-rankings
+  cancel-in-progress: false
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install browser and parser
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright beautifulsoup4
+          playwright install --with-deps chromium
+      - name: Download rankings from 2009
+        run: python scrape_historical_rankings.py
+      - name: Commit ranking archive
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rankings
+          git diff --cached --quiet || git commit -m "Update WPS rankings archive from 2009"
+          git push
