@@ -9,6 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from bs4 import BeautifulSoup
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
 
 PARENT = "https://www.paralympic.org/swimming/rankings"
@@ -40,31 +41,43 @@ def parse_table(html: str) -> list[dict[str, str]]:
     return best
 
 
+def wait_for_ranking_frame(page):
+    iframe = page.locator("iframe[src*='ipc-services.org'][src*='rankings/swm']").first
+    iframe.wait_for(state="attached", timeout=60000)
+    iframe.evaluate("el => el.classList.remove('cookieconsent-optin-statistics')")
+
+    frame = iframe.content_frame
+    if frame is None:
+        raise RuntimeError("ranking iframe has no content frame")
+
+    try:
+        frame.locator("#rankings-rankinglistfilter").wait_for(state="attached", timeout=90000)
+    except PlaywrightTimeoutError as exc:
+        raise RuntimeError(f"ranking form not loaded; frame URL: {frame.url}") from exc
+    return frame
+
+
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     items: list[dict[str, object]] = []
-    diagnostics: dict[str, object] = {"year": YEAR, "captured_at": datetime.now(timezone.utc).isoformat()}
+    diagnostics: dict[str, object] = {
+        "year": YEAR,
+        "captured_at": datetime.now(timezone.utc).isoformat(),
+        "source": PARENT,
+    }
 
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True)
-        context = browser.new_context(viewport={"width": 1600, "height": 1200}, locale="en-US")
+        context = browser.new_context(
+            viewport={"width": 1600, "height": 1200},
+            locale="en-US",
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131 Safari/537.36",
+        )
         page = context.new_page()
-        page.goto(PARENT, wait_until="domcontentloaded", timeout=120000)
-        page.wait_for_timeout(3000)
+        page.goto(PARENT, wait_until="networkidle", timeout=120000)
 
-        iframe = page.locator("iframe[src*='ipc-services.org']").first
-        if not iframe.count():
-            raise RuntimeError("ranking iframe not found")
-        iframe.evaluate("(el,src)=>{el.classList.remove('cookieconsent-optin-statistics');el.src=src}", IPC)
-
-        frame = None
-        for _ in range(60):
-            page.wait_for_timeout(500)
-            frame = next((candidate for candidate in page.frames if "/sdms/web/rankings/swm" in candidate.url), None)
-            if frame and frame.locator("#rankings-rankinglistfilter").count():
-                break
-        if not frame or not frame.locator("#rankings-rankinglistfilter").count():
-            raise RuntimeError("ranking form not loaded")
+        frame = wait_for_ranking_frame(page)
+        diagnostics["frame_url"] = frame.url
 
         year_select = frame.locator("#rankings-rankinglistfilter")
         year_options = {
@@ -88,7 +101,8 @@ def main() -> None:
                     "file": "",
                 }
                 try:
-                    frame.goto(IPC, wait_until="domcontentloaded", timeout=60000)
+                    frame.goto(IPC, wait_until="networkidle", timeout=90000)
+                    frame.locator("#rankings-rankinglistfilter").wait_for(state="attached", timeout=60000)
                     frame.locator("#rankings-rankingtypefilter").select_option("world")
                     frame.locator("#rankings-rankinglistfilter").select_option(year_value)
                     frame.locator(f"input[name='Rankings[specificationFilter]'][value='{course}']").check()
@@ -96,19 +110,13 @@ def main() -> None:
                     frame.locator("#rankings-eventtypefilter").select_option("")
                     frame.locator("#rankings-classfilter").select_option("")
 
-                    old_html = frame.content()
                     with page.expect_response(
                         lambda response: "/sdms/web/rankings/swm" in response.url and response.request.method == "POST",
-                        timeout=60000,
+                        timeout=90000,
                     ):
                         frame.locator("button[name='format'][value='html']").click()
 
-                    for _ in range(120):
-                        page.wait_for_timeout(250)
-                        if frame.content() != old_html and frame.locator("table").count():
-                            break
-                    page.wait_for_timeout(1000)
-
+                    frame.wait_for_load_state("networkidle", timeout=90000)
                     html = frame.content()
                     rows = parse_table(html)
                     if rows:
@@ -123,9 +131,9 @@ def main() -> None:
                         (OUT / f"response_{course}_{gender_file}.html").write_text(html, encoding="utf-8")
                         entry["status"] = "respuesta recibida, pero no se detectó la tabla"
                 except Exception as exc:
-                    entry["status"] = str(exc)[:220]
+                    entry["status"] = str(exc)[:300]
                 items.append(entry)
-                print(f"{YEAR} {course} {gender_file}: {entry['records']}")
+                print(f"{YEAR} {course} {gender_file}: {entry['records']} - {entry.get('status', '')}")
 
         browser.close()
 
