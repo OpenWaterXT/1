@@ -15,7 +15,7 @@ concurrency:
 jobs:
   download:
     runs-on: ubuntu-latest
-    timeout-minutes: 330
+    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -26,13 +26,33 @@ jobs:
           python -m pip install --upgrade pip
           pip install playwright beautifulsoup4
           playwright install --with-deps chromium
-      - name: Download rankings from 2009
-        run: python scrape_historical_rankings.py
-      - name: Commit ranking archive
-        if: always()
+      - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add rankings
-          git diff --cached --quiet || git commit -m "Update WPS rankings archive from 2009"
-          git push
+      - name: Download and checkpoint each year
+        shell: bash
+        run: |
+          set +e
+          CURRENT_YEAR=$(date -u +%Y)
+          for YEAR in $(seq 2009 "$CURRENT_YEAR"); do
+            echo "===== Downloading WPS rankings for $YEAR ====="
+            YEAR="$YEAR" python scrape_historical_rankings.py
+            EXIT_CODE=$?
+            git add rankings
+            if ! git diff --cached --quiet; then
+              git commit -m "Update WPS rankings $YEAR"
+              git push
+            fi
+            if [ "$EXIT_CODE" -ne 0 ]; then
+              echo "Year $YEAR failed; continuing with the next year"
+            fi
+          done
+      - name: Final status
+        run: |
+          test -f rankings/manifest.json
+          python - <<'PY'
+          import json
+          data=json.load(open('rankings/manifest.json',encoding='utf-8'))
+          print(f"Saved {len(data.get('items', []))} ranking blocks")
+          PY
