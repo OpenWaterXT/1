@@ -3,7 +3,7 @@ name: Snapshot classified athletes
 on:
   workflow_dispatch:
   schedule:
-    - cron: '23 4 * * 1'
+    - cron: '*/5 * * * *'
   push:
     branches: [main]
     paths:
@@ -16,7 +16,7 @@ permissions:
 jobs:
   snapshot:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -27,17 +27,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install playwright beautifulsoup4
           playwright install --with-deps chromium
-      - name: Capture official WPS master list
+      - name: Capture every available WPS season
         id: capture
         continue-on-error: true
         run: python scrape_current_master_list.py
-      - name: Commit snapshot and diagnostics
+      - name: Commit seasons, snapshot and diagnostics
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data
-          git diff --cached --quiet || git commit -m "Update WPS classified athletes snapshot"
+          git diff --cached --quiet || git commit -m "Update all available WPS seasons"
           git push
       - name: Fail if capture failed
         if: steps.capture.outcome == 'failure'
