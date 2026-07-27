@@ -3,7 +3,7 @@ name: Download WPS rankings 2009-present
 on:
   workflow_dispatch:
   schedule:
-    - cron: '7,22,37,52 * * * *'
+    - cron: '17 3 * * 2'
 
 permissions:
   contents: write
@@ -13,9 +13,14 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  download:
+  download-year:
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        year: [2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
     runs-on: ubuntu-latest
-    timeout-minutes: 360
+    timeout-minutes: 50
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -26,33 +31,75 @@ jobs:
           python -m pip install --upgrade pip
           pip install playwright beautifulsoup4
           playwright install --with-deps chromium
-      - name: Configure Git
+      - name: Download year ${{ matrix.year }}
+        env:
+          YEAR: ${{ matrix.year }}
+        run: python scrape_historical_rankings.py
+      - name: Upload year artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rankings-${{ matrix.year }}
+          path: rankings/${{ matrix.year }}
+          if-no-files-found: warn
+          retention-days: 7
+
+  publish:
+    needs: download-year
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download all yearly artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: rankings-*
+          path: rankings
+          merge-multiple: false
+      - name: Arrange files and build manifest
+        run: |
+          python - <<'PY'
+          import json
+          import shutil
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          root = Path('rankings')
+          items = []
+          for artifact in sorted(root.glob('rankings-*')):
+              year = artifact.name.split('-', 1)[1]
+              destination = root / year
+              destination.mkdir(parents=True, exist_ok=True)
+              for source in artifact.iterdir():
+                  target = destination / source.name
+                  if source.is_dir():
+                      if target.exists(): shutil.rmtree(target)
+                      shutil.copytree(source, target)
+                  else:
+                      shutil.copy2(source, target)
+              manifest = destination / 'manifest.json'
+              if manifest.exists():
+                  data = json.loads(manifest.read_text(encoding='utf-8'))
+                  items.extend(data.get('items', []))
+              shutil.rmtree(artifact)
+
+          items.sort(key=lambda x: (int(x.get('year', 0)), x.get('course', ''), x.get('gender', '')), reverse=True)
+          payload = {
+              'generated_at': datetime.now(timezone.utc).isoformat(),
+              'source': 'https://www.paralympic.org/swimming/rankings',
+              'years': [2009, 2026],
+              'items': items,
+              'blocks': len(items),
+              'blocks_with_data': sum(1 for x in items if int(x.get('records', 0)) > 0),
+              'records': sum(int(x.get('records', 0)) for x in items),
+          }
+          (root / 'manifest.json').write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
+          print(payload)
+          PY
+      - name: Commit complete ranking archive
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-      - name: Download and checkpoint each year
-        shell: bash
-        run: |
-          set +e
-          CURRENT_YEAR=$(date -u +%Y)
-          for YEAR in $(seq 2009 "$CURRENT_YEAR"); do
-            echo "===== Downloading WPS rankings for $YEAR ====="
-            YEAR="$YEAR" python scrape_historical_rankings.py
-            EXIT_CODE=$?
-            git add rankings
-            if ! git diff --cached --quiet; then
-              git commit -m "Update WPS rankings $YEAR"
-              git push
-            fi
-            if [ "$EXIT_CODE" -ne 0 ]; then
-              echo "Year $YEAR failed; continuing with the next year"
-            fi
-          done
-      - name: Final status
-        run: |
-          test -f rankings/manifest.json
-          python - <<'PY'
-          import json
-          data=json.load(open('rankings/manifest.json',encoding='utf-8'))
-          print(f"Saved {len(data.get('items', []))} ranking blocks")
-          PY
+          git add rankings
+          git diff --cached --quiet || git commit -m "Update complete WPS rankings archive from 2009"
+          git push
