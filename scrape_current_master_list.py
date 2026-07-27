@@ -14,8 +14,9 @@ from playwright.sync_api import Frame, Page, sync_playwright
 PARENT_URL = "https://www.paralympic.org/swimming/classified-athletes"
 IPC_URL = "https://www.ipc-services.org/sdms/web/cml/swm"
 OUT = Path("data")
+SEASONS_DIR = OUT / "seasons"
 SNAPSHOTS = OUT / "snapshots"
-REGIONS = {"AFR", "AMR", "ASR", "EUR", "OCR"}
+REGIONS = {"AFR", "AMR", "ASR", "OCR"}
 
 
 def clean(value: str) -> str:
@@ -23,7 +24,7 @@ def clean(value: str) -> str:
 
 
 def athlete_key(row: dict[str, str]) -> str:
-    raw = "|".join(clean(row.get(k, "")).lower() for k in ("sdms_id", "name", "npc", "gender"))
+    raw = "|".join(clean(row.get(k, "")).lower() for k in ("season", "sdms_id", "name", "npc", "gender"))
     return hashlib.sha1(raw.encode("utf-8")).hexdigest()[:16]
 
 
@@ -46,7 +47,6 @@ def normalise(headers: list[str], cells: list[str]) -> dict[str, str]:
         row[field] = clean(cell)
     if not row.get("name"):
         row["name"] = clean(f"{row.get('given_name', '')} {row.get('family_name', '')}")
-    row["athlete_id"] = athlete_key(row)
     return row
 
 
@@ -94,60 +94,39 @@ def wait_for_frame(page: Page) -> Frame | None:
     return None
 
 
-def select_options(select) -> list[dict[str, str]]:
+def options(select) -> list[dict[str, str]]:
     return [
         {"value": option.get_attribute("value") or "", "text": clean(option.inner_text())}
         for option in select.locator("option").all()
     ]
 
 
-def describe_form(frame: Frame) -> dict[str, object]:
-    form = frame.locator("form").first
-    if not form.count():
-        return {"found": False}
-    return {
-        "found": True,
-        "action": form.get_attribute("action"),
-        "method": form.get_attribute("method"),
-        "id": form.get_attribute("id"),
-        "outer_html": form.evaluate("el => el.outerHTML")[:30000],
-        "controls": frame.locator("form input, form select, form button").evaluate_all(
-            "els => els.map(e => ({tag:e.tagName,name:e.name,id:e.id,type:e.type,value:e.value,text:(e.innerText||'').trim()}))"
-        ),
-    }
-
-
-def click_submit(frame: Frame, page: Page) -> None:
-    selectors = [
-        "form button[type=submit]", "form input[type=submit]",
-        "form button:has-text('Search')", "form button:has-text('View')",
-        "form button:has-text('Submit')",
-    ]
-    control = None
-    for selector in selectors:
-        candidate = frame.locator(selector).first
-        if candidate.count() and candidate.is_visible():
-            control = candidate
-            break
-    if control is None:
-        raise RuntimeError("Visible submit control not found")
-
+def click_show_list(frame: Frame, page: Page) -> None:
+    button = frame.locator("button[name='format'][value='html']").first
+    if not button.count():
+        button = frame.locator("form button[type='submit']").first
+    if not button.count():
+        raise RuntimeError("Show List button not found")
     old_url = frame.url
-    try:
-        with page.expect_response(lambda r: "ipc-services.org/sdms/web/cml/swm" in r.url, timeout=30000):
-            control.click()
-    except Exception:
-        control.click()
-
-    for _ in range(80):
+    button.click()
+    for _ in range(120):
         page.wait_for_timeout(250)
         if frame.url != old_url or frame.locator("table tbody tr").count() > 0:
             break
-    page.wait_for_timeout(500)
+    page.wait_for_timeout(700)
+
+
+def write_csv(path: Path, rows: list[dict[str, str]], fields: list[str]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", newline="", encoding="utf-8") as handle:
+        writer = csv.DictWriter(handle, fieldnames=fields)
+        writer.writeheader()
+        writer.writerows(rows)
 
 
 def main() -> int:
     OUT.mkdir(exist_ok=True)
+    SEASONS_DIR.mkdir(parents=True, exist_ok=True)
     SNAPSHOTS.mkdir(parents=True, exist_ok=True)
     now = datetime.now(timezone.utc)
     day = now.strftime("%Y-%m-%d")
@@ -156,7 +135,8 @@ def main() -> int:
         "embedded_source": IPC_URL,
         "captured_at": now.isoformat(),
     }
-    rows: list[dict[str, str]] = []
+    combined: list[dict[str, str]] = []
+    season_index: list[dict[str, object]] = []
 
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True)
@@ -166,16 +146,6 @@ def main() -> int:
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131 Safari/537.36",
         )
         page = context.new_page()
-        traffic: list[dict[str, object]] = []
-        page.on("request", lambda request: traffic.append({
-            "kind": "request", "method": request.method, "url": request.url,
-            "post_data": (request.post_data or "")[:5000],
-        }) if "ipc-services.org" in request.url else None)
-        page.on("response", lambda response: traffic.append({
-            "kind": "response", "status": response.status, "url": response.url,
-            "content_type": response.headers.get("content-type", ""),
-        }) if "ipc-services.org" in response.url else None)
-
         page.goto(PARENT_URL, wait_until="domcontentloaded", timeout=120000)
         page.wait_for_timeout(3000)
         accept_cookies(page)
@@ -184,119 +154,120 @@ def main() -> int:
         if not iframe.count():
             raise RuntimeError("Official IPC Services iframe not found")
         iframe.evaluate("(el, src) => { el.classList.remove('cookieconsent-optin-statistics'); el.src = src; }", IPC_URL)
-
         frame = wait_for_frame(page)
         if frame is None:
             raise RuntimeError("Official IPC Services iframe did not load")
 
-        diagnostics["initial_frame_url"] = frame.url
-        diagnostics["form"] = describe_form(frame)
         selects = frame.locator("select")
-        diagnostics["select_count"] = selects.count()
-        diagnostics["selects"] = [
-            {
-                "name": selects.nth(i).get_attribute("name"),
-                "id": selects.nth(i).get_attribute("id"),
-                "options": select_options(selects.nth(i)),
-            }
-            for i in range(selects.count())
-        ]
         if selects.count() < 3:
             raise RuntimeError(f"Expected 3 selectors, found {selects.count()}")
+        available = [o for o in options(selects.nth(0)) if o["value"]]
+        diagnostics["available_seasons"] = available
+        if not available:
+            raise RuntimeError("No seasons available")
 
-        season_options = select_options(selects.nth(0))
-        valid_seasons = [o for o in season_options if o["value"]]
-        season = sorted(valid_seasons, key=lambda o: o["text"], reverse=True)[0]["value"] if valid_seasons else "S26"
-        npc_options = select_options(selects.nth(2))
-        npcs = [
-            o for o in npc_options
-            if o["value"].upper() not in REGIONS and re.fullmatch(r"[A-Za-z]{3}", o["value"] or "")
-        ]
-        diagnostics.update({"season_selected": season, "npc_count": len(npcs)})
-
-        # First run a fully documented ESP probe. This reveals the exact request
-        # generated by the official form and prevents another blind scrape.
-        probe_code = "ESP"
-        probe = next((o for o in npcs if o["value"].upper() == probe_code), None)
-        if probe:
-            selects.nth(0).select_option(season)
-            selects.nth(2).select_option(probe["value"])
-            diagnostics["probe_before_url"] = frame.url
-            diagnostics["probe_selected_values"] = frame.locator("select").evaluate_all("els => els.map(e => ({name:e.name,value:e.value}))")
-            click_submit(frame, page)
-            diagnostics["probe_after_url"] = frame.url
-            diagnostics["probe_title"] = frame.title()
-            diagnostics["probe_html"] = frame.content()[:50000]
-            diagnostics["probe_rows"] = len(parse_table(frame.content()))
-
-        diagnostics["traffic"] = traffic[-300:]
-
-        seen: set[str] = set()
-        errors: list[dict[str, str]] = []
-        counts: dict[str, int] = {}
-
-        for index, npc in enumerate(npcs, 1):
-            code = npc["value"].upper()
+        for season_pos, season_info in enumerate(available, 1):
+            code = season_info["value"].upper()
+            label = season_info["text"] or code
             try:
                 if frame.url.rstrip("/") != IPC_URL.rstrip("/"):
                     frame.goto(IPC_URL, wait_until="domcontentloaded", timeout=60000)
-                    page.wait_for_timeout(350)
-                current_selects = frame.locator("select")
-                current_selects.nth(0).select_option(season)
-                current_selects.nth(2).select_option(npc["value"])
-                click_submit(frame, page)
-                found = parse_table(frame.content())
-                counts[code] = len(found)
-                for row in found:
-                    row["npc"] = code
-                    row["athlete_id"] = athlete_key(row)
-                    signature = row.get("sdms_id") or json.dumps(row, sort_keys=True, ensure_ascii=False)
-                    if signature not in seen:
-                        seen.add(signature)
-                        rows.append(row)
-                print(f"[{index}/{len(npcs)}] {code}: {len(found)}")
-            except Exception as exc:
-                errors.append({"npc": code, "error": str(exc)[:500]})
+                    page.wait_for_timeout(500)
+                current = frame.locator("select")
+                current.nth(0).select_option(season_info["value"])
+                current.nth(1).select_option("")
+                current.nth(2).select_option("")
+                click_show_list(frame, page)
+                rows = parse_table(frame.content())
 
-        diagnostics["npc_counts"] = counts
-        diagnostics["npc_errors"] = errors
-        diagnostics["rows_extracted"] = len(rows)
-        diagnostics["final_frame_url"] = frame.url
-        diagnostics["traffic"] = traffic[-500:]
+                # Some deployments require one NPC at a time. Fall back only when
+                # the all-members request returns no rows.
+                if not rows:
+                    frame.goto(IPC_URL, wait_until="domcontentloaded", timeout=60000)
+                    page.wait_for_timeout(400)
+                    npc_options = [
+                        o for o in options(frame.locator("select").nth(2))
+                        if re.fullmatch(r"[A-Za-z]{3}", o["value"] or "") and o["value"].upper() not in REGIONS
+                    ]
+                    seen_ids: set[str] = set()
+                    fallback_rows: list[dict[str, str]] = []
+                    for npc in npc_options:
+                        if frame.url.rstrip("/") != IPC_URL.rstrip("/"):
+                            frame.goto(IPC_URL, wait_until="domcontentloaded", timeout=60000)
+                            page.wait_for_timeout(250)
+                        current = frame.locator("select")
+                        current.nth(0).select_option(season_info["value"])
+                        current.nth(2).select_option(npc["value"])
+                        click_show_list(frame, page)
+                        for row in parse_table(frame.content()):
+                            row["npc"] = row.get("npc") or npc["value"].upper()
+                            signature = row.get("sdms_id") or json.dumps(row, sort_keys=True, ensure_ascii=False)
+                            if signature not in seen_ids:
+                                seen_ids.add(signature)
+                                fallback_rows.append(row)
+                    rows = fallback_rows
+
+                for row in rows:
+                    row["season"] = code
+                    row["season_label"] = label
+                    row["athlete_id"] = athlete_key(row)
+
+                fields = sorted({key for row in rows for key in row})
+                write_csv(SEASONS_DIR / f"{code}.csv", rows, fields)
+                (SEASONS_DIR / f"{code}.json").write_text(json.dumps({
+                    "season": code,
+                    "label": label,
+                    "captured_at": now.isoformat(),
+                    "records": len(rows),
+                    "fields": fields,
+                    "athletes": rows,
+                }, ensure_ascii=False, indent=2), encoding="utf-8")
+                combined.extend(rows)
+                season_index.append({
+                    "season": code,
+                    "label": label,
+                    "records": len(rows),
+                    "json": f"data/seasons/{code}.json",
+                    "csv": f"data/seasons/{code}.csv",
+                })
+                print(f"[{season_pos}/{len(available)}] {code}: {len(rows)}")
+            except Exception as exc:
+                diagnostics.setdefault("season_errors", []).append({"season": code, "error": str(exc)[:500]})
+
         browser.close()
 
-    (OUT / "capture_diagnostics.json").write_text(
-        json.dumps(diagnostics, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
+    diagnostics["seasons_downloaded"] = season_index
+    diagnostics["rows_extracted"] = len(combined)
+    (OUT / "capture_diagnostics.json").write_text(json.dumps(diagnostics, ensure_ascii=False, indent=2), encoding="utf-8")
+    if not combined:
+        raise RuntimeError("No season returned athletes; previous dataset preserved")
 
-    if not rows:
-        raise RuntimeError("Capture returned zero athletes; diagnostics saved and previous dataset preserved")
-
-    fields = sorted({key for row in rows for key in row})
-    snapshot = SNAPSHOTS / f"{day}.csv"
-    for target in (snapshot, OUT / "latest.csv"):
-        with target.open("w", newline="", encoding="utf-8") as handle:
-            writer = csv.DictWriter(handle, fieldnames=fields)
-            writer.writeheader()
-            writer.writerows(rows)
-
-    payload = {
-        "captured_at": now.isoformat(), "source": PARENT_URL, "embedded_source": IPC_URL,
-        "records": len(rows), "fields": fields, "snapshot": str(snapshot), "athletes": rows,
-    }
-    (OUT / "latest.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    season_index.sort(key=lambda item: str(item["season"]), reverse=True)
+    (OUT / "seasons.json").write_text(json.dumps(season_index, ensure_ascii=False, indent=2), encoding="utf-8")
+    fields = sorted({key for row in combined for key in row})
+    write_csv(OUT / "latest.csv", combined, fields)
+    write_csv(SNAPSHOTS / f"{day}.csv", combined, fields)
+    (OUT / "latest.json").write_text(json.dumps({
+        "captured_at": now.isoformat(),
+        "source": PARENT_URL,
+        "embedded_source": IPC_URL,
+        "records": len(combined),
+        "seasons": season_index,
+        "fields": fields,
+        "snapshot": f"data/snapshots/{day}.csv",
+        "athletes": combined,
+    }, ensure_ascii=False, indent=2), encoding="utf-8")
 
     index_path = OUT / "snapshots.json"
     try:
         previous = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else []
     except Exception:
         previous = []
-    entry = {"date": day, "captured_at": now.isoformat(), "records": len(rows), "file": str(snapshot)}
+    entry = {"date": day, "captured_at": now.isoformat(), "records": len(combined), "file": f"data/snapshots/{day}.csv"}
     previous = [item for item in previous if item.get("date") != day] + [entry]
     previous.sort(key=lambda item: item.get("date", ""), reverse=True)
     index_path.write_text(json.dumps(previous, indent=2), encoding="utf-8")
-
-    print(f"Extracted {len(rows)} classified athletes")
+    print(f"Extracted {len(combined)} records across {len(season_index)} seasons")
     return 0
 
 
