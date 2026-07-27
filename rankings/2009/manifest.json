@@ -9,7 +9,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "ranking submit button not found"
+      "status": "ranking form not found"
     },
     {
       "year": 2009,
@@ -19,7 +19,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "ranking submit button not found"
+      "status": "ranking form not found"
     },
     {
       "year": 2009,
@@ -29,7 +29,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "ranking submit button not found"
+      "status": "ranking form not found"
     },
     {
       "year": 2009,
@@ -39,7 +39,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "ranking submit button not found"
+      "status": "ranking form not found"
     }
   ]
 }
