@@ -1,0 +1,16 @@
+[
+  {
+    "season": "S26",
+    "label": "Summer Season 2026",
+    "records": 2458,
+    "json": "data/seasons/S26.json",
+    "csv": "data/seasons/S26.csv"
+  },
+  {
+    "season": "S25",
+    "label": "Summer Season 2025",
+    "records": 229,
+    "json": "data/seasons/S25.json",
+    "csv": "data/seasons/S25.csv"
+  }
+]
