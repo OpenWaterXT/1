@@ -1,7 +1,7 @@
 {
   "source": "https://www.paralympic.org/swimming/classified-athletes",
   "embedded_source": "https://www.ipc-services.org/sdms/web/cml/swm",
-  "captured_at": "2026-07-27T06:52:42.217426+00:00",
+  "captured_at": "2026-07-27T07:09:05.736011+00:00",
   "available_seasons": [
     {
       "value": "S26",
@@ -12,21 +12,16 @@
       "text": "Summer Season 2025"
     }
   ],
-  "seasons_downloaded": [
+  "season_errors": [
     {
       "season": "S26",
-      "label": "Summer Season 2026",
-      "records": 2458,
-      "json": "data/seasons/S26.json",
-      "csv": "data/seasons/S26.csv"
+      "error": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "season": "S25",
-      "label": "Summer Season 2025",
-      "records": 229,
-      "json": "data/seasons/S25.json",
-      "csv": "data/seasons/S25.csv"
+      "error": "Response.text: Response body is unavailable for redirect responses"
     }
   ],
-  "rows_extracted": 2687
+  "seasons_downloaded": [],
+  "rows_extracted": 0
 }
