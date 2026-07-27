@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from bs4 import BeautifulSoup
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import Frame, Page, sync_playwright
 
 PARENT_URL = "https://www.paralympic.org/swimming/classified-athletes"
 IPC_URL = "https://www.ipc-services.org/sdms/web/cml/swm"
@@ -70,7 +70,7 @@ def parse_table(html: str) -> list[dict[str, str]]:
     return best
 
 
-def accept_cookies(page) -> None:
+def accept_cookies(page: Page) -> None:
     for selector in [
         "#CybotCookiebotDialogBodyLevelButtonLevelOptinAllowAll",
         "button:has-text('Allow all')", "button:has-text('Accept all')",
@@ -85,26 +85,65 @@ def accept_cookies(page) -> None:
             pass
 
 
-def wait_for_frame(page):
-    for _ in range(40):
-        page.wait_for_timeout(500)
+def wait_for_frame(page: Page) -> Frame | None:
+    for _ in range(50):
+        page.wait_for_timeout(400)
         frame = next((f for f in page.frames if "ipc-services.org/sdms/web/cml/swm" in f.url), None)
         if frame:
             return frame
     return None
 
 
-def submit_current_form(frame, page) -> None:
+def select_options(select) -> list[dict[str, str]]:
+    return [
+        {"value": option.get_attribute("value") or "", "text": clean(option.inner_text())}
+        for option in select.locator("option").all()
+    ]
+
+
+def describe_form(frame: Frame) -> dict[str, object]:
     form = frame.locator("form").first
     if not form.count():
-        raise RuntimeError("IPC form not found")
-    old_url = frame.url
-    form.evaluate("form => form.submit()")
-    for _ in range(40):
-        page.wait_for_timeout(250)
-        if frame.url != old_url or frame.locator("table").count():
+        return {"found": False}
+    return {
+        "found": True,
+        "action": form.get_attribute("action"),
+        "method": form.get_attribute("method"),
+        "id": form.get_attribute("id"),
+        "outer_html": form.evaluate("el => el.outerHTML")[:30000],
+        "controls": frame.locator("form input, form select, form button").evaluate_all(
+            "els => els.map(e => ({tag:e.tagName,name:e.name,id:e.id,type:e.type,value:e.value,text:(e.innerText||'').trim()}))"
+        ),
+    }
+
+
+def click_submit(frame: Frame, page: Page) -> None:
+    selectors = [
+        "form button[type=submit]", "form input[type=submit]",
+        "form button:has-text('Search')", "form button:has-text('View')",
+        "form button:has-text('Submit')",
+    ]
+    control = None
+    for selector in selectors:
+        candidate = frame.locator(selector).first
+        if candidate.count() and candidate.is_visible():
+            control = candidate
             break
-    page.wait_for_timeout(300)
+    if control is None:
+        raise RuntimeError("Visible submit control not found")
+
+    old_url = frame.url
+    try:
+        with page.expect_response(lambda r: "ipc-services.org/sdms/web/cml/swm" in r.url, timeout=30000):
+            control.click()
+    except Exception:
+        control.click()
+
+    for _ in range(80):
+        page.wait_for_timeout(250)
+        if frame.url != old_url or frame.locator("table tbody tr").count() > 0:
+            break
+    page.wait_for_timeout(500)
 
 
 def main() -> int:
@@ -127,6 +166,16 @@ def main() -> int:
             user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131 Safari/537.36",
         )
         page = context.new_page()
+        traffic: list[dict[str, object]] = []
+        page.on("request", lambda request: traffic.append({
+            "kind": "request", "method": request.method, "url": request.url,
+            "post_data": (request.post_data or "")[:5000],
+        }) if "ipc-services.org" in request.url else None)
+        page.on("response", lambda response: traffic.append({
+            "kind": "response", "status": response.status, "url": response.url,
+            "content_type": response.headers.get("content-type", ""),
+        }) if "ipc-services.org" in response.url else None)
+
         page.goto(PARENT_URL, wait_until="domcontentloaded", timeout=120000)
         page.wait_for_timeout(3000)
         accept_cookies(page)
@@ -140,26 +189,47 @@ def main() -> int:
         if frame is None:
             raise RuntimeError("Official IPC Services iframe did not load")
 
+        diagnostics["initial_frame_url"] = frame.url
+        diagnostics["form"] = describe_form(frame)
         selects = frame.locator("select")
+        diagnostics["select_count"] = selects.count()
+        diagnostics["selects"] = [
+            {
+                "name": selects.nth(i).get_attribute("name"),
+                "id": selects.nth(i).get_attribute("id"),
+                "options": select_options(selects.nth(i)),
+            }
+            for i in range(selects.count())
+        ]
         if selects.count() < 3:
             raise RuntimeError(f"Expected 3 selectors, found {selects.count()}")
 
-        season_options = [
-            {"value": o.get_attribute("value") or "", "text": clean(o.inner_text())}
-            for o in selects.nth(0).locator("option").all()
-        ]
+        season_options = select_options(selects.nth(0))
         valid_seasons = [o for o in season_options if o["value"]]
         season = sorted(valid_seasons, key=lambda o: o["text"], reverse=True)[0]["value"] if valid_seasons else "S26"
-
-        npc_options = [
-            {"value": o.get_attribute("value") or "", "text": clean(o.inner_text())}
-            for o in selects.nth(2).locator("option").all()
-        ]
+        npc_options = select_options(selects.nth(2))
         npcs = [
             o for o in npc_options
             if o["value"].upper() not in REGIONS and re.fullmatch(r"[A-Za-z]{3}", o["value"] or "")
         ]
-        diagnostics.update({"season_selected": season, "npc_count": len(npcs), "npcs": npcs})
+        diagnostics.update({"season_selected": season, "npc_count": len(npcs)})
+
+        # First run a fully documented ESP probe. This reveals the exact request
+        # generated by the official form and prevents another blind scrape.
+        probe_code = "ESP"
+        probe = next((o for o in npcs if o["value"].upper() == probe_code), None)
+        if probe:
+            selects.nth(0).select_option(season)
+            selects.nth(2).select_option(probe["value"])
+            diagnostics["probe_before_url"] = frame.url
+            diagnostics["probe_selected_values"] = frame.locator("select").evaluate_all("els => els.map(e => ({name:e.name,value:e.value}))")
+            click_submit(frame, page)
+            diagnostics["probe_after_url"] = frame.url
+            diagnostics["probe_title"] = frame.title()
+            diagnostics["probe_html"] = frame.content()[:50000]
+            diagnostics["probe_rows"] = len(parse_table(frame.content()))
+
+        diagnostics["traffic"] = traffic[-300:]
 
         seen: set[str] = set()
         errors: list[dict[str, str]] = []
@@ -168,19 +238,13 @@ def main() -> int:
         for index, npc in enumerate(npcs, 1):
             code = npc["value"].upper()
             try:
-                # Return to the official form before each request so the selectors
-                # and CSRF/session state are always fresh.
                 if frame.url.rstrip("/") != IPC_URL.rstrip("/"):
                     frame.goto(IPC_URL, wait_until="domcontentloaded", timeout=60000)
                     page.wait_for_timeout(350)
-
                 current_selects = frame.locator("select")
-                if current_selects.count() < 3:
-                    raise RuntimeError(f"Expected 3 selectors, found {current_selects.count()}")
                 current_selects.nth(0).select_option(season)
                 current_selects.nth(2).select_option(npc["value"])
-                submit_current_form(frame, page)
-
+                click_submit(frame, page)
                 found = parse_table(frame.content())
                 counts[code] = len(found)
                 for row in found:
@@ -192,21 +256,21 @@ def main() -> int:
                         rows.append(row)
                 print(f"[{index}/{len(npcs)}] {code}: {len(found)}")
             except Exception as exc:
-                errors.append({"npc": code, "error": str(exc)[:300]})
+                errors.append({"npc": code, "error": str(exc)[:500]})
 
         diagnostics["npc_counts"] = counts
         diagnostics["npc_errors"] = errors
         diagnostics["rows_extracted"] = len(rows)
         diagnostics["final_frame_url"] = frame.url
+        diagnostics["traffic"] = traffic[-500:]
         browser.close()
 
-    # Never overwrite a valid dataset with an empty capture.
+    (OUT / "capture_diagnostics.json").write_text(
+        json.dumps(diagnostics, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
+
     if not rows:
-        diagnostics["preserved_previous_dataset"] = True
-        (OUT / "capture_diagnostics.json").write_text(
-            json.dumps(diagnostics, ensure_ascii=False, indent=2), encoding="utf-8"
-        )
-        raise RuntimeError("Capture returned zero athletes; previous dataset preserved")
+        raise RuntimeError("Capture returned zero athletes; diagnostics saved and previous dataset preserved")
 
     fields = sorted({key for row in rows for key in row})
     snapshot = SNAPSHOTS / f"{day}.csv"
@@ -221,7 +285,6 @@ def main() -> int:
         "records": len(rows), "fields": fields, "snapshot": str(snapshot), "athletes": rows,
     }
     (OUT / "latest.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    (OUT / "capture_diagnostics.json").write_text(json.dumps(diagnostics, ensure_ascii=False, indent=2), encoding="utf-8")
 
     index_path = OUT / "snapshots.json"
     try:
