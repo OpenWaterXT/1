@@ -28,11 +28,17 @@ jobs:
           pip install playwright beautifulsoup4
           playwright install --with-deps chromium
       - name: Capture official WPS master list
+        id: capture
+        continue-on-error: true
         run: python scrape_current_master_list.py
       - name: Commit snapshot and diagnostics
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data
           git diff --cached --quiet || git commit -m "Update WPS classified athletes snapshot"
           git push
+      - name: Fail if capture failed
+        if: steps.capture.outcome == 'failure'
+        run: exit 1
