@@ -7,7 +7,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'scrape_current_master_list.py'
+      - 'download_s25_complete.py'
       - '.github/workflows/snapshot-classified-athletes.yml'
 
 permissions:
@@ -27,17 +27,17 @@ jobs:
           python -m pip install --upgrade pip
           pip install playwright beautifulsoup4
           playwright install --with-deps chromium
-      - name: Capture every available WPS season
+      - name: Download complete WPS 2025 season
         id: capture
         continue-on-error: true
-        run: python scrape_current_master_list.py
-      - name: Commit seasons, snapshot and diagnostics
+        run: python download_s25_complete.py
+      - name: Commit complete S25 data
         if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data
-          git diff --cached --quiet || git commit -m "Update all available WPS seasons"
+          git diff --cached --quiet || git commit -m "Add complete WPS S25 season"
           git push
       - name: Fail if capture failed
         if: steps.capture.outcome == 'failure'
