@@ -18,7 +18,7 @@ dialog{width:min(780px,94vw);background:#0e1d2f;color:var(--t);border:1px solid 
 </style>
 </head>
 <body>
-<header><span class="badge">WPS Classification Intelligence</span><h1>World Para Swimming<br>Classified Athletes</h1><p class="muted">Consulta por temporada de la Classification Master List oficial, con filtros y snapshots históricos.</p></header>
+<header><span class="badge">WPS Classification Intelligence</span><h1>World Para Swimming<br>Classified Athletes</h1><p class="muted">Consulta por temporada de la Classification Master List oficial, con filtros y snapshots históricos.</p><p><a href="rankings.html">Ver rankings históricos desde 2009 →</a></p></header>
 <main>
 <section class="stats">
 <div class="card"><strong id="nAth">0</strong><span class="muted">registros</span></div>
@@ -41,7 +41,7 @@ dialog{width:min(780px,94vw);background:#0e1d2f;color:var(--t);border:1px solid 
 <section class="panel"><table><thead><tr><th>Temporada</th><th>Deportista</th><th>NPC</th><th>Sexo</th><th>S</th><th>SB</th><th>SM</th><th>Estatus</th><th>Excepciones</th></tr></thead><tbody id="rows"></tbody></table><div id="empty" class="empty" hidden>No hay registros para estos filtros.</div></section>
 </main>
 <dialog id="profile"><div class="dialog-head"><div><span class="badge">Ficha del deportista</span><h2 id="pName"></h2></div><button onclick="profile.close()" style="width:auto">Cerrar</button></div><div class="dialog-body"><div id="pFields" class="grid"></div></div></dialog>
-<footer><p>Fuente oficial: <a href="https://www.paralympic.org/swimming/classified-athletes" target="_blank">World Para Swimming Classification Master List</a>.</p></footer>
+<footer><p>Fuente oficial: <a href="https://www.paralympic.org/swimming/classified-athletes" target="_blank">World Para Swimming Classification Master List</a> · <a href="rankings.html">Rankings históricos</a>.</p></footer>
 <script>
 let data=[],snaps=[],seasonMeta=[];
 const REGIONS=new Set(['AFR','AMR','ASR','OCR']);
