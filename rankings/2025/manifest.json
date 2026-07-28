@@ -9,7 +9,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.check: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"input[name='Rankings[genderFilter]'][value='M']\")\n    - locator resolved to <input id=\"i4\" value=\"M\" type=\"radio\" class=\"form-check-input\" n"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2025,
@@ -19,7 +19,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2025,
@@ -29,7 +29,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2025,
@@ -39,7 +39,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.check: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"input[name='Rankings[specificationFilter]'][value='SC']\")\n    - locator resolved to <input id=\"i1\" value=\"SC\" type=\"radio\" class=\"form-check"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     }
   ]
 }

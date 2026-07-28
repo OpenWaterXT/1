@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T09:06:04.025690+00:00",
+  "generated_at": "2026-07-28T09:23:32.563607+00:00",
   "source": "https://www.paralympic.org/swimming/rankings",
   "years": [
     2009,
@@ -14,7 +14,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2026,
@@ -24,7 +24,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2026,
@@ -34,7 +34,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2026,
@@ -44,7 +44,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2025,
@@ -54,7 +54,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2025,
@@ -64,7 +64,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.check: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"input[name='Rankings[specificationFilter]'][value='SC']\")\n    - locator resolved to <input id=\"i1\" value=\"SC\" type=\"radio\" class=\"form-check"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2025,
@@ -74,7 +74,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.check: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"input[name='Rankings[genderFilter]'][value='M']\")\n    - locator resolved to <input id=\"i4\" value=\"M\" type=\"radio\" class=\"form-check-input\" n"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2025,
@@ -84,7 +84,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2024,
@@ -94,7 +94,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2024,
@@ -104,7 +104,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2024,
@@ -114,7 +114,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2024,
@@ -124,7 +124,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2023,
@@ -134,7 +134,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2023,
@@ -144,7 +144,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2023,
@@ -154,7 +154,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.check: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"input[name='Rankings[genderFilter]'][value='M']\")\n    - locator resolved to <input id=\"i4\" value=\"M\" type=\"radio\" class=\"form-check-input\" n"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2023,
@@ -164,7 +164,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2022,
@@ -174,7 +174,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2022,
@@ -184,7 +184,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2022,
@@ -194,7 +194,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2022,
@@ -204,7 +204,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2021,
@@ -214,7 +214,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2021,
@@ -224,7 +224,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2021,
@@ -234,7 +234,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-classfilter\")\n    - locator resolved to <select class=\"form-select\" id=\"rankings-classfilter\" name=\"Rankings[classFilter]\""
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2021,
@@ -244,7 +244,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2020,
@@ -254,7 +254,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2020,
@@ -264,7 +264,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2020,
@@ -274,7 +274,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.check: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"input[name='Rankings[genderFilter]'][value='M']\")\n    - locator resolved to <input id=\"i4\" value=\"M\" type=\"radio\" class=\"form-check-input\" n"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2020,
@@ -284,7 +284,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2019,
@@ -294,7 +294,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2019,
@@ -304,7 +304,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2019,
@@ -314,7 +314,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-classfilter\")\n    - locator resolved to <select class=\"form-select\" id=\"rankings-classfilter\" name=\"Rankings[classFilter]\""
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2019,
@@ -324,7 +324,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2018,
@@ -334,7 +334,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2018,
@@ -344,7 +344,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2018,
@@ -354,7 +354,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2018,
@@ -364,7 +364,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2017,
@@ -374,7 +374,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2017,
@@ -384,7 +384,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2017,
@@ -394,7 +394,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.check: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"input[name='Rankings[genderFilter]'][value='M']\")\n    - locator resolved to <input id=\"i4\" value=\"M\" type=\"radio\" class=\"form-check-input\" n"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2017,
@@ -404,7 +404,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2016,
@@ -414,7 +414,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2016,
@@ -424,7 +424,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2016,
@@ -434,7 +434,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.check: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"input[name='Rankings[genderFilter]'][value='M']\")\n    - locator resolved to <input id=\"i4\" value=\"M\" type=\"radio\" class=\"form-check-input\" n"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2016,
@@ -444,7 +444,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.check: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"input[name='Rankings[genderFilter]'][value='W']\")\n    - locator resolved to <input id=\"i5\" value=\"W\" type=\"radio\" class=\"form-check-input\" n"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2015,
@@ -454,7 +454,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2015,
@@ -464,7 +464,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2015,
@@ -474,7 +474,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2015,
@@ -484,7 +484,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2014,
@@ -494,7 +494,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2014,
@@ -504,7 +504,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.check: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"input[name='Rankings[specificationFilter]'][value='SC']\")\n    - locator resolved to <input id=\"i1\" value=\"SC\" type=\"radio\" class=\"form-check"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2014,
@@ -514,7 +514,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.check: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"input[name='Rankings[genderFilter]'][value='M']\")\n    - locator resolved to <input id=\"i4\" value=\"M\" type=\"radio\" class=\"form-check-input\" n"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2014,
@@ -524,7 +524,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.check: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"input[name='Rankings[genderFilter]'][value='W']\")\n    - locator resolved to <input id=\"i5\" value=\"W\" type=\"radio\" class=\"form-check-input\" n"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2013,
@@ -534,7 +534,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2013,
@@ -544,7 +544,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2013,
@@ -554,7 +554,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.check: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"input[name='Rankings[genderFilter]'][value='M']\")\n    - locator resolved to <input id=\"i4\" value=\"M\" type=\"radio\" class=\"form-check-input\" n"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2013,
@@ -564,7 +564,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2012,
@@ -574,7 +574,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankingtypefilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankingtypefil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2012,
@@ -584,7 +584,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2012,
@@ -594,7 +594,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.check: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"input[name='Rankings[genderFilter]'][value='M']\")\n    - locator resolved to <input id=\"i4\" value=\"M\" type=\"radio\" class=\"form-check-input\" n"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2012,
@@ -604,7 +604,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2011,
@@ -614,7 +614,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2011,
@@ -624,7 +624,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2011,
@@ -634,7 +634,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2011,
@@ -644,7 +644,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2010,
@@ -654,7 +654,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2010,
@@ -664,7 +664,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2010,
@@ -674,7 +674,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2010,
@@ -684,7 +684,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2009,
@@ -694,7 +694,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2009,
@@ -704,7 +704,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2009,
@@ -714,7 +714,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "Locator.check: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"input[name='Rankings[genderFilter]'][value='M']\")\n    - locator resolved to <input id=\"i4\" value=\"M\" type=\"radio\" class=\"form-check-input\" n"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     },
     {
       "year": 2009,
@@ -724,7 +724,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-rankinglistfilter\")\n    - locator resolved to <select class=\"form-select\" aria-required=\"true\" id=\"rankings-rankinglistfil"
+      "status": "'FrameLocator' object has no attribute 'evaluate'"
     }
   ],
   "blocks": 72,
