@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T09:23:32.563607+00:00",
+  "generated_at": "2026-07-28T09:49:00.570375+00:00",
   "source": "https://www.paralympic.org/swimming/rankings",
   "years": [
     2009,
@@ -7,286 +7,6 @@
   ],
   "items": [
     {
-      "year": 2026,
-      "course": "SC",
-      "course_label": "P25",
-      "gender": "M",
-      "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2026,
-      "course": "SC",
-      "course_label": "P25",
-      "gender": "F",
-      "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2026,
-      "course": "LC",
-      "course_label": "P50",
-      "gender": "M",
-      "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2026,
-      "course": "LC",
-      "course_label": "P50",
-      "gender": "F",
-      "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2025,
-      "course": "SC",
-      "course_label": "P25",
-      "gender": "M",
-      "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2025,
-      "course": "SC",
-      "course_label": "P25",
-      "gender": "F",
-      "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2025,
-      "course": "LC",
-      "course_label": "P50",
-      "gender": "M",
-      "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2025,
-      "course": "LC",
-      "course_label": "P50",
-      "gender": "F",
-      "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2024,
-      "course": "SC",
-      "course_label": "P25",
-      "gender": "M",
-      "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2024,
-      "course": "SC",
-      "course_label": "P25",
-      "gender": "F",
-      "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2024,
-      "course": "LC",
-      "course_label": "P50",
-      "gender": "M",
-      "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2024,
-      "course": "LC",
-      "course_label": "P50",
-      "gender": "F",
-      "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2023,
-      "course": "SC",
-      "course_label": "P25",
-      "gender": "M",
-      "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2023,
-      "course": "SC",
-      "course_label": "P25",
-      "gender": "F",
-      "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2023,
-      "course": "LC",
-      "course_label": "P50",
-      "gender": "M",
-      "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2023,
-      "course": "LC",
-      "course_label": "P50",
-      "gender": "F",
-      "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2022,
-      "course": "SC",
-      "course_label": "P25",
-      "gender": "M",
-      "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2022,
-      "course": "SC",
-      "course_label": "P25",
-      "gender": "F",
-      "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2022,
-      "course": "LC",
-      "course_label": "P50",
-      "gender": "M",
-      "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2022,
-      "course": "LC",
-      "course_label": "P50",
-      "gender": "F",
-      "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2021,
-      "course": "SC",
-      "course_label": "P25",
-      "gender": "M",
-      "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2021,
-      "course": "SC",
-      "course_label": "P25",
-      "gender": "F",
-      "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2021,
-      "course": "LC",
-      "course_label": "P50",
-      "gender": "M",
-      "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2021,
-      "course": "LC",
-      "course_label": "P50",
-      "gender": "F",
-      "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2020,
-      "course": "SC",
-      "course_label": "P25",
-      "gender": "M",
-      "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2020,
-      "course": "SC",
-      "course_label": "P25",
-      "gender": "F",
-      "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2020,
-      "course": "LC",
-      "course_label": "P50",
-      "gender": "M",
-      "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
-      "year": 2020,
-      "course": "LC",
-      "course_label": "P50",
-      "gender": "F",
-      "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
-    },
-    {
       "year": 2019,
       "course": "SC",
       "course_label": "P25",
@@ -414,7 +134,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2016,
@@ -424,7 +144,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2016,
@@ -434,7 +154,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2016,
@@ -444,7 +164,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2015,
@@ -494,7 +214,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2014,
@@ -504,7 +224,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2014,
@@ -514,7 +234,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2014,
@@ -524,7 +244,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Timeout 120000ms exceeded while waiting for event \"response\""
     },
     {
       "year": 2013,
@@ -534,7 +254,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2013,
@@ -544,7 +264,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Timeout 120000ms exceeded while waiting for event \"response\""
     },
     {
       "year": 2013,
@@ -554,7 +274,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2013,
@@ -564,7 +284,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2012,
@@ -574,7 +294,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2012,
@@ -584,7 +304,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2012,
@@ -594,7 +314,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2012,
@@ -604,7 +324,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2011,
@@ -614,7 +334,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2011,
@@ -624,7 +344,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2011,
@@ -634,7 +354,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2011,
@@ -644,7 +364,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Timeout 120000ms exceeded while waiting for event \"response\""
     },
     {
       "year": 2010,
@@ -654,7 +374,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2010,
@@ -664,7 +384,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2010,
@@ -674,7 +394,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2010,
@@ -684,7 +404,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2009,
@@ -694,7 +414,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2009,
@@ -704,7 +424,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Timeout 120000ms exceeded while waiting for event \"response\""
     },
     {
       "year": 2009,
@@ -714,7 +434,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     },
     {
       "year": 2009,
@@ -724,10 +444,10 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "status": "Response.text: Response body is unavailable for redirect responses"
     }
   ],
-  "blocks": 72,
+  "blocks": 44,
   "blocks_with_data": 0,
   "records": 0
 }
