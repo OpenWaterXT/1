@@ -81,11 +81,18 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Preserve the newly built archive, then restart from the latest main.
+          mv rankings /tmp/rankings-new
+          git fetch origin main
+          git reset --hard origin/main
+          rm -rf rankings
+          mv /tmp/rankings-new rankings
+
           git add -A rankings
-          if ! git diff --cached --quiet; then
-            git commit -m "Rebuild WPS rankings archive from 2009"
-            git pull --rebase origin main
-            git push origin HEAD:main
-          else
+          if git diff --cached --quiet; then
             echo "No ranking changes to publish"
+          else
+            git commit -m "Rebuild WPS rankings archive from 2009"
+            git push origin HEAD:main
           fi
