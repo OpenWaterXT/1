@@ -68,13 +68,8 @@ def get_form_frame(page):
     return frame
 
 
-def submit_query(page, frame, year_value: str, course: str, gender: str):
-    payload = {
-        "year": year_value,
-        "course": course,
-        "gender": gender,
-    }
-
+def submit_query(page, frame, year_value: str, course: str, gender: str) -> tuple[str, int]:
+    payload = {"year": year_value, "course": course, "gender": gender}
     form = frame.locator("form[action*='/rankings/swm']").first
     form.wait_for(state="attached", timeout=60000)
 
@@ -113,7 +108,24 @@ def submit_query(page, frame, year_value: str, course: str, gender: str):
             payload,
         )
 
-    return response_info.value
+    post_response = response_info.value
+
+    # El POST oficial responde con una redirección. El cuerpo útil está en el
+    # documento final que se carga dentro del iframe, no en la respuesta 302.
+    html = ""
+    for _ in range(240):
+        page.wait_for_timeout(500)
+        try:
+            html = frame.locator("html").evaluate("el => el.outerHTML")
+            if "<table" in html.lower() or "no result" in html.lower() or "no ranking" in html.lower():
+                break
+        except Exception:
+            continue
+
+    if not html:
+        raise RuntimeError("La redirección terminó sin HTML accesible en el iframe")
+
+    return html, post_response.status
 
 
 def main() -> None:
@@ -160,13 +172,12 @@ def main() -> None:
                 }
                 try:
                     frame = get_form_frame(page)
-                    response = submit_query(page, frame, year_value, course, gender_post)
-                    html = response.text()
+                    html, post_status = submit_query(page, frame, year_value, course, gender_post)
                     rows = parse_ranking_table(html)
 
                     if not rows:
                         (OUT / f"response_{course}_{gender_file}.html").write_text(html, encoding="utf-8")
-                        entry["status"] = f"Sin tabla detectada; HTTP {response.status}"
+                        entry["status"] = f"Sin tabla detectada tras redirección; POST HTTP {post_status}"
                     else:
                         filename = f"{YEAR}_{course}_{gender_file}.csv"
                         fields = list(dict.fromkeys(key for row in rows for key in row))
