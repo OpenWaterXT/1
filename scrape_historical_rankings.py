@@ -75,24 +75,24 @@ def submit_query(page, frame, year_value: str, course: str, gender: str):
         "gender": gender,
     }
 
+    form = frame.locator("form[action*='/rankings/swm']").first
+    form.wait_for(state="attached", timeout=60000)
+
     with page.expect_response(
         lambda r: "/sdms/web/rankings/swm" in r.url and r.request.method == "POST",
         timeout=120000,
     ) as response_info:
-        frame.evaluate(
+        form.evaluate(
             """
-            ({year, course, gender}) => {
-              const form = document.querySelector('form[action*="/rankings/swm"]');
-              if (!form) throw new Error('Formulario oficial no encontrado');
-
+            (form, {year, course, gender}) => {
               const setSelect = (selector, value) => {
-                const el = document.querySelector(selector);
+                const el = form.querySelector(selector);
                 if (!el) throw new Error(`No existe ${selector}`);
                 el.value = value;
                 el.dispatchEvent(new Event('change', {bubbles: true}));
               };
               const setRadio = (name, value) => {
-                const el = document.querySelector(`input[name="${name}"][value="${value}"]`);
+                const el = form.querySelector(`input[name="${name}"][value="${value}"]`);
                 if (!el) throw new Error(`No existe radio ${name}=${value}`);
                 el.checked = true;
                 el.dispatchEvent(new Event('change', {bubbles: true}));
