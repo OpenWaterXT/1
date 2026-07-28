@@ -9,7 +9,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "ranking form not found"
+      "status": "Locator.select_option: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"iframe[src*='ipc-services.org'][src*='rankings/swm']\").first.content_frame.locator(\"#rankings-classfilter\")\n    - locator resolved to <select class=\"form-select\" id=\"rankings-classfilter\" name=\"Rankings[classFilter]\""
     },
     {
       "year": 2019,
@@ -19,7 +19,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "ranking form not found"
+      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
     },
     {
       "year": 2019,
@@ -29,7 +29,7 @@
       "gender_label": "Masculino",
       "records": 0,
       "file": "",
-      "status": "ranking form not found"
+      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
     },
     {
       "year": 2019,
@@ -39,7 +39,7 @@
       "gender_label": "Femenino",
       "records": 0,
       "file": "",
-      "status": "ranking form not found"
+      "status": "Locator.click: Error: strict mode violation: locator(\"button[name='format'][value='html']\") resolved to 2 elements:\n    1) <button id=\"w3\" value=\"html\" type=\"submit\" name=\"format\" class=\"mx-2 mt-3 btn btn-primary lib-btn\">Show List</button> aka get_by_role(\"button\", name=\"Show List\").first\n    2) <b"
     }
   ]
 }
