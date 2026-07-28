@@ -7,9 +7,9 @@
       "course_label": "P50",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 133,
+      "file": "rankings/2015/2015_LC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2015,
@@ -17,9 +17,9 @@
       "course_label": "P50",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 80,
+      "file": "rankings/2015/2015_LC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2015,
@@ -27,9 +27,9 @@
       "course_label": "P25",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 6,
+      "file": "rankings/2015/2015_SC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2015,
@@ -37,9 +37,9 @@
       "course_label": "P25",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 17,
+      "file": "rankings/2015/2015_SC_F.csv",
+      "status": "ok"
     }
   ]
 }

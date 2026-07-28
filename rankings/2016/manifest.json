@@ -7,9 +7,9 @@
       "course_label": "P50",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 102,
+      "file": "rankings/2016/2016_LC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2016,
@@ -17,9 +17,9 @@
       "course_label": "P50",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 97,
+      "file": "rankings/2016/2016_LC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2016,
@@ -27,9 +27,9 @@
       "course_label": "P25",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 15,
+      "file": "rankings/2016/2016_SC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2016,
@@ -37,9 +37,9 @@
       "course_label": "P25",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 13,
+      "file": "rankings/2016/2016_SC_F.csv",
+      "status": "ok"
     }
   ]
 }

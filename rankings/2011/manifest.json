@@ -7,9 +7,9 @@
       "course_label": "P50",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 120,
+      "file": "rankings/2011/2011_LC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2011,
@@ -17,9 +17,9 @@
       "course_label": "P50",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Timeout 120000ms exceeded while waiting for event \"response\""
+      "records": 80,
+      "file": "rankings/2011/2011_LC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2011,
@@ -27,9 +27,9 @@
       "course_label": "P25",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 23,
+      "file": "rankings/2011/2011_SC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2011,
@@ -37,9 +37,9 @@
       "course_label": "P25",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 18,
+      "file": "rankings/2011/2011_SC_F.csv",
+      "status": "ok"
     }
   ]
 }

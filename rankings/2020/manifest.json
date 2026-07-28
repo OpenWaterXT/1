@@ -1,0 +1,45 @@
+{
+  "year": 2020,
+  "items": [
+    {
+      "year": 2020,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 42,
+      "file": "rankings/2020/2020_LC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2020,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 31,
+      "file": "rankings/2020/2020_LC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2020,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 8,
+      "file": "rankings/2020/2020_SC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2020,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 10,
+      "file": "rankings/2020/2020_SC_F.csv",
+      "status": "ok"
+    }
+  ]
+}

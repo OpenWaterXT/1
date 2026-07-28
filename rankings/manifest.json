@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T09:49:00.570375+00:00",
+  "generated_at": "2026-07-28T10:13:13.739631+00:00",
   "source": "https://www.paralympic.org/swimming/rankings",
   "years": [
     2009,
@@ -7,14 +7,294 @@
   ],
   "items": [
     {
+      "year": 2026,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 6,
+      "file": "rankings/2026/2026_SC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2026,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 8,
+      "file": "rankings/2026/2026_SC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2026,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 102,
+      "file": "rankings/2026/2026_LC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2026,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 80,
+      "file": "rankings/2026/2026_LC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2025,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 28,
+      "file": "rankings/2025/2025_SC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2025,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 15,
+      "file": "rankings/2025/2025_SC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2025,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 138,
+      "file": "rankings/2025/2025_LC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2025,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 99,
+      "file": "rankings/2025/2025_LC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2024,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 21,
+      "file": "rankings/2024/2024_SC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2024,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 14,
+      "file": "rankings/2024/2024_SC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2024,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 104,
+      "file": "rankings/2024/2024_LC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2024,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 85,
+      "file": "rankings/2024/2024_LC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2023,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 17,
+      "file": "rankings/2023/2023_SC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2023,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 13,
+      "file": "rankings/2023/2023_SC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2023,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 127,
+      "file": "rankings/2023/2023_LC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2023,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 94,
+      "file": "rankings/2023/2023_LC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2022,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 26,
+      "file": "rankings/2022/2022_SC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2022,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 15,
+      "file": "rankings/2022/2022_SC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2022,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 107,
+      "file": "rankings/2022/2022_LC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2022,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 75,
+      "file": "rankings/2022/2022_LC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2021,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 9,
+      "file": "rankings/2021/2021_SC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2021,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 8,
+      "file": "rankings/2021/2021_SC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2021,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 82,
+      "file": "rankings/2021/2021_LC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2021,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 68,
+      "file": "rankings/2021/2021_LC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2020,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 8,
+      "file": "rankings/2020/2020_SC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2020,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 10,
+      "file": "rankings/2020/2020_SC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2020,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 42,
+      "file": "rankings/2020/2020_LC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2020,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 31,
+      "file": "rankings/2020/2020_LC_F.csv",
+      "status": "ok"
+    },
+    {
       "year": 2019,
       "course": "SC",
       "course_label": "P25",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 6,
+      "file": "rankings/2019/2019_SC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2019,
@@ -22,9 +302,9 @@
       "course_label": "P25",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 8,
+      "file": "rankings/2019/2019_SC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2019,
@@ -32,9 +312,9 @@
       "course_label": "P50",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 125,
+      "file": "rankings/2019/2019_LC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2019,
@@ -42,9 +322,9 @@
       "course_label": "P50",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 80,
+      "file": "rankings/2019/2019_LC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2018,
@@ -52,9 +332,9 @@
       "course_label": "P25",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 6,
+      "file": "rankings/2018/2018_SC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2018,
@@ -62,9 +342,9 @@
       "course_label": "P25",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 19,
+      "file": "rankings/2018/2018_SC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2018,
@@ -72,9 +352,9 @@
       "course_label": "P50",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 118,
+      "file": "rankings/2018/2018_LC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2018,
@@ -82,9 +362,9 @@
       "course_label": "P50",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 80,
+      "file": "rankings/2018/2018_LC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2017,
@@ -92,9 +372,9 @@
       "course_label": "P25",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 36,
+      "file": "rankings/2017/2017_SC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2017,
@@ -102,9 +382,9 @@
       "course_label": "P25",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 21,
+      "file": "rankings/2017/2017_SC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2017,
@@ -112,9 +392,9 @@
       "course_label": "P50",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 110,
+      "file": "rankings/2017/2017_LC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2017,
@@ -122,9 +402,9 @@
       "course_label": "P50",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 101,
+      "file": "rankings/2017/2017_LC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2016,
@@ -132,9 +412,9 @@
       "course_label": "P25",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 15,
+      "file": "rankings/2016/2016_SC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2016,
@@ -142,9 +422,9 @@
       "course_label": "P25",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 13,
+      "file": "rankings/2016/2016_SC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2016,
@@ -152,9 +432,9 @@
       "course_label": "P50",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 102,
+      "file": "rankings/2016/2016_LC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2016,
@@ -162,9 +442,9 @@
       "course_label": "P50",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 97,
+      "file": "rankings/2016/2016_LC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2015,
@@ -172,9 +452,9 @@
       "course_label": "P25",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 6,
+      "file": "rankings/2015/2015_SC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2015,
@@ -182,9 +462,9 @@
       "course_label": "P25",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 17,
+      "file": "rankings/2015/2015_SC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2015,
@@ -192,9 +472,9 @@
       "course_label": "P50",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 133,
+      "file": "rankings/2015/2015_LC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2015,
@@ -202,9 +482,9 @@
       "course_label": "P50",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "'FrameLocator' object has no attribute 'evaluate'"
+      "records": 80,
+      "file": "rankings/2015/2015_LC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2014,
@@ -212,9 +492,9 @@
       "course_label": "P25",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 29,
+      "file": "rankings/2014/2014_SC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2014,
@@ -222,9 +502,9 @@
       "course_label": "P25",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 23,
+      "file": "rankings/2014/2014_SC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2014,
@@ -232,9 +512,9 @@
       "course_label": "P50",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 138,
+      "file": "rankings/2014/2014_LC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2014,
@@ -242,9 +522,9 @@
       "course_label": "P50",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Timeout 120000ms exceeded while waiting for event \"response\""
+      "records": 91,
+      "file": "rankings/2014/2014_LC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2013,
@@ -252,9 +532,9 @@
       "course_label": "P25",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 33,
+      "file": "rankings/2013/2013_SC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2013,
@@ -262,9 +542,9 @@
       "course_label": "P25",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Timeout 120000ms exceeded while waiting for event \"response\""
+      "records": 22,
+      "file": "rankings/2013/2013_SC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2013,
@@ -272,9 +552,9 @@
       "course_label": "P50",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 107,
+      "file": "rankings/2013/2013_LC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2013,
@@ -282,9 +562,9 @@
       "course_label": "P50",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 76,
+      "file": "rankings/2013/2013_LC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2012,
@@ -292,9 +572,9 @@
       "course_label": "P25",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 21,
+      "file": "rankings/2012/2012_SC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2012,
@@ -302,9 +582,9 @@
       "course_label": "P25",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 15,
+      "file": "rankings/2012/2012_SC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2012,
@@ -312,9 +592,9 @@
       "course_label": "P50",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 100,
+      "file": "rankings/2012/2012_LC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2012,
@@ -322,9 +602,9 @@
       "course_label": "P50",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 80,
+      "file": "rankings/2012/2012_LC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2011,
@@ -332,9 +612,9 @@
       "course_label": "P25",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 23,
+      "file": "rankings/2011/2011_SC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2011,
@@ -342,9 +622,9 @@
       "course_label": "P25",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 18,
+      "file": "rankings/2011/2011_SC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2011,
@@ -352,9 +632,9 @@
       "course_label": "P50",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 120,
+      "file": "rankings/2011/2011_LC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2011,
@@ -362,9 +642,9 @@
       "course_label": "P50",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Timeout 120000ms exceeded while waiting for event \"response\""
+      "records": 80,
+      "file": "rankings/2011/2011_LC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2010,
@@ -372,9 +652,9 @@
       "course_label": "P25",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 25,
+      "file": "rankings/2010/2010_SC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2010,
@@ -382,9 +662,9 @@
       "course_label": "P25",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 8,
+      "file": "rankings/2010/2010_SC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2010,
@@ -392,9 +672,9 @@
       "course_label": "P50",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 108,
+      "file": "rankings/2010/2010_LC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2010,
@@ -402,9 +682,9 @@
       "course_label": "P50",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 72,
+      "file": "rankings/2010/2010_LC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2009,
@@ -412,9 +692,9 @@
       "course_label": "P25",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 33,
+      "file": "rankings/2009/2009_SC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2009,
@@ -422,9 +702,9 @@
       "course_label": "P25",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Timeout 120000ms exceeded while waiting for event \"response\""
+      "records": 32,
+      "file": "rankings/2009/2009_SC_F.csv",
+      "status": "ok"
     },
     {
       "year": 2009,
@@ -432,9 +712,9 @@
       "course_label": "P50",
       "gender": "M",
       "gender_label": "Masculino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 65,
+      "file": "rankings/2009/2009_LC_M.csv",
+      "status": "ok"
     },
     {
       "year": 2009,
@@ -442,12 +722,12 @@
       "course_label": "P50",
       "gender": "F",
       "gender_label": "Femenino",
-      "records": 0,
-      "file": "",
-      "status": "Response.text: Response body is unavailable for redirect responses"
+      "records": 48,
+      "file": "rankings/2009/2009_LC_F.csv",
+      "status": "ok"
     }
   ],
-  "blocks": 44,
-  "blocks_with_data": 0,
-  "records": 0
+  "blocks": 72,
+  "blocks_with_data": 72,
+  "records": 3972
 }
