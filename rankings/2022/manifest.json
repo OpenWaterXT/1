@@ -1,0 +1,45 @@
+{
+  "year": 2022,
+  "items": [
+    {
+      "year": 2022,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 107,
+      "file": "rankings/2022/2022_LC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2022,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 75,
+      "file": "rankings/2022/2022_LC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2022,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 26,
+      "file": "rankings/2022/2022_SC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2022,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 15,
+      "file": "rankings/2022/2022_SC_F.csv",
+      "status": "ok"
+    }
+  ]
+}

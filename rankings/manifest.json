@@ -1,11 +1,251 @@
 {
-  "generated_at": "2026-07-28T11:42:00.772786+00:00",
+  "generated_at": "2026-07-29T02:44:03.013119+00:00",
   "source": "https://www.paralympic.org/swimming/rankings",
   "years": [
     2009,
     2026
   ],
   "items": [
+    {
+      "year": 2026,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 6,
+      "file": "rankings/2026/2026_SC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2026,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 8,
+      "file": "rankings/2026/2026_SC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2026,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 102,
+      "file": "rankings/2026/2026_LC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2026,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 80,
+      "file": "rankings/2026/2026_LC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2025,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 28,
+      "file": "rankings/2025/2025_SC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2025,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 15,
+      "file": "rankings/2025/2025_SC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2025,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 138,
+      "file": "rankings/2025/2025_LC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2025,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 99,
+      "file": "rankings/2025/2025_LC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2024,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 21,
+      "file": "rankings/2024/2024_SC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2024,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 14,
+      "file": "rankings/2024/2024_SC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2024,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 104,
+      "file": "rankings/2024/2024_LC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2024,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 85,
+      "file": "rankings/2024/2024_LC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2023,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 17,
+      "file": "rankings/2023/2023_SC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2023,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 13,
+      "file": "rankings/2023/2023_SC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2023,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 127,
+      "file": "rankings/2023/2023_LC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2023,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 94,
+      "file": "rankings/2023/2023_LC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2022,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 26,
+      "file": "rankings/2022/2022_SC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2022,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 15,
+      "file": "rankings/2022/2022_SC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2022,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 107,
+      "file": "rankings/2022/2022_LC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2022,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 75,
+      "file": "rankings/2022/2022_LC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2021,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 9,
+      "file": "rankings/2021/2021_SC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2021,
+      "course": "SC",
+      "course_label": "P25",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 8,
+      "file": "rankings/2021/2021_SC_F.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2021,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "M",
+      "gender_label": "Masculino",
+      "records": 82,
+      "file": "rankings/2021/2021_LC_M.csv",
+      "status": "ok"
+    },
+    {
+      "year": 2021,
+      "course": "LC",
+      "course_label": "P50",
+      "gender": "F",
+      "gender_label": "Femenino",
+      "records": 68,
+      "file": "rankings/2021/2021_LC_F.csv",
+      "status": "ok"
+    },
     {
       "year": 2020,
       "course": "SC",
@@ -487,7 +727,7 @@
       "status": "ok"
     }
   ],
-  "blocks": 48,
-  "blocks_with_data": 48,
-  "records": 2631
+  "blocks": 72,
+  "blocks_with_data": 72,
+  "records": 3972
 }
