@@ -1,7 +1,7 @@
 {
   "season": "S25",
   "label": "Summer Season 2025",
-  "captured_at": "2026-08-16T05:06:03.132118+00:00",
+  "captured_at": "2026-08-16T05:37:01.068733+00:00",
   "records": 2507,
   "athletes": [
     {
@@ -8714,9 +8714,9 @@
       "given_name": "Gabriel Alejandro",
       "gender": "M",
       "s": "NE",
-      "status": "C",
+      "status": "C C",
       "sb": "NE",
-      "sm": "NE",
+      "sm": "NE NE",
       "exceptions": "-",
       "name": "Gabriel Alejandro Ortiz Duran",
       "npc": "COL",
@@ -28425,7 +28425,7 @@
       "family_name": "Saldana",
       "given_name": "Ahmir",
       "gender": "M",
-      "s": "S6 S5",
+      "s": "S5 S6",
       "status": "R-2025",
       "sb": "SB5",
       "sm": "SM6",
