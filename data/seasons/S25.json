@@ -1,7 +1,7 @@
 {
   "season": "S25",
   "label": "Summer Season 2025",
-  "captured_at": "2026-08-18T09:51:28.275808+00:00",
+  "captured_at": "2026-08-18T10:12:47.025690+00:00",
   "records": 2507,
   "athletes": [
     {
@@ -8714,9 +8714,9 @@
       "given_name": "Gabriel Alejandro",
       "gender": "M",
       "s": "NE",
-      "status": "C",
+      "status": "C C",
       "sb": "NE",
-      "sm": "NE",
+      "sm": "NE NE",
       "exceptions": "-",
       "name": "Gabriel Alejandro Ortiz Duran",
       "npc": "COL",
@@ -10667,7 +10667,7 @@
       "gender": "M",
       "s": "S12 S11",
       "status": "R-2027 R-2019",
-      "sb": "SB12 SB11",
+      "sb": "SB11 SB12",
       "sm": "SM11 SM12",
       "exceptions": "T, B",
       "name": "Jeferson Gerardo Penafiel Ayala",
