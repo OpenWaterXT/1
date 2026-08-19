@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-08-19T09:53:26.229278+00:00",
+  "captured_at": "2026-08-19T10:20:04.112161+00:00",
   "source": "https://www.paralympic.org/swimming/classified-athletes",
   "records": 4965,
   "seasons": [
@@ -41432,7 +41432,7 @@
       "family_name": "Aliyev",
       "given_name": "Nihat",
       "gender": "M",
-      "s": "S10 S5",
+      "s": "S5 S10",
       "status": "",
       "sb": "",
       "sm": "",
@@ -48057,9 +48057,9 @@
       "given_name": "Gabriel Alejandro",
       "gender": "M",
       "s": "NE",
-      "status": "C",
+      "status": "C C",
       "sb": "NE",
-      "sm": "NE",
+      "sm": "NE NE",
       "exceptions": "-",
       "name": "Gabriel Alejandro Ortiz Duran",
       "npc": "COL",
