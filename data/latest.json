@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-08-20T08:52:56.501574+00:00",
+  "captured_at": "2026-08-20T09:19:45.310674+00:00",
   "source": "https://www.paralympic.org/swimming/classified-athletes",
   "records": 4965,
   "seasons": [
@@ -41432,7 +41432,7 @@
       "family_name": "Aliyev",
       "given_name": "Nihat",
       "gender": "M",
-      "s": "S10 S5",
+      "s": "S5 S10",
       "status": "",
       "sb": "",
       "sm": "",
@@ -50649,9 +50649,9 @@
       "given_name": "Margot",
       "gender": "F",
       "s": "NE",
-      "status": "C C",
-      "sb": "NE NE",
-      "sm": "NE NE",
+      "status": "C",
+      "sb": "NE",
+      "sm": "NE",
       "exceptions": "-",
       "name": "Margot Boulet",
       "npc": "FRA",
