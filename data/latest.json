@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-08-20T11:36:51.583578+00:00",
+  "captured_at": "2026-08-20T11:58:04.320156+00:00",
   "source": "https://www.paralympic.org/swimming/classified-athletes",
   "records": 4965,
   "seasons": [
@@ -50008,10 +50008,10 @@
       "family_name": "Penafiel Ayala",
       "given_name": "Jeferson Gerardo",
       "gender": "M",
-      "s": "S11 S12",
-      "status": "R-2019 R-2027",
-      "sb": "SB11 SB12",
-      "sm": "SM12 SM11",
+      "s": "S12 S11",
+      "status": "R-2027 R-2019",
+      "sb": "SB12 SB11",
+      "sm": "SM11 SM12",
       "exceptions": "T, B",
       "name": "Jeferson Gerardo Penafiel Ayala",
       "npc": "ECU",
