@@ -1,7 +1,7 @@
 {
   "season": "S25",
   "label": "Summer Season 2025",
-  "captured_at": "2026-08-22T13:59:13.656644+00:00",
+  "captured_at": "2026-08-22T14:18:29.303165+00:00",
   "records": 2507,
   "athletes": [
     {
@@ -10665,10 +10665,10 @@
       "family_name": "Penafiel Ayala",
       "given_name": "Jeferson Gerardo",
       "gender": "M",
-      "s": "S11 S12",
-      "status": "R-2019 R-2027",
-      "sb": "SB12 SB11",
-      "sm": "SM12 SM11",
+      "s": "S12 S11",
+      "status": "R-2027 R-2019",
+      "sb": "SB11 SB12",
+      "sm": "SM11 SM12",
       "exceptions": "T, B",
       "name": "Jeferson Gerardo Penafiel Ayala",
       "npc": "ECU",
