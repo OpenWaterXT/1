@@ -1,7 +1,7 @@
 {
   "season": "S25",
   "label": "Summer Season 2025",
-  "captured_at": "2026-08-26T00:33:52.215392+00:00",
+  "captured_at": "2026-08-26T02:11:18.322600+00:00",
   "records": 2507,
   "athletes": [
     {
@@ -2089,7 +2089,7 @@
       "family_name": "Aliyev",
       "given_name": "Nihat",
       "gender": "M",
-      "s": "S10 S5",
+      "s": "S5 S10",
       "status": "",
       "sb": "",
       "sm": "",
@@ -10667,7 +10667,7 @@
       "gender": "M",
       "s": "S11 S12",
       "status": "R-2019 R-2027",
-      "sb": "SB12 SB11",
+      "sb": "SB11 SB12",
       "sm": "SM12 SM11",
       "exceptions": "T, B",
       "name": "Jeferson Gerardo Penafiel Ayala",
