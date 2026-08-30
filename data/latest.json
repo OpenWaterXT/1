@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-08-30T15:00:32.749412+00:00",
+  "captured_at": "2026-08-30T18:27:09.600182+00:00",
   "source": "https://www.paralympic.org/swimming/classified-athletes",
   "records": 4965,
   "seasons": [
@@ -48057,9 +48057,9 @@
       "given_name": "Gabriel Alejandro",
       "gender": "M",
       "s": "NE",
-      "status": "C",
+      "status": "C C",
       "sb": "NE",
-      "sm": "NE",
+      "sm": "NE NE",
       "exceptions": "-",
       "name": "Gabriel Alejandro Ortiz Duran",
       "npc": "COL",
@@ -50010,7 +50010,7 @@
       "gender": "M",
       "s": "S11 S12",
       "status": "R-2019 R-2027",
-      "sb": "SB12 SB11",
+      "sb": "SB11 SB12",
       "sm": "SM12 SM11",
       "exceptions": "T, B",
       "name": "Jeferson Gerardo Penafiel Ayala",
