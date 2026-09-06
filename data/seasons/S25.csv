@@ -151,7 +151,7 @@ dbc02a7bafa0c4a1,-,Izotau,M,Uladzimir,Uladzimir Izotau,BLR,S12,SB12,6967,S25,Sum
 5bcf2ad4e75f6326,-,Kavalionak,M,Yauheni,Yauheni Kavalionak,BLR,S12,SB12,59569,S25,Summer Season 2025,SM12,R-2028
 f018274858b85722,-,Lappo,F,Elena,Elena Lappo,BLR,S4,SB4,62481,S25,Summer Season 2025,SM4,N
 dd92573f8c655022,-,Rasolka,F,Nastassia,Nastassia Rasolka,BLR,S13,SB13,44655,S25,Summer Season 2025,SM13,R-2026
-5a9b5293e967a26c,0,Salei,M,Dzmitry,Dzmitry Salei,BLR,S12,SB12,7020,S25,Summer Season 2025,SM12,R-2026
+5a9b5293e967a26c,0,Salei,M,Dzmitry,Dzmitry Salei,BLR,S12,SB12,7020,S25,Summer Season 2025,SM12,R-2030
 3b5a38b73cc500e8,"12, +",Shchalkanau,M,Yahor,Yahor Shchalkanau,BLR,S9,SB9,26226,S25,Summer Season 2025,SM9,C
 f187085099ada1da,"12, +",Sheshka,F,Darya,Darya Sheshka,BLR,S10,SB9,62172,S25,Summer Season 2025,SM10,R-2027
 634aa4da05bcab1e,-,Sidzelnik,M,Aliaksandr,Aliaksandr Sidzelnik,BLR,S6,SB5,49083,S25,Summer Season 2025,SM6,N
@@ -665,7 +665,7 @@ eb4421e4ee1b3c0a,"A, 12, +",Fernandez Soto,M,Santiago Gabriel,Santiago Gabriel F
 cfdbb3d3d88edbb3,-,Herrera Perez,F,Sara Amelie,Sara Amelie Herrera Perez,ECU,NE,NE,66947,S25,Summer Season 2025,NE,C
 b2c32173f3773831,"12, +",Lacaze,F,Lila,Lila Lacaze,ECU,S9,SB9,57219,S25,Summer Season 2025,SM9,R-2029
 a7eb28c53ef8e4d4,"1, 3, 5",Ortega Zambrano,F,Mayte Yomaira,Mayte Yomaira Ortega Zambrano,ECU,S9,SB8,42390,S25,Summer Season 2025,SM9,C
-e87b7ae95ae7d1e5,"T, B",Penafiel Ayala,M,Jeferson Gerardo,Jeferson Gerardo Penafiel Ayala,ECU,S11 S12,SB11 SB12,28204,S25,Summer Season 2025,SM12 SM11,R-2019 R-2027
+e87b7ae95ae7d1e5,"T, B",Penafiel Ayala,M,Jeferson Gerardo,Jeferson Gerardo Penafiel Ayala,ECU,S11 S12,SB12 SB11,28204,S25,Summer Season 2025,SM12 SM11,R-2019 R-2027
 79e55c2daa609b2f,-,Pineda Gualan,M,Alex Rene,Alex Rene Pineda Gualan,ECU,NE,NE,66941,S25,Summer Season 2025,NE,C
 3a467e841dab561c,9,Tandazo,M,Erick,Erick Tandazo,ECU,S9,SB9,32295,S25,Summer Season 2025,SM9,C
 65e95880b7681546,"A, Y, E, 3, 5, 12",Abbas Tewfick,F,Ayaallah Ayman,Ayaallah Ayman Abbas Tewfick,EGY,S6,SB5,23972,S25,Summer Season 2025,SM6,C
@@ -1894,7 +1894,7 @@ e93fa1f96123fa97,T,Chernov,M,Maksym,Maksym Chernov,RUS,S11,SB11,59913,S25,Summer
 d220d9b1e7573818,"A, 12",Evseenko,M,Mikhail,Mikhail Evseenko,RUS,S6,SB5,52817,S25,Summer Season 2025,SM6,R-2027
 442501076112c160,-,Faizulina,F,Arina,Arina Faizulina,RUS,S7,SB6,63240,S25,Summer Season 2025,SM7,N
 855bd7dae5d7dbc7,"A, 3, 5, 12",Fedurina,F,Galina,Galina Fedurina,RUS,S5,SB4,52588,S25,Summer Season 2025,SM5,R-2027
-eea269b3556c36d9,-,Fitmova,F,Daria,Daria Fitmova,RUS,S12,SB12,63280,S25,Summer Season 2025,SM12,R
+eea269b3556c36d9,-,Fitmova,F,Daria,Daria Fitmova,RUS,NE,NE,63280,S25,Summer Season 2025,NE,C
 9ec02fe375906323,"A, 3, 5, 12, +",Ganiuk,M,Aleksei,Aleksei Ganiuk,RUS,S8,SB7,30035,S25,Summer Season 2025,SM8,R-2029
 ad795c823e93ab84,-,Gladyshev,M,Artem,Artem Gladyshev,RUS,S14,SB14,52699,S25,Summer Season 2025,SM14,R-2027
 afb44c4163e4ac1b,"A, E, 12",Goncharova,F,Anastasiia,Anastasiia Goncharova,RUS,S4,SB3,63115,S25,Summer Season 2025,SM4,R-2026
@@ -1920,7 +1920,7 @@ df7968181fbaa3ef,-,Kuzmin,M,Egor,Egor Kuzmin,RUS,S12,SB12,52880,S25,Summer Seaso
 bb4cc1cff288dbc2,T,Latritskaia,F,Mariia,Mariia Latritskaia,RUS,S12,SB12,42122,S25,Summer Season 2025,SM12,R-2027
 0886d4f9a4e9eb48,0,Lazutin,M,Evgenii,Evgenii Lazutin,RUS,S13,SB13,61161,S25,Summer Season 2025,SM13,R-2027
 fea0cdb1f3406c0b,0,Lisitskii,M,Stepan,Stepan Lisitskii,RUS,S13,SB13,42123,S25,Summer Season 2025,SM13,R-2027
-caa147a62259d47a,"T, B",Lukianenko,F,Daria,Daria Lukianenko,RUS,S11,SB11,42294,S25,Summer Season 2025,SM11,R
+caa147a62259d47a,"T, B",Lukianenko,F,Daria,Daria Lukianenko,RUS,CNC,CNC,42294,S25,Summer Season 2025,CNC,R
 65de3923145149fb,"1, 3, 5",Maiborodina,F,Daria,Daria Maiborodina,RUS,S9,SB8,52618,S25,Summer Season 2025,SM9,C
 3e4b3a4f8818006d,"A, 12",Maslov,M,Stepan,Stepan Maslov,RUS,S8,SB7,61385,S25,Summer Season 2025,SM8,R-2027
 2d0a40dcc8bcd5d1,-,Meleshko,F,Daria,Daria Meleshko,RUS,S14,SB14,52700,S25,Summer Season 2025,SM14,R-2026
