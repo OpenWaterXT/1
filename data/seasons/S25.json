@@ -1,7 +1,7 @@
 {
   "season": "S25",
   "label": "Summer Season 2025",
-  "captured_at": "2026-09-16T16:10:26.907372+00:00",
+  "captured_at": "2026-09-16T19:32:03.511728+00:00",
   "records": 2507,
   "athletes": [
     {
@@ -10665,10 +10665,10 @@
       "family_name": "Penafiel Ayala",
       "given_name": "Jeferson Gerardo",
       "gender": "M",
-      "s": "S11 S12",
-      "status": "R-2019 R-2027",
-      "sb": "SB12 SB11",
-      "sm": "SM12 SM11",
+      "s": "S12 S11",
+      "status": "R-2027 R-2019",
+      "sb": "SB11 SB12",
+      "sm": "SM11 SM12",
       "exceptions": "T, B",
       "name": "Jeferson Gerardo Penafiel Ayala",
       "npc": "ECU",
@@ -38647,18 +38647,18 @@
     {
       "sdms_id": "53223",
       "family_name": "Arias",
-      "given_name": "Daniel",
+      "given_name": "Hanna",
       "gender": "F",
       "s": "S9",
       "status": "R-2029",
       "sb": "SB9",
       "sm": "SM9",
       "exceptions": "1, 3, 5",
-      "name": "Daniel Arias",
+      "name": "Hanna Arias",
       "npc": "URU",
       "season": "S25",
       "season_label": "Summer Season 2025",
-      "athlete_id": "b860f254c637295d"
+      "athlete_id": "7416390d0b869834"
     },
     {
       "sdms_id": "59985",
