@@ -1,8 +1,8 @@
 {
   "season": "S25",
   "label": "Summer Season 2025",
-  "captured_at": "2026-10-12T09:12:38.810438+00:00",
-  "records": 2507,
+  "captured_at": "2026-10-12T18:59:31.314417+00:00",
+  "records": 2505,
   "athletes": [
     {
       "sdms_id": "33729",
@@ -2089,7 +2089,7 @@
       "family_name": "Aliyev",
       "given_name": "Nihat",
       "gender": "M",
-      "s": "S10 S5",
+      "s": "S5 S10",
       "status": "",
       "sb": "",
       "sm": "",
@@ -12757,22 +12757,6 @@
       "athlete_id": "d101d65eaeb32d43"
     },
     {
-      "sdms_id": "52298",
-      "family_name": "Chociaj",
-      "given_name": "Natalia",
-      "gender": "F",
-      "s": "S13",
-      "status": "R-2026",
-      "sb": "SB13",
-      "sm": "SM13",
-      "exceptions": "T",
-      "name": "Natalia Chociaj",
-      "npc": "GBR",
-      "season": "S25",
-      "season_label": "Summer Season 2025",
-      "athlete_id": "217b098c82fa7f51"
-    },
-    {
       "sdms_id": "9246",
       "family_name": "Clegg",
       "given_name": "James",
@@ -13045,22 +13029,6 @@
       "athlete_id": "acc0f84491ff5ef3"
     },
     {
-      "sdms_id": "47035",
-      "family_name": "Hyde",
-      "given_name": "Charlotte",
-      "gender": "F",
-      "s": "S7",
-      "status": "R-2025",
-      "sb": "SB6",
-      "sm": "SM7",
-      "exceptions": "A, 12, +",
-      "name": "Charlotte Hyde",
-      "npc": "GBR",
-      "season": "S25",
-      "season_label": "Summer Season 2025",
-      "athlete_id": "75a3a522bf9b6b7c"
-    },
-    {
       "sdms_id": "29907",
       "family_name": "Kane",
       "given_name": "Abby",
@@ -13091,22 +13059,6 @@
       "season": "S25",
       "season_label": "Summer Season 2025",
       "athlete_id": "e71e9290228db18e"
-    },
-    {
-      "sdms_id": "41438",
-      "family_name": "Kelman-Johns",
-      "given_name": "George",
-      "gender": "M",
-      "s": "S14",
-      "status": "C",
-      "sb": "SB14",
-      "sm": "SM14",
-      "exceptions": "-",
-      "name": "George Kelman-Johns",
-      "npc": "GBR",
-      "season": "S25",
-      "season_label": "Summer Season 2025",
-      "athlete_id": "005aa11b14a1da2e"
     },
     {
       "sdms_id": "62592",
@@ -27987,6 +27939,22 @@
       "season": "S25",
       "season_label": "Summer Season 2025",
       "athlete_id": "deb561abaea7e678"
+    },
+    {
+      "sdms_id": "14677",
+      "family_name": "Zijderveld",
+      "given_name": "Chantalle",
+      "gender": "F",
+      "s": "S10",
+      "status": "C",
+      "sb": "SB9",
+      "sm": "SM10",
+      "exceptions": "1, 3, 5",
+      "name": "Chantalle Zijderveld",
+      "npc": "NED",
+      "season": "S25",
+      "season_label": "Summer Season 2025",
+      "athlete_id": "89c5d1c41be62128"
     },
     {
       "sdms_id": "41270",
