@@ -1,5 +1,5 @@
 {
-  "captured_at": "2026-10-13T15:15:18.603023+00:00",
+  "captured_at": "2026-10-13T20:41:13.351916+00:00",
   "source": "https://www.paralympic.org/swimming/classified-athletes",
   "records": 4963,
   "seasons": [
@@ -50649,9 +50649,9 @@
       "given_name": "Margot",
       "gender": "F",
       "s": "NE",
-      "status": "C",
-      "sb": "NE",
-      "sm": "NE",
+      "status": "C C",
+      "sb": "NE NE",
+      "sm": "NE NE",
       "exceptions": "-",
       "name": "Margot Boulet",
       "npc": "FRA",
