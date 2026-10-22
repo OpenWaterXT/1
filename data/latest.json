@@ -1,7 +1,7 @@
 {
-  "captured_at": "2026-10-22T10:04:30.893249+00:00",
+  "captured_at": "2026-10-22T15:03:36.842229+00:00",
   "source": "https://www.paralympic.org/swimming/classified-athletes",
-  "records": 4963,
+  "records": 4960,
   "seasons": [
     {
       "season": "S26",
@@ -13,7 +13,7 @@
     {
       "season": "S25",
       "label": "Summer Season 2025",
-      "records": 2505,
+      "records": 2502,
       "json": "data/seasons/S25.json",
       "csv": "data/seasons/S25.csv"
     }
@@ -41432,7 +41432,7 @@
       "family_name": "Aliyev",
       "given_name": "Nihat",
       "gender": "M",
-      "s": "S10 S5",
+      "s": "S5 S10",
       "status": "",
       "sb": "",
       "sm": "",
@@ -50008,10 +50008,10 @@
       "family_name": "Penafiel Ayala",
       "given_name": "Jeferson Gerardo",
       "gender": "M",
-      "s": "S12 S11",
-      "status": "R-2027 R-2019",
-      "sb": "SB11 SB12",
-      "sm": "SM11 SM12",
+      "s": "S11 S12",
+      "status": "R-2019 R-2027",
+      "sb": "SB12 SB11",
+      "sm": "SM12 SM11",
       "exceptions": "T, B",
       "name": "Jeferson Gerardo Penafiel Ayala",
       "npc": "ECU",
@@ -75332,22 +75332,6 @@
       "athlete_id": "438ecdf5a950447a"
     },
     {
-      "sdms_id": "8949",
-      "family_name": "Berezhna",
-      "given_name": "Yana",
-      "gender": "F",
-      "s": "S11",
-      "status": "C",
-      "sb": "SB11",
-      "sm": "SM11",
-      "exceptions": "T",
-      "name": "Yana Berezhna",
-      "npc": "UKR",
-      "season": "S25",
-      "season_label": "Summer Season 2025",
-      "athlete_id": "59c697bff3373300"
-    },
-    {
       "sdms_id": "8935",
       "family_name": "Bohodaiko",
       "given_name": "Yevhenii",
@@ -75410,38 +75394,6 @@
       "season": "S25",
       "season_label": "Summer Season 2025",
       "athlete_id": "0a24a11067069aa1"
-    },
-    {
-      "sdms_id": "17279",
-      "family_name": "Denysenko",
-      "given_name": "Kateryna",
-      "gender": "F",
-      "s": "S8",
-      "status": "C",
-      "sb": "SB8",
-      "sm": "SM8",
-      "exceptions": "1, 2, 4",
-      "name": "Kateryna Denysenko",
-      "npc": "UKR",
-      "season": "S25",
-      "season_label": "Summer Season 2025",
-      "athlete_id": "23376f923cd0cc9c"
-    },
-    {
-      "sdms_id": "19525",
-      "family_name": "Denysenko",
-      "given_name": "Yaroslav",
-      "gender": "M",
-      "s": "NE",
-      "status": "C",
-      "sb": "NE",
-      "sm": "NE",
-      "exceptions": "0",
-      "name": "Yaroslav Denysenko",
-      "npc": "UKR",
-      "season": "S25",
-      "season_label": "Summer Season 2025",
-      "athlete_id": "d93778dc98e81f1e"
     },
     {
       "sdms_id": "52473",
