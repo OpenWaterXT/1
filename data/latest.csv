@@ -2587,7 +2587,7 @@ bdb92bdf902bf3e9,-,Falk,F,Janina,Janina Falk,AUT,S14,SB14,30381,S25,Summer Seaso
 b84cda5dc52216ec,"1, 2, 4",Onea,M,Andreas,Andreas Onea,AUT,S8,SB8,5338,S25,Summer Season 2025,SM8,C
 3459babdb0845394,-,Schumacher,M,Jakob,Jakob Schumacher,AUT,S14,SB14,55869,S25,Summer Season 2025,SM14,C
 2a5f75879e5ffbc1,"H, A, 12",Weber-Treiber,F,Sabine,Sabine Weber-Treiber,AUT,S7,SB6,14637,S25,Summer Season 2025,SM7,C
-80d7a63b89aed951,-,Aliyev,M,Nihat,Nihat Aliyev,AZE,S10 S5,,63124,S25,Summer Season 2025,,
+80d7a63b89aed951,-,Aliyev,M,Nihat,Nihat Aliyev,AZE,S5 S10,,63124,S25,Summer Season 2025,,
 aab9e8d87cc7e365,8,Mammadov,M,Murad,Murad Mammadov,AZE,S10,SB9,63129,S25,Summer Season 2025,SM10,R-2028
 075403b080cc5d77,"A, 12",Nazarov,M,Abuzar,Abuzar Nazarov,AZE,S6,SB5,63127,S25,Summer Season 2025,SM6,R-2029
 68f16be730e5e378,"A, 5",Rustamli,F,Nurjan,Nurjan Rustamli,AZE,CNC,CNC,59891,S25,Summer Season 2025,CNC,R
@@ -3123,7 +3123,7 @@ eb4421e4ee1b3c0a,"A, 12, +",Fernandez Soto,M,Santiago Gabriel,Santiago Gabriel F
 cfdbb3d3d88edbb3,-,Herrera Perez,F,Sara Amelie,Sara Amelie Herrera Perez,ECU,NE,NE,66947,S25,Summer Season 2025,NE,C
 b2c32173f3773831,"12, +",Lacaze,F,Lila,Lila Lacaze,ECU,S9,SB9,57219,S25,Summer Season 2025,SM9,R-2029
 a7eb28c53ef8e4d4,"1, 3, 5",Ortega Zambrano,F,Mayte Yomaira,Mayte Yomaira Ortega Zambrano,ECU,S9,SB8,42390,S25,Summer Season 2025,SM9,C
-e87b7ae95ae7d1e5,"T, B",Penafiel Ayala,M,Jeferson Gerardo,Jeferson Gerardo Penafiel Ayala,ECU,S12 S11,SB12 SB11,28204,S25,Summer Season 2025,SM11 SM12,R-2027 R-2019
+e87b7ae95ae7d1e5,"T, B",Penafiel Ayala,M,Jeferson Gerardo,Jeferson Gerardo Penafiel Ayala,ECU,S11 S12,SB12 SB11,28204,S25,Summer Season 2025,SM12 SM11,R-2019 R-2027
 79e55c2daa609b2f,-,Pineda Gualan,M,Alex Rene,Alex Rene Pineda Gualan,ECU,NE,NE,66941,S25,Summer Season 2025,NE,C
 3a467e841dab561c,9,Tandazo,M,Erick,Erick Tandazo,ECU,S9,SB9,32295,S25,Summer Season 2025,SM9,C
 65e95880b7681546,"A, Y, E, 3, 5, 12",Abbas Tewfick,F,Ayaallah Ayman,Ayaallah Ayman Abbas Tewfick,EGY,S6,SB5,23972,S25,Summer Season 2025,SM6,C
@@ -3163,7 +3163,7 @@ d6982f808d262d5e,"3, 5, 12, +",Laitala,M,Ilmari,Ilmari Laitala,FIN,S9,SB8,43349,
 bed6e30958ba0310,"12, +",Rajahalme,F,Jenna,Jenna Rajahalme,FIN,S10,NE,35821,S25,Summer Season 2025,NE,C
 8f944b556432fe6a,"A, 8",Bellanger,M,Alexis,Alexis Bellanger,FRA,S9,SB8,52565,S25,Summer Season 2025,SM9,C
 dcdeb631dba3add8,"1, 2, 4",Ben Chrif,M,Nawfal,Nawfal Ben Chrif,FRA,S8,SB8,61482,S25,Summer Season 2025,SM8,R-2026
-61cce366c7f8dadc,-,Boulet,F,Margot,Margot Boulet,FRA,NE,NE,50220,S25,Summer Season 2025,NE,C
+61cce366c7f8dadc,-,Boulet,F,Margot,Margot Boulet,FRA,NE,NE NE,50220,S25,Summer Season 2025,NE NE,C C
 ec6abbcf249f968c,"A, 12",Chapuy,F,Selam,Selam Chapuy,FRA,S5,SB4,42903,S25,Summer Season 2025,SM5,R-2025
 5ef954a46c3ba757,"A, 1, 3, 5, 9",Chardard,M,Laurent,Laurent Chardard,FRA,S6,SB6,42473,S25,Summer Season 2025,SM6,C
 5d59b6a973b5bcee,-,Chevallier,F,Maely,Maely Chevallier,FRA,S14,SB14,41945,S25,Summer Season 2025,SM14,C
@@ -3863,7 +3863,7 @@ f72706974d9fb24e,8,Kim,M,Saehun,Saehun Kim,KOR,S9,SB8,22768,S25,Summer Season 20
 92af38c569e918f5,-,Kim,M,Seungjin,Seungjin Kim,KOR,S14,SB14,43255,S25,Summer Season 2025,SM14,R
 86baf26a3d220fb7,-,Kim,M,Si Ham,Si Ham Kim,KOR,S10,SB9,63852,S25,Summer Season 2025,SM10,N
 78376e767135cca4,-,Kim,M,Siwoo,Siwoo Kim,KOR,S14,SB14,67825,S25,Summer Season 2025,SM14,R-2027
-07012b8dd8e8aedc,-,Kim,M,Soohyeong,Soohyeong Kim,KOR,S14,SB14,56879,S25,Summer Season 2025,SM14,R-2024
+07012b8dd8e8aedc,-,Kim,M,Soohyeong,Soohyeong Kim,KOR,S14,SB14,56879,S25,Summer Season 2025,SM14,R
 596fbbc6a2d645dc,-,Ko,M,Junho,Junho Ko,KOR,S14,SB14,35073,S25,Summer Season 2025,SM14,C
 8e9b89887017d40e,"1, 2, 4, 12, +",Koh,M,Joonhyeok,Joonhyeok Koh,KOR,S6,SB6,21531,S25,Summer Season 2025,SM6,R-2029
 e3953767ed721aac,-,Kook,M,Dongken,Dongken Kook,KOR,S14,SB14,41662,S25,Summer Season 2025,SM14,C
@@ -3881,7 +3881,7 @@ bc722ce88ce5cd95,0,Lee,M,Inkook,Inkook Lee,KOR,S14,SB14,16034,S25,Summer Season 
 297aa77b5de4aa97,-,Park,M,Sangmin,Sangmin Park,KOR,S10,SB8,41955,S25,Summer Season 2025,SM10,N
 d7c969e7759e5a28,"A, 12, +",Park,M,Suhan,Suhan Park,KOR,S8,SB7,40595,S25,Summer Season 2025,SM8,C
 20862f886281ff13,-,Shin,F,Hyewon,Hyewon Shin,KOR,S14,SB14,57745,S25,Summer Season 2025,SM14,R-2025
-8905e32d9199f0a3,-,Son,M,Jiwon,Jiwon Son,KOR,S14,SB14,65140,S25,Summer Season 2025,SM14,R-2026
+8905e32d9199f0a3,-,Son,M,Jiwon,Jiwon Son,KOR,S14,SB14,65140,S25,Summer Season 2025,SM14,R
 820eb03f20ab267f,9,Yeum,M,Jundu,Jundu Yeum,KOR,S9,SB8,42464,S25,Summer Season 2025,SM9,C
 a1ecfe79f8f55d96,-,Yun,F,Chaewoo,Chaewoo Yun,KOR,S5,SB4,67879,S25,Summer Season 2025,SM5,N
 744b5288eafc71a9,"3, 5, 12, +",Yun,M,Juhyun,Juhyun Yun,KOR,S10,SB9,63921,S25,Summer Season 2025,SM10,R-2027
@@ -4632,8 +4632,8 @@ c94f5b78016ef6cf,T,Khalek,M,Khanawat,Khanawat Khalek,THA,S12,SB12,56920,S25,Summ
 f56c2f9dd2aad314,-,Khaphinit,M,Natthakron,Natthakron Khaphinit,THA,S7,SB7,51668,S25,Summer Season 2025,SM7,N
 66cc60769f54ae0d,"1, 3, 5",Komkaew,F,Surerut,Surerut Komkaew,THA,S9,SB9,5974,S25,Summer Season 2025,SM9,C
 3f5dcbc0db1c2de8,"A, 12",Kongsripilarom,M,Nattawut,Nattawut Kongsripilarom,THA,S4,SB4,59332,S25,Summer Season 2025,SM4,R-2026
-55b4897c4230d07f,-,Kumarasing,M,Phakhawat,Phakhawat Kumarasing,THA,S14,SB14,60305,S25,Summer Season 2025,SM14,R-2026
-837202197e279d87,-,Meeprom,M,Natirat,Natirat Meeprom,THA,S14,SB14,60304,S25,Summer Season 2025,SM14,R-2026
+55b4897c4230d07f,-,Kumarasing,M,Phakhawat,Phakhawat Kumarasing,THA,S14,SB14,60305,S25,Summer Season 2025,SM14,C
+837202197e279d87,-,Meeprom,M,Natirat,Natirat Meeprom,THA,S14,SB14,60304,S25,Summer Season 2025,SM14,C
 19c3596914cd0b82,T,Mimetta,M,Noi,Noi Mimetta,THA,S13,SB13,35253,S25,Summer Season 2025,SM13,R-2027
 ae934290613b582c,"T, B",Mueanpong,M,Sukrid,Sukrid Mueanpong,THA,S11,SB11,35249,S25,Summer Season 2025,SM11,C
 eb133ca07e28cfbf,"A, Y, E, 7, 12, +",Nakananram,M,Methasit,Methasit Nakananram,THA,S3,SB2,59855,S25,Summer Season 2025,SM3,R-2027
@@ -4656,7 +4656,7 @@ c4ff8770390efd22,"12, +",Srichanpliw,F,Mesa,Mesa Srichanpliw,THA,S9,SB8,51667,S2
 08691b036038745a,"A, 12, +",Sutcharoen,M,Thawilap,Thawilap Sutcharoen,THA,S7,SB6,56319,S25,Summer Season 2025,SM7,C
 7b4882177b6ce65d,-,Suwanchairob,M,Montri,Montri Suwanchairob,THA,S10,SB9,63824,S25,Summer Season 2025,SM10,N
 0344c9a7c601c228,"Y, E, 3, 5, 8",Tabthong,M,Yongyoot,Yongyoot Tabthong,THA,S6,SB6,23527,S25,Summer Season 2025,SM6,C
-82e842bb154ac23a,-,Thavornvasu,F,Wachiraphon,Wachiraphon Thavornvasu,THA,S14,SB14,65328,S25,Summer Season 2025,SM14,R-2026
+82e842bb154ac23a,-,Thavornvasu,F,Wachiraphon,Wachiraphon Thavornvasu,THA,S14,SB14,65328,S25,Summer Season 2025,SM14,C
 4debfbe85575c770,-,Uttisen,F,Luksika,Luksika Uttisen,THA,S14,SB14,57055,S25,Summer Season 2025,SM14,C
 3eef071e53e4671d,"*, A, Y, E, 7",Wiprajong,M,Natthaphong,Natthaphong Wiprajong,THA,S6,SB7,23561,S25,Summer Season 2025,SM6,R
 0ddcb73acd623fa4,-,Withetsuksom,M,Anan,Anan Withetsuksom,THA,S12,SB12,42470,S25,Summer Season 2025,SM12,R-2026
