@@ -1,7 +1,7 @@
 {
   "season": "S25",
   "label": "Summer Season 2025",
-  "captured_at": "2026-10-25T10:54:09.001760+00:00",
+  "captured_at": "2026-10-25T14:35:53.281366+00:00",
   "records": 2502,
   "athletes": [
     {
@@ -8714,9 +8714,9 @@
       "given_name": "Gabriel Alejandro",
       "gender": "M",
       "s": "NE",
-      "status": "C C",
+      "status": "C",
       "sb": "NE",
-      "sm": "NE NE",
+      "sm": "NE",
       "exceptions": "-",
       "name": "Gabriel Alejandro Ortiz Duran",
       "npc": "COL",
