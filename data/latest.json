@@ -1,7 +1,7 @@
 {
-  "captured_at": "2026-11-11T08:42:30.810795+00:00",
+  "captured_at": "2026-11-11T22:58:34.424277+00:00",
   "source": "https://www.paralympic.org/swimming/classified-athletes",
-  "records": 4960,
+  "records": 4959,
   "seasons": [
     {
       "season": "S26",
@@ -13,7 +13,7 @@
     {
       "season": "S25",
       "label": "Summer Season 2025",
-      "records": 2502,
+      "records": 2501,
       "json": "data/seasons/S25.json",
       "csv": "data/seasons/S25.csv"
     }
@@ -41432,7 +41432,7 @@
       "family_name": "Aliyev",
       "given_name": "Nihat",
       "gender": "M",
-      "s": "S10 S5",
+      "s": "S5 S10",
       "status": "",
       "sb": "",
       "sm": "",
@@ -49860,22 +49860,6 @@
       "athlete_id": "e59402b45fdc579f"
     },
     {
-      "sdms_id": "33225",
-      "family_name": "Lopez",
-      "given_name": "Patricio",
-      "gender": "M",
-      "s": "S4",
-      "status": "C",
-      "sb": "SB3",
-      "sm": "SM4",
-      "exceptions": "A, 12",
-      "name": "Patricio Lopez",
-      "npc": "DOM",
-      "season": "S25",
-      "season_label": "Summer Season 2025",
-      "athlete_id": "0b3b535891194065"
-    },
-    {
       "sdms_id": "66296",
       "family_name": "Sevastian",
       "given_name": "Jean",
@@ -50008,10 +49992,10 @@
       "family_name": "Penafiel Ayala",
       "given_name": "Jeferson Gerardo",
       "gender": "M",
-      "s": "S11 S12",
-      "status": "R-2019 R-2027",
+      "s": "S12 S11",
+      "status": "R-2027 R-2019",
       "sb": "SB12 SB11",
-      "sm": "SM12 SM11",
+      "sm": "SM11 SM12",
       "exceptions": "T, B",
       "name": "Jeferson Gerardo Penafiel Ayala",
       "npc": "ECU",
