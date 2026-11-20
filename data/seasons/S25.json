@@ -1,7 +1,7 @@
 {
   "season": "S25",
   "label": "Summer Season 2025",
-  "captured_at": "2026-11-20T09:14:01.286525+00:00",
+  "captured_at": "2026-11-20T17:46:33.563061+00:00",
   "records": 2501,
   "athletes": [
     {
@@ -10651,7 +10651,7 @@
       "gender": "M",
       "s": "S11 S12",
       "status": "R-2019 R-2027",
-      "sb": "SB11 SB12",
+      "sb": "SB12 SB11",
       "sm": "SM12 SM11",
       "exceptions": "T, B",
       "name": "Jeferson Gerardo Penafiel Ayala",
@@ -11290,9 +11290,9 @@
       "given_name": "Margot",
       "gender": "F",
       "s": "NE",
-      "status": "C C",
-      "sb": "NE NE",
-      "sm": "NE NE",
+      "status": "C",
+      "sb": "NE",
+      "sm": "NE",
       "exceptions": "-",
       "name": "Margot Boulet",
       "npc": "FRA",
