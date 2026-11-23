@@ -1,7 +1,7 @@
 {
   "season": "S25",
   "label": "Summer Season 2025",
-  "captured_at": "2026-11-23T04:03:31.812866+00:00",
+  "captured_at": "2026-11-23T14:21:32.227556+00:00",
   "records": 2501,
   "athletes": [
     {
@@ -11290,9 +11290,9 @@
       "given_name": "Margot",
       "gender": "F",
       "s": "NE",
-      "status": "C",
-      "sb": "NE",
-      "sm": "NE",
+      "status": "C C",
+      "sb": "NE NE",
+      "sm": "NE NE",
       "exceptions": "-",
       "name": "Margot Boulet",
       "npc": "FRA",
